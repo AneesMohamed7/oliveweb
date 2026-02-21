@@ -37,9 +37,6 @@ export default function Navbar() {
     const treatmentLinks = [
         { name: 'Dental Treatments', path: '/dental-treatments' },
         { name: 'Facial Aesthetics', path: '/facial-aesthetics' },
-        { name: 'Clear Aligners', path: '/treatments/aligners' },
-        { name: 'Dental Implants', path: '/treatments/implants' },
-        { name: 'Veneers', path: '/treatments/veneers' },
     ];
 
     const rightLinks = [
@@ -89,27 +86,34 @@ export default function Navbar() {
                         ))}
 
                         {/* Treatments Dropdown */}
-                        <div className="relative" ref={dropdownRef}>
-                            <button
-                                onClick={() => setTreatmentsOpen(!treatmentsOpen)}
+                        <div className="relative flex items-center gap-1" ref={dropdownRef}>
+                            <Link
+                                to="/treatments"
                                 className={cn(
-                                    "text-xs lg:text-sm font-medium transition-colors hover:text-primary whitespace-nowrap flex items-center gap-1",
+                                    "text-xs lg:text-sm font-medium transition-colors hover:text-primary whitespace-nowrap",
                                     isTreatmentsActive ? "text-primary" : "text-text"
                                 )}
                             >
                                 Treatments
+                            </Link>
+                            <button
+                                onClick={() => setTreatmentsOpen(!treatmentsOpen)}
+                                className="p-1 hover:text-primary transition-colors focus:outline-none"
+                                aria-label="Toggle Treatments Menu"
+                            >
                                 <ChevronDown size={14} className={cn("transition-transform duration-200", treatmentsOpen && "rotate-180")} />
                             </button>
 
                             {treatmentsOpen && (
-                                <div className="absolute top-full left-0 mt-3 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50">
-                                    <div className="px-3 py-1.5">
+                                <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50">
+                                    <div className="px-3 py-1.5 border-b border-gray-50 mb-1">
                                         <p className="text-[10px] uppercase tracking-wider text-gray-400 font-bold">Our Specialisations</p>
                                     </div>
                                     {treatmentLinks.map((link) => (
                                         <Link
                                             key={link.name}
                                             to={link.path}
+                                            onClick={() => setTreatmentsOpen(false)}
                                             className={cn(
                                                 "block px-4 py-2.5 text-sm hover:bg-blue-50 hover:text-primary transition-colors",
                                                 location.pathname === link.path ? "text-primary bg-blue-50/50 font-medium" : "text-gray-700"
@@ -174,24 +178,39 @@ export default function Navbar() {
 
                         {/* Mobile Treatments Submenu */}
                         <div>
-                            <button
-                                onClick={() => setTreatmentsOpen(!treatmentsOpen)}
-                                className={cn(
-                                    "w-full flex items-center justify-between px-3 py-3 rounded-md text-base font-medium",
-                                    isTreatmentsActive ? "text-primary bg-blue-50" : "text-text hover:text-primary hover:bg-gray-50"
-                                )}
-                            >
-                                Treatments
-                                <ChevronDown size={18} className={cn("transition-transform", treatmentsOpen && "rotate-180")} />
-                            </button>
+                            <div className="flex items-center justify-between px-3 py-3 rounded-md hover:bg-gray-50">
+                                <Link
+                                    to="/treatments"
+                                    onClick={() => {
+                                        setIsOpen(false);
+                                        setTreatmentsOpen(false);
+                                    }}
+                                    className={cn(
+                                        "flex-grow text-base font-medium",
+                                        location.pathname === "/treatments" ? "text-primary" : "text-text"
+                                    )}
+                                >
+                                    Treatments
+                                </Link>
+                                <button
+                                    onClick={() => setTreatmentsOpen(!treatmentsOpen)}
+                                    className="p-1 text-gray-400"
+                                >
+                                    <ChevronDown size={18} className={cn("transition-transform", treatmentsOpen && "rotate-180")} />
+                                </button>
+                            </div>
                             {treatmentsOpen && (
-                                <div className="pl-6 space-y-1 mt-1">
+                                <div className="pl-6 space-y-1 mt-1 bg-gray-50/50 rounded-lg">
                                     {treatmentLinks.map((link) => (
                                         <Link
                                             key={link.name}
                                             to={link.path}
+                                            onClick={() => {
+                                                setIsOpen(false);
+                                                setTreatmentsOpen(false);
+                                            }}
                                             className={cn(
-                                                "block px-3 py-2.5 rounded-md text-sm",
+                                                "block px-3 py-3 rounded-md text-base",
                                                 location.pathname === link.path ? "text-primary font-medium" : "text-gray-600 hover:text-primary"
                                             )}
                                         >
