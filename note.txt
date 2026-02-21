@@ -1,0 +1,10 @@
+to add 
+
+1.carousel in home page for service
+2.in home page number of aligners deliverd  ,dental implants,happy patients
+3.clinic time
+4.face treatments
+5.add a specific details about  main chief dental sergeon doctors
+6.add a calender based booking system
+7.add a chat bot for quick response
+8.chief dental surgeon photos and details in muti specialty dental experts page
