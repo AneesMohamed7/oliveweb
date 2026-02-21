@@ -113,7 +113,6 @@ export default function Navbar() {
                                         <Link
                                             key={link.name}
                                             to={link.path}
-                                            onClick={() => setTreatmentsOpen(false)}
                                             className={cn(
                                                 "block px-4 py-2.5 text-sm hover:bg-blue-50 hover:text-primary transition-colors",
                                                 location.pathname === link.path ? "text-primary bg-blue-50/50 font-medium" : "text-gray-700"
@@ -181,10 +180,6 @@ export default function Navbar() {
                             <div className="flex items-center justify-between px-3 py-3 rounded-md hover:bg-gray-50">
                                 <Link
                                     to="/treatments"
-                                    onClick={() => {
-                                        setIsOpen(false);
-                                        setTreatmentsOpen(false);
-                                    }}
                                     className={cn(
                                         "flex-grow text-base font-medium",
                                         location.pathname === "/treatments" ? "text-primary" : "text-text"
@@ -205,10 +200,6 @@ export default function Navbar() {
                                         <Link
                                             key={link.name}
                                             to={link.path}
-                                            onClick={() => {
-                                                setIsOpen(false);
-                                                setTreatmentsOpen(false);
-                                            }}
                                             className={cn(
                                                 "block px-3 py-3 rounded-md text-base",
                                                 location.pathname === link.path ? "text-primary font-medium" : "text-gray-600 hover:text-primary"
