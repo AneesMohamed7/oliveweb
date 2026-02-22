@@ -56,6 +56,33 @@ function Counter({ from, to, label, suffix = "+", icon: Icon, delay = 0 }) {
 export default function StatsSection() {
     return (
         <section className="py-24 bg-gray-900 relative overflow-hidden">
+            {/* Animated Glow Orbs */}
+            <motion.div
+                animate={{
+                    x: [0, 100, 0],
+                    y: [0, 50, 0],
+                    scale: [1, 1.2, 1]
+                }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                className="absolute -top-24 -left-24 w-96 h-96 bg-primary/20 rounded-full blur-[100px]"
+            />
+            <motion.div
+                animate={{
+                    x: [0, -100, 0],
+                    y: [0, -50, 0],
+                    scale: [1, 1.3, 1]
+                }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px]"
+            />
+            <motion.div
+                animate={{
+                    opacity: [0.1, 0.3, 0.1],
+                }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-1/2 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px]"
+            />
+
             {/* Background elements */}
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-black/50 pointer-events-none"></div>

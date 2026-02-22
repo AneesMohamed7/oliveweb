@@ -9,7 +9,7 @@ export const dentalServices = [
         type: 'core',
         description: 'Precision-placed titanium implants using advanced digital planning for permanent, natural-looking tooth restoration with minimal discomfort and maximum longevity.',
         icon: Anchor,
-        image: '/images/implants-solution.jpg',
+        image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop',
         link: '/treatments/implants'
     },
     {
@@ -19,7 +19,7 @@ export const dentalServices = [
         type: 'core',
         description: 'Digitally crafted invisible aligners for precise teeth straightening — comfortable, removable, and designed for predictable results without traditional braces.',
         icon: Smile,
-        image: '/images/aligner-lifestyle.jpg',
+        image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop',
         link: '/treatments/aligners'
     },
     {
@@ -29,7 +29,7 @@ export const dentalServices = [
         type: 'core',
         description: 'Comprehensive smile transformation combining veneers, whitening, and alignment — tailored with digital design for a naturally stunning, confident smile.',
         icon: Sparkles,
-        image: '/images/veneers-solution.jpg',
+        image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
         link: '/treatments/veneers'
     },
     {
@@ -39,7 +39,7 @@ export const dentalServices = [
         type: 'core',
         description: 'Advanced endodontic care using rotary instruments and apex locators for painless, precise root canal therapy that preserves your natural tooth structure.',
         icon: HeartPulse,
-        image: '/images/service-rct.jpg',
+        image: 'https://images.unsplash.com/photo-1583912267550-d44d7a125e7e?q=80&w=800&auto=format&fit=crop',
         link: '/dental-treatments'
     },
     {
@@ -49,7 +49,7 @@ export const dentalServices = [
         type: 'secondary',
         description: 'Ultra-thin porcelain shells custom-crafted to refine tooth shape, colour, and alignment for a flawless, natural-looking smile.',
         icon: Sparkles,
-        image: '/images/veneers-solution.jpg',
+        image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=800&auto=format&fit=crop',
         link: '/treatments/veneers'
     },
     {
@@ -59,7 +59,7 @@ export const dentalServices = [
         type: 'secondary',
         description: 'High-quality Zirconia and ceramic restorations to rebuild damaged teeth and bridge gaps with precision-fitted, long-lasting results.',
         icon: Crown,
-        image: '/images/service-bridges.jpg',
+        image: 'https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?q=80&w=800&auto=format&fit=crop',
         link: '/dental-treatments'
     },
     {
@@ -69,7 +69,7 @@ export const dentalServices = [
         type: 'secondary',
         description: 'Professional laser whitening to brighten your smile by several shades in a single, comfortable clinical session.',
         icon: Sun,
-        image: '/images/service-whitening.jpg',
+        image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop',
         link: '/dental-treatments'
     },
     {
@@ -79,7 +79,7 @@ export const dentalServices = [
         type: 'secondary',
         description: 'Gentle, fearless dental care for children — including fluoride application, sealants, and early habit correction in a child-friendly environment.',
         icon: Baby,
-        image: '/images/service-kids.jpg',
+        image: 'https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?q=80&w=800&auto=format&fit=crop',
         link: '/dental-treatments'
     },
     {
@@ -89,7 +89,7 @@ export const dentalServices = [
         type: 'secondary',
         description: 'Painless extraction of impacted wisdom teeth by expert oral surgeons using minimally invasive techniques.',
         icon: Syringe,
-        image: '/images/service-surgery.jpg',
+        image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop',
         link: '/dental-treatments'
     }
 ];
@@ -104,7 +104,7 @@ export const facialServices = [
         type: 'core',
         description: 'Platelet-rich plasma therapy stimulates deep collagen production for natural skin tightening and rejuvenation — medically supervised for safe, lasting results.',
         icon: Droplets,
-        image: '/images/facial-prp.jpg',
+        image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=800&auto=format&fit=crop',
         link: '/facial-aesthetics'
     },
     {
@@ -114,7 +114,7 @@ export const facialServices = [
         type: 'core',
         description: 'Precision-administered anti-ageing injections to smooth fine lines and restore volume — delivering subtle, natural-looking facial refinement under clinical supervision.',
         icon: Syringe,
-        image: '/images/facial-botox.jpg',
+        image: 'https://images.unsplash.com/photo-1522335789203-aa9fb3ad2fda?q=80&w=800&auto=format&fit=crop',
         link: '/facial-aesthetics'
     },
     {
@@ -124,7 +124,7 @@ export const facialServices = [
         type: 'core',
         description: 'Controlled micro-injuries trigger the skin\'s natural healing response, boosting collagen and reducing scars, pores, and fine lines with minimal downtime.',
         icon: CircleDot,
-        image: '/images/facial-microneedling.jpg',
+        image: 'https://images.unsplash.com/photo-1614806687383-29471f0084ba?q=80&w=800&auto=format&fit=crop',
         link: '/facial-aesthetics'
     },
     {
@@ -134,7 +134,7 @@ export const facialServices = [
         type: 'core',
         description: 'Non-surgical face lifting using dissolvable threads to tighten sagging skin and stimulate collagen — a minimally invasive alternative to traditional surgery.',
         icon: Sparkles,
-        image: '/images/facial-threadlift.jpg',
+        image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?q=80&w=800&auto=format&fit=crop',
         link: '/facial-aesthetics'
     },
     {
@@ -144,7 +144,7 @@ export const facialServices = [
         type: 'core',
         description: 'Multi-step facial treatment combining deep cleansing, exfoliation, extraction, and hydration for instantly radiant, revitalised skin in a single session.',
         icon: Waves,
-        image: '/images/facial-hydrafacial.jpg',
+        image: 'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?q=80&w=800&auto=format&fit=crop',
         link: '/facial-aesthetics'
     },
     // ADVANCED

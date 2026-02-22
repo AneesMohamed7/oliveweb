@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
 import { Phone, MapPin, Send } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function ContactCTA() {
     const [formData, setFormData] = useState({ name: '', phone: '' });
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Create WhatsApp message
         const message = `Hi Olive Dental, I would like to request a callback.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}`;
         const whatsappUrl = `https://wa.me/918891494731?text=${message}`;
-
-        // Open WhatsApp
         window.open(whatsappUrl, '_blank');
-
-        // Reset form
         setFormData({ name: '', phone: '' });
     };
 
@@ -25,7 +21,12 @@ export default function ContactCTA() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
                         <h2 className="text-3xl lg:text-4xl font-bold mb-6">Visit Olive Dental & Face Clinic</h2>
                         <div className="space-y-6 text-blue-100">
                             <div className="flex items-start gap-4">
@@ -61,9 +62,15 @@ export default function ContactCTA() {
                                 ></iframe>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="bg-white text-gray-900 p-8 rounded-2xl shadow-xl">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="bg-white text-gray-900 p-8 rounded-2xl shadow-xl"
+                    >
                         <h3 className="text-2xl font-bold mb-2">Book Your Appointment</h3>
                         <p className="text-gray-500 mb-6">Leave your details and we'll call you back instantly.</p>
 
@@ -98,7 +105,7 @@ export default function ContactCTA() {
                                 Request Callback via WhatsApp
                             </button>
                         </form>
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>

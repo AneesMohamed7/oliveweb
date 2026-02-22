@@ -1,10 +1,18 @@
 import React from 'react';
 import { Clock, MapPin, Phone } from 'lucide-react';
+import { motion } from 'framer-motion';
+
 export default function ClinicHours() {
     return (
         <section className="py-16 bg-white border-t border-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden shadow-2xl text-white">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden shadow-2xl text-white"
+                >
                     <div className="grid md:grid-cols-2">
                         <div className="p-8 md:p-12 flex flex-col justify-center">
                             <h2 className="text-3xl font-bold mb-6">Visit Our Clinic</h2>
@@ -50,7 +58,10 @@ export default function ClinicHours() {
                         </div>
 
                         <div className="relative h-64 md:h-auto overflow-hidden">
-                            <img
+                            <motion.img
+                                initial={{ scale: 1.1 }}
+                                whileInView={{ scale: 1 }}
+                                transition={{ duration: 1.5 }}
                                 src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2068"
                                 alt="Modern Dental Clinic Reception"
                                 className="absolute inset-0 w-full h-full object-cover opacity-80"
@@ -58,7 +69,7 @@ export default function ClinicHours() {
                             <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/50 to-transparent md:bg-gradient-to-l md:from-transparent md:to-gray-900"></div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );
