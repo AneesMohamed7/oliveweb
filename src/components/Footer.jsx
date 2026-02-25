@@ -12,7 +12,7 @@ export default function Footer() {
                     <div>
                         <div className="flex items-center gap-2 mb-4">
                             <img src={oliveLogo} alt="Olive Dental" className="h-12 w-auto object-contain brightness-0 invert" />
-                            <h3 className="text-2xl font-bold text-white">Olive Dental</h3>
+                            <h3 className="text-xl font-bold text-white">Olive Dental & Face Clinic</h3>
                         </div>
                         <p className="text-sm leading-relaxed mb-6">
                             Advanced smile correction and dental care with clear aligners, veneers, and implants.
