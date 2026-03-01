@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Services from '../components/Services';
+import HomeMissionVision from '../components/HomeMissionVision';
 import StatsSection from '../components/StatsSection';
 import ClinicHours from '../components/ClinicHours';
 import BeforeAfter from '../components/BeforeAfter';
@@ -22,6 +23,7 @@ export default function Home() {
             <Hero />
             <StatsSection />
             <Features />
+            <HomeMissionVision />
             <Services />
             <BeforeAfter />
             <DoctorsSection />
