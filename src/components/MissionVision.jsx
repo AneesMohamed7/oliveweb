@@ -115,48 +115,61 @@ export default function MissionVision() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeUp}
-                        className="relative bg-gradient-to-br from-primary/5 to-blue-50 border border-primary/10 rounded-3xl p-8 lg:p-10 overflow-hidden"
+                        className="relative bg-gradient-to-br from-primary/5 to-blue-50 border border-primary/10 rounded-3xl overflow-hidden"
                     >
+                        {/* Mission image header */}
+                        <div className="h-52 overflow-hidden relative">
+                            <img
+                                src="/images/purpose-family-care.png"
+                                alt="Olive Dental doctors consulting with a family in Kondotty"
+                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-blue-50 via-blue-50/30 to-transparent" />
+                        </div>
+
                         {/* Decorative */}
                         <div className="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2" />
 
-                        <div className="flex items-center gap-4 mb-6 relative z-10">
-                            <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20">
-                                <Target size={26} className="text-white" />
+                        <div className="p-8 lg:p-10 pt-4">
+                            <div className="flex items-center gap-4 mb-6 relative z-10">
+                                <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20">
+                                    <Target size={26} className="text-white" />
+                                </div>
+                                <div>
+                                    {/* AEO: Clear, direct answer format for "What is Olive Dental's mission?" */}
+                                    <p className="text-xs font-bold text-primary uppercase tracking-widest">Our Mission</p>
+                                    <h3 className="text-2xl font-bold text-gray-900">What We Do & Why</h3>
+                                </div>
                             </div>
-                            <div>
-                                {/* AEO: Clear, direct answer format for "What is Olive Dental's mission?" */}
-                                <p className="text-xs font-bold text-primary uppercase tracking-widest">Our Mission</p>
-                                <h3 className="text-2xl font-bold text-gray-900">What We Do & Why</h3>
-                            </div>
+
+                            {/* AEO: Direct summary — structured for featured snippets */}
+                            <p
+                                className="text-gray-700 text-lg leading-relaxed mb-6 font-medium relative z-10"
+                                itemProp="knowsAbout"
+                            >
+                                The mission of Olive Dental & Face Clinic is to provide safe, transparent, and
+                                technology-driven dental and facial treatments to patients in Kondotty and across
+                                Malappuram — combining specialist expertise with compassionate, affordable care.
+                            </p>
+
+                            <ul className="space-y-3 relative z-10">
+                                {missionPoints.map((point, i) => (
+                                    <motion.li
+                                        key={i}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        variants={fadeUp}
+                                        custom={i * 0.08}
+                                        className="flex items-start gap-3"
+                                    >
+                                        <CheckCircle2 size={17} className="text-primary mt-0.5 shrink-0" />
+                                        <span className="text-gray-700 text-sm leading-relaxed">{point}</span>
+                                    </motion.li>
+                                ))}
+                            </ul>
                         </div>
-
-                        {/* AEO: Direct summary — structured for featured snippets */}
-                        <p
-                            className="text-gray-700 text-lg leading-relaxed mb-6 font-medium relative z-10"
-                            itemProp="knowsAbout"
-                        >
-                            The mission of Olive Dental & Face Clinic is to provide safe, transparent, and
-                            technology-driven dental and facial treatments to patients in Kondotty and across
-                            Malappuram — combining specialist expertise with compassionate, affordable care.
-                        </p>
-
-                        <ul className="space-y-3 relative z-10">
-                            {missionPoints.map((point, i) => (
-                                <motion.li
-                                    key={i}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    variants={fadeUp}
-                                    custom={i * 0.08}
-                                    className="flex items-start gap-3"
-                                >
-                                    <CheckCircle2 size={17} className="text-primary mt-0.5 shrink-0" />
-                                    <span className="text-gray-700 text-sm leading-relaxed">{point}</span>
-                                </motion.li>
-                            ))}
-                        </ul>
                     </motion.div>
 
                     {/* VISION */}
@@ -166,58 +179,71 @@ export default function MissionVision() {
                         viewport={{ once: true }}
                         variants={fadeUp}
                         custom={0.1}
-                        className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 lg:p-10 overflow-hidden text-white"
+                        className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden text-white"
                     >
+                        {/* Vision image header */}
+                        <div className="h-52 overflow-hidden relative">
+                            <img
+                                src="/images/vision-clinic-future.png"
+                                alt="Modern, premium interior of Olive Dental clinic Kondotty"
+                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent" />
+                        </div>
+
                         {/* Decorative */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white/[0.02] rounded-full -translate-y-1/3 translate-x-1/3" />
                         <div className="absolute bottom-0 left-0 w-40 h-40 bg-primary/10 rounded-full translate-y-1/2 -translate-x-1/2" />
 
-                        <div className="flex items-center gap-4 mb-6 relative z-10">
-                            <div className="w-14 h-14 bg-white/10 border border-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                                <Eye size={26} className="text-primary" />
+                        <div className="p-8 lg:p-10 pt-4">
+                            <div className="flex items-center gap-4 mb-6 relative z-10">
+                                <div className="w-14 h-14 bg-white/10 border border-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                                    <Eye size={26} className="text-primary" />
+                                </div>
+                                <div>
+                                    {/* AEO: Direct answer for "What is Olive Dental's vision?" */}
+                                    <p className="text-xs font-bold text-primary uppercase tracking-widest">Our Vision</p>
+                                    <h3 className="text-2xl font-bold text-white">Where We Are Going</h3>
+                                </div>
                             </div>
-                            <div>
-                                {/* AEO: Direct answer for "What is Olive Dental's vision?" */}
-                                <p className="text-xs font-bold text-primary uppercase tracking-widest">Our Vision</p>
-                                <h3 className="text-2xl font-bold text-white">Where We Are Going</h3>
+
+                            <p className="text-gray-300 text-lg leading-relaxed mb-6 font-medium relative z-10">
+                                Our vision is to become the most trusted multi-specialty dental and facial clinic in
+                                Malappuram district — known for clinical excellence, ethical practice, and genuine
+                                patient outcomes that stand the test of time.
+                            </p>
+
+                            <ul className="space-y-3 relative z-10">
+                                {visionPoints.map((point, i) => (
+                                    <motion.li
+                                        key={i}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        variants={fadeUp}
+                                        custom={i * 0.08}
+                                        className="flex items-start gap-3"
+                                    >
+                                        <div className="w-5 h-5 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center shrink-0 mt-0.5">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                                        </div>
+                                        <span className="text-gray-300 text-sm leading-relaxed">{point}</span>
+                                    </motion.li>
+                                ))}
+                            </ul>
+
+                            {/* AEO: Stat chips */}
+                            <div className="flex flex-wrap gap-3 mt-8 relative z-10">
+                                {['5★ Rated on Google', '10,000+ Patients', 'Est. Kondotty 2018'].map((stat) => (
+                                    <span
+                                        key={stat}
+                                        className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/10 text-white text-xs font-semibold backdrop-blur-sm"
+                                    >
+                                        {stat}
+                                    </span>
+                                ))}
                             </div>
-                        </div>
-
-                        <p className="text-gray-300 text-lg leading-relaxed mb-6 font-medium relative z-10">
-                            Our vision is to become the most trusted multi-specialty dental and facial clinic in
-                            Malappuram district — known for clinical excellence, ethical practice, and genuine
-                            patient outcomes that stand the test of time.
-                        </p>
-
-                        <ul className="space-y-3 relative z-10">
-                            {visionPoints.map((point, i) => (
-                                <motion.li
-                                    key={i}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    variants={fadeUp}
-                                    custom={i * 0.08}
-                                    className="flex items-start gap-3"
-                                >
-                                    <div className="w-5 h-5 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center shrink-0 mt-0.5">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                    </div>
-                                    <span className="text-gray-300 text-sm leading-relaxed">{point}</span>
-                                </motion.li>
-                            ))}
-                        </ul>
-
-                        {/* AEO: Stat chips */}
-                        <div className="flex flex-wrap gap-3 mt-8 relative z-10">
-                            {['5★ Rated on Google', '10,000+ Patients', 'Est. Kondotty 2018'].map((stat) => (
-                                <span
-                                    key={stat}
-                                    className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/10 text-white text-xs font-semibold backdrop-blur-sm"
-                                >
-                                    {stat}
-                                </span>
-                            ))}
                         </div>
                     </motion.div>
                 </div>
@@ -296,7 +322,7 @@ export default function MissionVision() {
                             },
                             {
                                 q: 'Where is Olive Dental & Face Clinic located?',
-                                a: 'Olive Dental & Face Clinic has two branches: the main clinic in Kunnumpuram opposite Daru Shifa Hospital, Kondotty, Malappuram, and a branch at Kottukkara, Kondotty.',
+                                a: 'Olive Dental & Face Clinic has two clinics: the main clinic in Kunnumpuram opposite Daru Shifa Hospital, Kondotty, Malappuram, and a clinic at Kottukkara, Kondotty.',
                             },
                         ].map((faq, i) => (
                             <div

@@ -17,6 +17,16 @@ export default function About() {
             <Helmet>
                 <title>About Us | Olive Dental & Face Clinic — Kunnumpuram & Kondotty</title>
                 <meta name="description" content="Advanced dental and medically guided facial care in Kunnumpuram & Kondotty. Learn about Olive Dental & Face Clinic's mission, values, and commitment to trust-based healthcare." />
+
+                <link rel="canonical" href="https://olivedentalofficial.in/about" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="About Olive Dental & Face Clinic" />
+                <meta property="og:description" content="Advanced dental and medically guided facial care in Kunnumpuram & Kondotty. Built on trust." />
+                <meta property="og:url" content="https://olivedentalofficial.in/about" />
+                <meta property="og:image" content="https://olivedentalofficial.in/og-image.jpg" />
+
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
 
             {/* ═══════════════════════════════════════════
@@ -218,11 +228,11 @@ export default function About() {
                                 ))}
                             </div>
 
-                            {/* Branch locations */}
+                            {/* Clinic locations */}
                             <div className="bg-gray-50 border border-gray-100 rounded-2xl p-5 space-y-4">
                                 {[
                                     { name: 'Kunnumpuram HQ', sub: 'Opp. Darushifa Hospital, Kondotty' },
-                                    { name: 'Kottukkara Branch', sub: 'Kondotty, Malappuram' }
+                                    { name: 'Kottukkara Clinic', sub: 'Kondotty, Malappuram' }
                                 ].map((b) => (
                                     <div key={b.name} className="flex items-center gap-3">
                                         <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -543,7 +553,7 @@ export default function About() {
                         <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-8 rounded-3xl">
                             <MapPin className="mx-auto mb-4 text-white" size={28} />
                             <h4 className="font-bold text-lg">Kottukkara</h4>
-                            <p className="text-blue-200 text-sm">Kondotty Branch</p>
+                            <p className="text-blue-200 text-sm">Kondotty Clinic</p>
                         </div>
                     </div>
 

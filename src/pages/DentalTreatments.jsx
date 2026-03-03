@@ -47,6 +47,16 @@ export default function DentalTreatments() {
             <Helmet>
                 <title>Advanced Dental Treatments | Olive Dental & Face Clinic, Kunnumpuram</title>
                 <meta name="description" content="Precision-driven dental treatments in Kunnumpuram, Kerala — dental implants, clear aligners, smile makeover, root canal, and more. Book your consultation." />
+
+                <link rel="canonical" href="https://olivedentalofficial.in/dental-treatments" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Advanced Dental Treatments | Olive Dental & Face Clinic" />
+                <meta property="og:description" content="Precision-driven dental treatments in Kunnumpuram, Kerala. Book your consultation today." />
+                <meta property="og:url" content="https://olivedentalofficial.in/dental-treatments" />
+                <meta property="og:image" content="https://olivedentalofficial.in/og-image.jpg" />
+
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
 
             {/* ─── HERO ─── */}

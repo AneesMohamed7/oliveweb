@@ -39,6 +39,16 @@ export default function FacialAesthetics() {
             <Helmet>
                 <title>Advanced Facial Aesthetic Treatments | Olive Dental & Face Clinic, Kunnumpuram</title>
                 <meta name="description" content="PRP treatment, Botox, microneedling, HydraFacial, and advanced anti-ageing treatments in Kunnumpuram, Kerala. Medically supervised facial aesthetics clinic." />
+
+                <link rel="canonical" href="https://olivedentalofficial.in/facial-aesthetics" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Facial Aesthetic Treatments | Olive Dental & Face Clinic" />
+                <meta property="og:description" content="Medically supervised facial aesthetics, PRP, and anti-ageing in Kunnumpuram, Kerala." />
+                <meta property="og:url" content="https://olivedentalofficial.in/facial-aesthetics" />
+                <meta property="og:image" content="https://olivedentalofficial.in/og-image.jpg" />
+
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
 
             {/* ─── HERO ─── */}

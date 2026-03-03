@@ -139,12 +139,21 @@ export default function Navbar() {
                         ))}
 
                         <a
+                            href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20an%20appointment"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-4 py-2 lg:px-5 lg:py-2.5 bg-accent text-white text-xs lg:text-sm font-medium rounded-full hover:bg-accent-dark transition-all shadow-lg hover:shadow-xl flex items-center gap-2 whitespace-nowrap"
+                        >
+                            <MessageCircle size={16} />
+                            <span className="hidden lg:inline">Book Appointment</span>
+                            <span className="lg:hidden">Book</span>
+                        </a>
+                        <a
                             href="tel:+918891494731"
-                            className="px-4 py-2 lg:px-5 lg:py-2.5 bg-primary text-white text-xs lg:text-sm font-medium rounded-full hover:bg-primary-dark transition-all shadow-lg hover:shadow-xl flex items-center gap-2 whitespace-nowrap"
+                            className="p-2 lg:p-2.5 bg-gray-100 text-primary rounded-full hover:bg-primary hover:text-white transition-all flex items-center justify-center"
+                            aria-label="Call Olive Dental"
                         >
                             <Phone size={16} />
-                            <span className="hidden lg:inline">+91 88914 94731</span>
-                            <span className="lg:hidden">Call</span>
                         </a>
                     </div>
 
