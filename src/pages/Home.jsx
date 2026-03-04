@@ -6,6 +6,7 @@ import Services from '../components/Services';
 import StatsSection from '../components/StatsSection';
 import ClinicHours from '../components/ClinicHours';
 import BeforeAfter from '../components/BeforeAfter';
+import InvisalignParallax from '../components/InvisalignParallax';
 import DoctorsSection from '../components/DoctorsSection';
 import FAQ from '../components/FAQ';
 import ContactCTA from '../components/ContactCTA';
@@ -38,6 +39,7 @@ export default function Home() {
             <StatsSection />
             <Features />
             <Services />
+            <InvisalignParallax />
             <BeforeAfter />
             <DoctorsSection />
             <GoogleReviews />
