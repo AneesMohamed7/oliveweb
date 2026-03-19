@@ -153,6 +153,7 @@ export const facialServices = [
         title: 'Chemical Peels',
         category: 'facial',
         type: 'advanced',
+        image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=800&auto=format&fit=crop',
         description: 'Medical-grade peels to improve skin texture, reduce pigmentation, and promote cellular renewal.'
     },
     {
@@ -160,6 +161,7 @@ export const facialServices = [
         title: 'Skin Resurfacing',
         category: 'facial',
         type: 'advanced',
+        image: 'https://images.unsplash.com/photo-1614806687383-29471f0084ba?q=80&w=800&auto=format&fit=crop',
         description: 'Advanced techniques to smooth uneven skin tone, reduce scarring, and restore a youthful complexion.'
     },
     {
@@ -167,6 +169,7 @@ export const facialServices = [
         title: 'Mesotherapy',
         category: 'facial',
         type: 'advanced',
+        image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?q=80&w=800&auto=format&fit=crop',
         description: 'Targeted microinjections delivering vitamins and hyaluronic acid deep into the skin for intensive hydration and glow.'
     },
     {
@@ -174,6 +177,7 @@ export const facialServices = [
         title: 'Lip Pigmentation',
         category: 'facial',
         type: 'advanced',
+        image: 'https://images.unsplash.com/photo-1629532661574-8b8941fc360b?q=80&w=800&auto=format&fit=crop',
         description: 'Gentle depigmentation therapy to restore natural, even-toned lip colour with clinical precision.'
     },
     {
@@ -181,6 +185,7 @@ export const facialServices = [
         title: 'Microblading',
         category: 'facial',
         type: 'advanced',
+        image: 'https://images.unsplash.com/photo-1588698125556-9cd593845bbf?q=80&w=800&auto=format&fit=crop',
         description: 'Semi-permanent eyebrow enhancement using fine strokes for naturally defined, fuller brows.'
     },
     // MINOR
@@ -189,6 +194,7 @@ export const facialServices = [
         title: 'Wart Removal',
         category: 'facial',
         type: 'minor',
+        image: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop',
         description: 'Safe clinical removal of warts.'
     },
     {
@@ -196,6 +202,7 @@ export const facialServices = [
         title: 'Mole Removal',
         category: 'facial',
         type: 'minor',
+        image: 'https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=800&auto=format&fit=crop',
         description: 'Precise mole excision with minimal scarring.'
     },
     {
@@ -203,6 +210,7 @@ export const facialServices = [
         title: 'Skin Tag Removal',
         category: 'facial',
         type: 'minor',
+        image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=800&auto=format&fit=crop',
         description: 'Quick, painless skin tag removal.'
     },
     {
@@ -210,6 +218,7 @@ export const facialServices = [
         title: 'Dandruff Treatment',
         category: 'facial',
         type: 'minor',
+        image: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop',
         description: 'Clinical scalp therapy for persistent dandruff.'
     },
     {
@@ -217,6 +226,7 @@ export const facialServices = [
         title: 'Under Eye Treatment',
         category: 'facial',
         type: 'minor',
+        image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?q=80&w=800&auto=format&fit=crop',
         description: 'Targeted treatment for dark circles and puffiness.'
     },
     {
@@ -224,6 +234,7 @@ export const facialServices = [
         title: 'Dermaplaning',
         category: 'facial',
         type: 'minor',
+        image: 'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?q=80&w=800&auto=format&fit=crop',
         description: 'Professional exfoliation for smooth, radiant skin.'
     }
 ];

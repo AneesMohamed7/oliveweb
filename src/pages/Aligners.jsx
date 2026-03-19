@@ -68,21 +68,25 @@ const beforeAfterCases = [
 const steps = [
     {
         icon: CalendarCheck,
+        image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=400&h=300',
         title: 'Consultation',
         desc: 'Discuss your goals, examine your teeth, and determine if aligners are right for you.'
     },
     {
         icon: ScanLine,
+        image: '/images/scan-intraoral.jpg',
         title: 'Digital Scan',
         desc: '3D intraoral scan creates a precise model of your teeth — no messy impressions.'
     },
     {
         icon: Layers,
+        image: '/images/aligners-product.jpg',
         title: 'Custom Aligners',
         desc: 'Your personalized trays are manufactured and delivered within 2–3 weeks.'
     },
     {
         icon: Sparkles,
+        image: '/images/aligner-lifestyle.jpg',
         title: 'Gradual Correction',
         desc: 'Wear each set of trays for 1–2 weeks as teeth shift into perfect alignment.'
     }
@@ -365,10 +369,7 @@ export default function Aligners() {
                         </p>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-4 gap-8 relative">
-                        {/* Desktop connector line */}
-                        <div className="hidden md:block absolute top-16 left-[12.5%] w-[75%] h-0.5 bg-primary/15" />
-
+                    <div className="grid md:grid-cols-4 gap-8">
                         {steps.map((step, i) => (
                             <motion.div
                                 key={i}
@@ -376,10 +377,13 @@ export default function Aligners() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: i * 0.12 }}
-                                className="relative text-center"
+                                className="relative text-center bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all z-10"
                             >
-                                <div className="w-14 h-14 mx-auto mb-5 bg-white border-2 border-primary/20 rounded-2xl flex items-center justify-center text-primary shadow-sm relative z-10">
-                                    <step.icon size={26} />
+                                <div className="mb-6 rounded-xl overflow-hidden aspect-video shadow-sm">
+                                    <img src={step.image} alt={step.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+                                <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-xl flex items-center justify-center text-primary relative">
+                                    <step.icon size={24} />
                                 </div>
                                 <span className="inline-block text-[11px] font-bold text-primary bg-primary/10 px-3 py-0.5 rounded-full mb-3">
                                     Step {i + 1}

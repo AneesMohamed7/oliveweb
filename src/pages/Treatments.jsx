@@ -32,18 +32,23 @@ export default function Treatments() {
                         >
                             <Link
                                 to="/dental-treatments"
-                                className="block bg-white rounded-2xl p-10 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group text-left h-full"
+                                className="block bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden h-full flex flex-col"
                             >
-                                <div className="w-16 h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                                    <Stethoscope size={32} />
+                                <div className="h-64 w-full relative overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1000&auto=format&fit=crop" alt="Dental Treatments" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                                 </div>
-                                <h2 className="text-2xl font-bold text-gray-900 mb-3">Dental Treatments</h2>
-                                <p className="text-gray-500 mb-6 leading-relaxed">
-                                    Advanced dental care including implants, clear aligners, smile makeovers, root canal treatment, and more — precision-driven for lasting results.
-                                </p>
-                                <span className="inline-flex items-center text-primary font-semibold group-hover:underline">
-                                    Explore Dental <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                                </span>
+                                <div className="p-8 flex flex-col flex-grow relative">
+                                    <div className="w-16 h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mb-5 -mt-16 relative z-10 border-4 border-white shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+                                        <Stethoscope size={28} />
+                                    </div>
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-3">Dental Treatments</h2>
+                                    <p className="text-gray-500 mb-6 leading-relaxed flex-grow">
+                                        Advanced dental care including implants, clear aligners, smile makeovers, root canal treatment, and more — precision-driven for lasting results.
+                                    </p>
+                                    <span className="inline-flex items-center text-primary font-semibold group-hover:underline">
+                                        Explore Dental <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                                    </span>
+                                </div>
                             </Link>
                         </motion.div>
 
@@ -54,18 +59,23 @@ export default function Treatments() {
                         >
                             <Link
                                 to="/facial-aesthetics"
-                                className="block bg-white rounded-2xl p-10 border border-amber-100/60 hover:shadow-xl hover:shadow-amber-100/30 hover:-translate-y-1 transition-all duration-300 group text-left h-full"
+                                className="block bg-white rounded-2xl border border-amber-100 hover:shadow-xl hover:shadow-amber-100/30 hover:-translate-y-1 transition-all duration-300 group overflow-hidden h-full flex flex-col"
                             >
-                                <div className="w-16 h-16 bg-amber-50 text-amber-700 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
-                                    <Sparkles size={32} />
+                                <div className="h-64 w-full relative overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1000&auto=format&fit=crop" alt="Facial Aesthetics" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                                 </div>
-                                <h2 className="text-2xl font-bold text-gray-900 mb-3">Facial Aesthetics</h2>
-                                <p className="text-gray-500 mb-6 leading-relaxed">
-                                    Medically supervised PRP, Botox, microneedling, thread lifts, HydraFacial, and advanced skin solutions for natural, refined results.
-                                </p>
-                                <span className="inline-flex items-center text-amber-700 font-semibold group-hover:underline">
-                                    Explore Aesthetics <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                                </span>
+                                <div className="p-8 flex flex-col flex-grow relative">
+                                    <div className="w-16 h-16 bg-amber-50 text-amber-700 rounded-2xl flex items-center justify-center mb-5 -mt-16 relative z-10 border-4 border-white shadow-sm group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                                        <Sparkles size={28} />
+                                    </div>
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-3">Facial Aesthetics</h2>
+                                    <p className="text-gray-500 mb-6 leading-relaxed flex-grow">
+                                        Medically supervised PRP, Botox, microneedling, thread lifts, HydraFacial, and advanced skin solutions for natural, refined results.
+                                    </p>
+                                    <span className="inline-flex items-center text-amber-700 font-semibold group-hover:underline">
+                                        Explore Aesthetics <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                                    </span>
+                                </div>
                             </Link>
                         </motion.div>
                     </div>

@@ -23,7 +23,7 @@ const facialFaqs = [
     },
     {
         question: 'How often should I get a HydraFacial?',
-        answer: 'For optimal results, we recommend a HydraFacial every 4–6 weeks. It complements other treatments and maintains skin health between more intensive procedures.'
+        answer: 'For  of optimal resultas optimal results, we recommend a HydraFacial every 4–6 weeks. It complements other treatments and maintains skin health between more intensive procedures.'
     }
 ];
 
@@ -169,22 +169,22 @@ export default function FacialAesthetics() {
                         <p className="text-gray-500">Evidence-based treatments for specific skin concerns, following strict clinical protocols.</p>
                     </motion.div>
 
-                    <div className="space-y-4">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {advancedFacial.map((service, index) => (
                             <motion.div
                                 key={service.id}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.08 }}
-                                className="bg-white rounded-xl p-5 border border-gray-100 flex items-start gap-4 hover:shadow-md hover:border-primary/10 transition-all"
+                                className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-primary/20 transition-all group flex flex-col"
                             >
-                                <div className="w-10 h-10 bg-blue-50 text-primary rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-                                    <Sparkles size={18} />
+                                <div className="h-48 overflow-hidden relative">
+                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                                 </div>
-                                <div>
-                                    <h3 className="font-bold text-gray-900 mb-1">{service.title}</h3>
-                                    <p className="text-gray-500 text-sm">{service.description}</p>
+                                <div className="p-6 flex flex-col flex-grow">
+                                    <h3 className="font-bold text-gray-900 mb-2">{service.title}</h3>
+                                    <p className="text-gray-500 text-sm leading-relaxed flex-grow">{service.description}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -196,14 +196,23 @@ export default function FacialAesthetics() {
             <section className="py-14 bg-white border-t border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h3 className="text-lg font-bold text-gray-900 mb-6">Additional Clinical Procedures</h3>
-                    <div className="flex flex-wrap gap-3">
-                        {minorFacial.map((service) => (
-                            <span
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                        {minorFacial.map((service, index) => (
+                            <motion.div
                                 key={service.id}
-                                className="px-4 py-2 bg-gray-50 text-gray-600 text-sm rounded-lg border border-gray-200 hover:border-primary/30 hover:bg-white transition-all cursor-default"
+                                initial={{ opacity: 0, y: 15 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.05 }}
+                                className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-primary/20 transition-all group flex flex-col"
                             >
-                                {service.title}
-                            </span>
+                                <div className="h-28 overflow-hidden relative">
+                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                </div>
+                                <div className="p-3 text-center bg-white flex flex-col justify-center flex-grow">
+                                    <h3 className="font-bold text-gray-800 text-xs sm:text-sm">{service.title}</h3>
+                                </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>

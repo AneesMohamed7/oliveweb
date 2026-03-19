@@ -108,6 +108,12 @@ export default function StatsSection() {
                 </div>
                 <p className="text-center text-gray-500 text-xs mt-8 tracking-wide">Since 2019 · across both clinic locations</p>
             </div>
+            <div>
+                <footer>
+                    counter
+                </footer>
+            </div>
         </section>
+
     );
 }

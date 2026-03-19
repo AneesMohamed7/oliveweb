@@ -175,7 +175,7 @@ export default function DentalTreatments() {
                         <p className="text-gray-500 max-w-2xl">Comprehensive treatments to address every dental need.</p>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {secondaryDental.map((service, index) => (
                             <motion.div
                                 key={service.id}
@@ -183,13 +183,18 @@ export default function DentalTreatments() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.08 }}
-                                className="bg-white rounded-xl p-5 border border-gray-100 hover:shadow-md transition-all group"
+                                className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-primary/20 transition-all group flex flex-col"
                             >
-                                <div className="w-10 h-10 bg-blue-50 text-primary rounded-lg flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-colors">
-                                    <service.icon size={20} />
+                                <div className="h-40 overflow-hidden relative">
+                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                                 </div>
-                                <h3 className="font-bold text-gray-900 mb-1.5">{service.title}</h3>
-                                <p className="text-gray-500 text-xs leading-relaxed">{service.description}</p>
+                                <div className="p-5 flex flex-col flex-grow">
+                                    <h3 className="font-bold text-gray-900 mb-1.5 flex items-center justify-between">
+                                        {service.title}
+                                        <service.icon size={16} className="text-primary opacity-50" />
+                                    </h3>
+                                    <p className="text-gray-500 text-xs leading-relaxed flex-grow">{service.description}</p>
+                                </div>
                             </motion.div>
                         ))}
                     </div>

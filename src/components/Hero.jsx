@@ -1,100 +1,229 @@
 import React from 'react';
-import { Phone, MessageCircle, ArrowRight, Star, ShieldCheck, Activity } from 'lucide-react';
+import {
+    Phone,
+    MessageCircle,
+    Star,
+    ShieldCheck,
+    Cpu,
+    Heart,
+    Users,
+    MapPin,
+    CheckCircle2,
+    ArrowRight,
+} from 'lucide-react';
 import { motion } from 'framer-motion';
+
+const TRUST_BADGES = [
+    { icon: ShieldCheck, label: 'Experienced Doctors' },
+    { icon: Cpu, label: 'Modern Technology' },
+    { icon: Heart, label: 'Gentle & Comfortable' },
+    { icon: Users, label: 'Trusted Locally' },
+];
+
+const STATS = [
+    { value: '2,000+', label: 'Happy Patients' },
+    { value: '4.9★', label: 'Google Rating' },
+    { value: '10+', label: 'Years of Care' },
+];
+
+const stagger = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.10, delayChildren: 0.15 } },
+};
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 28 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+};
+
+const scaleIn = {
+    hidden: { opacity: 0, scale: 0.88 },
+    show: { opacity: 1, scale: 1, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+};
 
 export default function Hero() {
     return (
-        <div className="relative bg-gradient-to-br from-blue-50 to-white overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <section className="relative min-h-screen flex flex-col overflow-hidden">
 
-                {/* Text Content */}
-                <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="z-10"
-                >
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-primary text-sm font-medium mb-6">
-                        <Star size={14} className="fill-primary" />
-                        Top Rated Dental Clinic in Kerala
-                    </div>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                        Fix Gaps, Crooked Teeth & Dental Problems — <span className="text-primary">Smile Confidently Again</span>
-                    </h1>
-                    <p className="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
-                        Painless smile correction and advanced dental treatments by experienced specialists, all under one roof in Malappuram.
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <a
-                            href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20an%20appointment"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-8 py-4 bg-accent text-white rounded-xl font-semibold shadow-lg hover:shadow-accent/30 hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
-                        >
-                            <MessageCircle size={20} />
-                            WhatsApp Appointment
-                        </a>
-                        <a
-                            href="tel:+918891494731"
-                            className="px-8 py-4 bg-white text-primary border-2 border-primary/20 rounded-xl font-semibold hover:bg-blue-50 hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
-                        >
-                            <Phone size={20} />
-                            Call Now
-                        </a>
-                    </div>
-
-                    <div className="mt-10 flex items-center gap-6 text-sm text-gray-500 font-medium">
-                        <div className="flex items-center gap-2">
-                            <ShieldCheck size={18} className="text-accent" />
-                            Certified Specialists
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <Activity size={18} className="text-accent" />
-                            Advanced Technology
-                        </div>
-                    </div>
-                </motion.div>
-
-                {/* Hero Image */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8 }}
-                    className="relative lg:h-[600px] h-auto flex items-center justify-center"
-                >
-                    {/* Abstract Background Shapes */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-100/50 rounded-full blur-3xl -z-10" />
-
-                    <img
-                        src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1000&auto=format&fit=crop"
-                        alt="Smiling patient"
-                        className="w-full h-auto rounded-3xl shadow-2xl object-cover lg:max-h-[550px] z-10"
-                    />
-
-                    {/* Floating Badge */}
-                    <motion.div
-                        initial={{ y: 20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.5 }}
-                        className="absolute bottom-10 left-[-20px] bg-white p-4 rounded-xl shadow-xl flex items-center gap-3 z-20"
-                    >
-                        <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 font-bold">
-                            4.9
-                        </div>
-                        <div>
-                            <div className="flex text-yellow-500">
-                                <Star size={14} fill="currentColor" />
-                                <Star size={14} fill="currentColor" />
-                                <Star size={14} fill="currentColor" />
-                                <Star size={14} fill="currentColor" />
-                                <Star size={14} fill="currentColor" />
-                            </div>
-                            <p className="text-xs font-semibold text-gray-600">Google Reviews</p>
-                        </div>
-                    </motion.div>
-                </motion.div>
+            {/* BG IMAGE */}
+            <div className="absolute inset-0 -z-20">
+                <img
+                    src="https://images.unsplash.com/photo-1629909615184-74f495363b67?q=85&w=1800&auto=format&fit=crop"
+                    alt=""
+                    aria-hidden="true"
+                    className="w-full h-full object-cover object-center"
+                    loading="lazy"
+                />
             </div>
-        </div>
+
+            {/* DARK OVERLAY */}
+            <div
+                className="absolute inset-0 -z-10"
+                style={{
+                    background: 'linear-gradient(135deg, rgba(10,24,60,0.92) 0%, rgba(10,40,80,0.82) 50%, rgba(5,20,50,0.75) 100%)',
+                }}
+            />
+
+            {/* TOP NAV */}
+            <motion.div
+                initial={{ opacity: 0, y: -12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="relative z-10 flex items-center justify-end px-5 sm:px-8 lg:px-14 py-5"
+            >
+
+            </motion.div>
+
+            {/* MAIN CONTENT */}
+            <div className="relative z-10 flex-1 flex items-center">
+                <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 py-12 lg:py-0">
+                    <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+
+                        {/* LEFT */}
+                        <motion.div
+                            variants={stagger}
+                            initial="hidden"
+                            animate="show"
+                            className="flex flex-col"
+                        >
+                            {/* <motion.div variants={fadeUp}>
+                                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs font-semibold tracking-widest uppercase mb-6">
+                                    <MapPin size={11} strokeWidth={2.5} className="text-sky-300" />
+                                    Kunnumpuram, Kerala
+                                </span>
+                            </motion.div> */}
+
+                            <motion.h1
+                                variants={fadeUp}
+                                className="text-4xl sm:text-5xl lg:text-[3.2rem] font-extrabold text-white leading-[1.1] tracking-tight mb-5"
+                            >
+                                Advanced Dental &amp;{' '}
+                                <span
+                                    style={{
+                                        background: 'linear-gradient(95deg, #7dd3fc 0%, #38bdf8 50%, #bae6fd 100%)',
+                                        WebkitBackgroundClip: 'text',
+                                        WebkitTextFillColor: 'transparent',
+                                        backgroundClip: 'text',
+                                    }}
+                                >
+                                    Facial Care
+                                </span>
+                                <br />in Kunnumpuram
+                            </motion.h1>
+
+                            <motion.p
+                                variants={fadeUp}
+                                className="text-base sm:text-lg text-white/70 leading-relaxed mb-8 max-w-[500px]"
+                            >
+                                From dental implants and aligners to advanced facial aesthetic
+                                treatments — experience modern care with trusted specialists,
+                                all under one roof.
+                            </motion.p>
+
+                            <motion.div
+                                variants={fadeUp}
+                                className="flex flex-wrap gap-2 mb-9"
+                            >
+                                {TRUST_BADGES.map(({ icon: Icon, label }) => (
+                                    <div
+                                        key={label}
+                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white/85 text-xs font-medium"
+                                    >
+                                        <Icon size={13} className="text-sky-300" strokeWidth={2} />
+                                        {label}
+                                    </div>
+                                ))}
+                            </motion.div>
+
+                            <motion.div
+                                variants={fadeUp}
+                                className="flex flex-col sm:flex-row gap-3.5 mb-6"
+                            >
+
+                                <a
+                                    href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20an%20appointment"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-green-500 hover:bg-green-400 text-white font-bold text-sm shadow-lg shadow-green-900/40 hover:shadow-green-500/40 transition-all duration-200 hover:-translate-y-0.5"
+                                >
+                                    <MessageCircle size={19} strokeWidth={2} />
+                                    Book via WhatsApp
+                                    <ArrowRight size={15} className="opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                                </a>
+
+                                <a
+                                    href="tel:+918891494731"
+                                    className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/25 hover:bg-white/20 text-white font-bold text-sm transition-all duration-200 hover:-translate-y-0.5"
+                                >
+                                    <Phone size={18} strokeWidth={2} />
+                                    Call Now
+                                </a>
+                            </motion.div>
+
+                            <motion.p
+                                variants={fadeUp}
+                                className="flex items-center gap-1.5 text-sm text-white/50"
+                            >
+                                <CheckCircle2 size={13} className="text-green-400 flex-shrink-0" strokeWidth={2.5} />
+                                Trusted by Kunnumpuram and nearby communities
+                            </motion.p>
+                        </motion.div>
+
+                        {/* RIGHT — image card */}
+                        <motion.div
+                            variants={scaleIn}
+                            initial="hidden"
+                            animate="show"
+                            className="relative hidden lg:flex flex-col gap-4 items-center justify-center"
+                        >
+                            {/* Glow */}
+                            <div
+                                className="absolute inset-6 rounded-3xl blur-2xl opacity-25 pointer-events-none"
+                                style={{ background: 'radial-gradient(ellipse, #38bdf8 0%, #1d4ed8 60%, transparent 100%)' }}
+                            />
+
+                            {/* Image */}
+                            <div
+                                className="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10"
+                                style={{ aspectRatio: '4/3' }}
+                            >
+                                <img
+                                    src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop"
+                                    alt="Dental specialist with patient"
+                                    className="w-full h-full object-cover object-top"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1840]/70 via-transparent to-transparent pointer-events-none" />
+                                <div className="absolute bottom-5 left-5 right-5">
+                                    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3">
+                                        <p className="text-white font-semibold text-sm">Olive Dental &amp; Face Clinic</p>
+                                        <p className="text-white/60 text-xs mt-0.5">Multi-Specialty · Kunnumpuram</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Stats row below image */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 12 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.7, duration: 0.5 }}
+                                className="w-full grid grid-cols-3 gap-3"
+                            >
+                                {STATS.map(({ value, label }) => (
+                                    <div
+                                        key={label}
+                                        className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl py-4 px-3"
+                                    >
+                                        <span className="text-white font-extrabold text-xl tracking-tight">{value}</span>
+                                        <span className="text-white/55 text-xs mt-1 text-center leading-tight">{label}</span>
+                                    </div>
+                                ))}
+                            </motion.div>
+                        </motion.div>
+
+                    </div>
+                </div>
+            </div >
+
+        </section >
     );
 }
