@@ -136,7 +136,7 @@ export default function FacialAesthetics() {
                             >
                                 {service.image && (
                                     <div className="h-52 overflow-hidden relative">
-                                        <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                        <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent opacity-60" />
                                         <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1 rounded-full bg-primary/90 text-white shadow-sm">
                                             Medical Aesthetic
@@ -180,7 +180,7 @@ export default function FacialAesthetics() {
                                 className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-primary/20 transition-all group flex flex-col"
                             >
                                 <div className="h-48 overflow-hidden relative">
-                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                                 </div>
                                 <div className="p-6 flex flex-col flex-grow">
                                     <h3 className="font-bold text-gray-900 mb-2">{service.title}</h3>
@@ -207,7 +207,7 @@ export default function FacialAesthetics() {
                                 className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-primary/20 transition-all group flex flex-col"
                             >
                                 <div className="h-28 overflow-hidden relative">
-                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                                 </div>
                                 <div className="p-3 text-center bg-white flex flex-col justify-center flex-grow">
                                     <h3 className="font-bold text-gray-800 text-xs sm:text-sm">{service.title}</h3>

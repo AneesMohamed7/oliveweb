@@ -64,7 +64,7 @@ export default function Doctors() {
                                             <img
                                                 src={doctor.image}
                                                 alt={`${doctor.name} - ${doctor.specialty} at Olive Dental & Face Clinic`}
-                                                className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                                                className="w-full h-full object-cover"
                                             />
                                         </div>
 

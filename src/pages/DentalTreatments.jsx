@@ -141,7 +141,7 @@ export default function DentalTreatments() {
                                 className="bg-white rounded-2xl border border-gray-100 overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
                             >
                                 <div className="h-52 overflow-hidden relative">
-                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent opacity-60" />
                                 </div>
                                 <div className="p-6 flex flex-col flex-grow">
@@ -186,7 +186,7 @@ export default function DentalTreatments() {
                                 className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-primary/20 transition-all group flex flex-col"
                             >
                                 <div className="h-40 overflow-hidden relative">
-                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                                 </div>
                                 <div className="p-5 flex flex-col flex-grow">
                                     <h3 className="font-bold text-gray-900 mb-1.5 flex items-center justify-between">

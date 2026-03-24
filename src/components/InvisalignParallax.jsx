@@ -20,7 +20,7 @@ export default function InvisalignParallax() {
                 style={{ backgroundImage: "url('/images/invisalign-parallax-bg.png')" }}
             />
             {/* Soft clinical overlay */}
-            <div className="absolute inset-0 bg-white/85 backdrop-blur-[2px]" />
+            <div className="absolute inset-0 bg-white/50 backdrop-blur-[1px]" />
 
             {/* ── Main Content ── */}
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -113,20 +113,20 @@ export default function InvisalignParallax() {
                             transition={{ duration: 0.5, delay: 0.5 }}
                             className="flex flex-col sm:flex-row gap-3"
                         >
-                            <Link
-                                to="/aligners"
-                                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-all duration-300 shadow-md"
-                            >
-                                Learn More
-                                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                            </Link>
                             <a
                                 href="tel:+918891494731"
-                                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-primary/20 text-primary font-semibold rounded-xl hover:bg-primary/5 transition-all duration-300"
+                                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-all duration-300 shadow-md"
                             >
                                 <Phone size={16} />
                                 Book Consultation
                             </a>
+                            <Link
+                                to="/aligners"
+                                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-primary/20 text-primary font-semibold rounded-xl hover:bg-primary/5 transition-all duration-300"
+                            >
+                                Learn More
+                                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                            </Link>
                         </motion.div>
                     </div>
                 </div>
