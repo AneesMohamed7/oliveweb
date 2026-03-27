@@ -17,6 +17,20 @@ import Implants from './pages/Implants';
 import DentalTreatments from './pages/DentalTreatments';
 import FacialAesthetics from './pages/FacialAesthetics';
 
+// Dental Treatments
+import RootCanal from './pages/RootCanal';
+import CrownsAndBridges from './pages/CrownsAndBridges';
+import TeethWhitening from './pages/TeethWhitening';
+import KidsDentistry from './pages/KidsDentistry';
+import WisdomTooth from './pages/WisdomTooth';
+
+// Facial Aesthetics
+import PRP from './pages/PRP';
+import Botox from './pages/Botox';
+import Microneedling from './pages/Microneedling';
+import ThreadLift from './pages/ThreadLift';
+import HydraFacial from './pages/HydraFacial';
+
 export default function App() {
   const location = useLocation();
   const { scrollYProgress } = useScroll();
@@ -49,6 +63,21 @@ export default function App() {
             <Route path="/treatments/aligners" element={<PageWrapper><Aligners /></PageWrapper>} />
             <Route path="/treatments/veneers" element={<PageWrapper><Veneers /></PageWrapper>} />
             <Route path="/treatments/implants" element={<PageWrapper><Implants /></PageWrapper>} />
+            
+            {/* New Dental Routes */}
+            <Route path="/treatments/root-canal" element={<PageWrapper><RootCanal /></PageWrapper>} />
+            <Route path="/treatments/crowns-bridges" element={<PageWrapper><CrownsAndBridges /></PageWrapper>} />
+            <Route path="/treatments/teeth-whitening" element={<PageWrapper><TeethWhitening /></PageWrapper>} />
+            <Route path="/treatments/kids-dentistry" element={<PageWrapper><KidsDentistry /></PageWrapper>} />
+            <Route path="/treatments/wisdom-tooth" element={<PageWrapper><WisdomTooth /></PageWrapper>} />
+
+            {/* New Facial Routes */}
+            <Route path="/treatments/prp" element={<PageWrapper><PRP /></PageWrapper>} />
+            <Route path="/treatments/botox" element={<PageWrapper><Botox /></PageWrapper>} />
+            <Route path="/treatments/microneedling" element={<PageWrapper><Microneedling /></PageWrapper>} />
+            <Route path="/treatments/thread-lift" element={<PageWrapper><ThreadLift /></PageWrapper>} />
+            <Route path="/treatments/hydrafacial" element={<PageWrapper><HydraFacial /></PageWrapper>} />
+
             <Route path="/dental-treatments" element={<PageWrapper><DentalTreatments /></PageWrapper>} />
             <Route path="/facial-aesthetics" element={<PageWrapper><FacialAesthetics /></PageWrapper>} />
             <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />

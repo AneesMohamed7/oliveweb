@@ -19,7 +19,7 @@ export default function DoctorsSection() {
                     className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16"
                 >
                     <div>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Multi-Specialty Dental Experts</h2>
+                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Dental Experts</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
                             Our team of specialists works together to provide comprehensive care under one roof.
                         </p>

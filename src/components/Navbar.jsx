@@ -46,7 +46,7 @@ export default function Navbar() {
         { name: 'Contact', path: '/contact' },
     ];
 
-    const isTreatmentsActive = ['/treatments', '/dental-treatments', '/facial-aesthetics', '/treatments/aligners', '/treatments/implants', '/treatments/veneers'].includes(location.pathname);
+    const isTreatmentsActive = location.pathname.startsWith('/treatments') || ['/dental-treatments', '/facial-aesthetics'].includes(location.pathname);
 
     return (
         <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">

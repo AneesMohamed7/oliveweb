@@ -32,8 +32,7 @@ export default function DentalTreatments() {
     const [openFaq, setOpenFaq] = useState(null);
 
     const allDental = dentalServices;
-    const coreDental = allDental.filter(s => s.type === 'core');
-    const secondaryDental = allDental.filter(s => s.type === 'secondary');
+    const coreDental = allDental;
 
     const trustPillars = [
         { icon: Cpu, title: 'Digital Diagnostics', text: 'CBCT scans and digital impressions for precise treatment planning.' },
@@ -155,45 +154,6 @@ export default function DentalTreatments() {
                                             Learn More <ArrowRight size={14} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
                                         </Link>
                                     )}
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ─── SECONDARY TREATMENTS ─── */}
-            <section className="py-20 bg-background-soft">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="mb-14"
-                    >
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Complete Dental Solutions</h2>
-                        <p className="text-gray-500 max-w-2xl">Comprehensive treatments to address every dental need.</p>
-                    </motion.div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {secondaryDental.map((service, index) => (
-                            <motion.div
-                                key={service.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.08 }}
-                                className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-primary/20 transition-all group flex flex-col"
-                            >
-                                <div className="h-40 overflow-hidden relative">
-                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
-                                </div>
-                                <div className="p-5 flex flex-col flex-grow">
-                                    <h3 className="font-bold text-gray-900 mb-1.5 flex items-center justify-between">
-                                        {service.title}
-                                        <service.icon size={16} className="text-primary opacity-50" />
-                                    </h3>
-                                    <p className="text-gray-500 text-xs leading-relaxed flex-grow">{service.description}</p>
                                 </div>
                             </motion.div>
                         ))}

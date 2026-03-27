@@ -102,17 +102,12 @@ export default function StatsSection() {
                 </motion.div>
 
                 <div className="grid md:grid-cols-3 gap-12 md:gap-8">
-                    <Counter from={0} to={200} label="Aligners Delivered" icon={Smile} delay={0} />
-                    <Counter from={0} to={350} label="Dental Implants" icon={Anchor} delay={0.2} />
-                    <Counter from={0} to={3000} label="Happy Patients" icon={Users} delay={0.4} />
+                    <Counter from={0} to={80} label="Aligners Delivered" icon={Smile} delay={0} />
+                    <Counter from={0} to={75} label="Dental Implants" icon={Anchor} delay={0.2} />
+                    <Counter from={0} to={4000} label="Happy Patients" icon={Users} delay={0.4} />
                 </div>
-                <p className="text-center text-gray-500 text-xs mt-8 tracking-wide">Since 2019 · across both clinic locations</p>
             </div>
-            <div>
-                <footer>
-                    counter
-                </footer>
-            </div>
+
         </section>
 
     );

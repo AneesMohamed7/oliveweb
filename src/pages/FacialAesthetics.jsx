@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { facialServices } from '../data/services';
 import { ArrowRight, ShieldCheck, Sparkles, FlaskConical, Heart, ChevronDown, ChevronUp, Phone, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const facialFaqs = [
     {
@@ -30,9 +31,7 @@ const facialFaqs = [
 export default function FacialAesthetics() {
     const [openFaq, setOpenFaq] = useState(null);
 
-    const coreFacial = facialServices.filter(s => s.type === 'core');
-    const advancedFacial = facialServices.filter(s => s.type === 'advanced');
-    const minorFacial = facialServices.filter(s => s.type === 'minor');
+    const coreFacial = facialServices;
 
     return (
         <>
@@ -144,73 +143,18 @@ export default function FacialAesthetics() {
                                     </div>
                                 )}
                                 <div className="p-6 flex flex-col flex-grow">
-                                    <div className="w-11 h-11 bg-blue-50 text-primary rounded-xl flex items-center justify-center mb-4 -mt-11 relative z-10 border-2 border-white shadow-md group-hover:bg-primary group-hover:text-white transition-colors">
-                                        <service.icon size={22} />
-                                    </div>
+                                    {service.icon && (
+                                        <div className="w-11 h-11 bg-blue-50 text-primary rounded-xl flex items-center justify-center mb-4 -mt-11 relative z-10 border-2 border-white shadow-md group-hover:bg-primary group-hover:text-white transition-colors">
+                                            <service.icon size={22} />
+                                        </div>
+                                    )}
                                     <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
-                                    <p className="text-gray-500 text-sm leading-relaxed flex-grow">{service.description}</p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ─── SECTION 2: ADVANCED SKIN SOLUTIONS ─── */}
-            <section className="py-20 bg-[#FAF8F5]">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="mb-12"
-                    >
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Targeted Skin Solutions</h2>
-                        <p className="text-gray-500">Evidence-based treatments for specific skin concerns, following strict clinical protocols.</p>
-                    </motion.div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {advancedFacial.map((service, index) => (
-                            <motion.div
-                                key={service.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.08 }}
-                                className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-primary/20 transition-all group flex flex-col"
-                            >
-                                <div className="h-48 overflow-hidden relative">
-                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
-                                </div>
-                                <div className="p-6 flex flex-col flex-grow">
-                                    <h3 className="font-bold text-gray-900 mb-2">{service.title}</h3>
-                                    <p className="text-gray-500 text-sm leading-relaxed flex-grow">{service.description}</p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ─── SECTION 3: MINOR PROCEDURES ─── */}
-            <section className="py-14 bg-white border-t border-gray-100">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h3 className="text-lg font-bold text-gray-900 mb-6">Additional Clinical Procedures</h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                        {minorFacial.map((service, index) => (
-                            <motion.div
-                                key={service.id}
-                                initial={{ opacity: 0, y: 15 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.05 }}
-                                className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-primary/20 transition-all group flex flex-col"
-                            >
-                                <div className="h-28 overflow-hidden relative">
-                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
-                                </div>
-                                <div className="p-3 text-center bg-white flex flex-col justify-center flex-grow">
-                                    <h3 className="font-bold text-gray-800 text-xs sm:text-sm">{service.title}</h3>
+                                    <p className="text-gray-500 text-sm leading-relaxed flex-grow mb-4">{service.description}</p>
+                                    {service.link && (
+                                        <Link to={service.link} className="inline-flex items-center text-primary font-semibold text-sm group/link">
+                                            Learn More <ArrowRight size={14} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
+                                        </Link>
+                                    )}
                                 </div>
                             </motion.div>
                         ))}
