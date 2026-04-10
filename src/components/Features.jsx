@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, ShieldCheck, Scan, ClipboardCheck } from 'lucide-react';
+import { Users, ShieldCheck, Stethoscope, ClipboardCheck, Wallet, BadgeCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Features() {
@@ -7,23 +7,33 @@ export default function Features() {
         {
             icon: Users,
             title: 'Multi-Specialty Care Under One Roof',
-            text: 'Comprehensive dental and facial treatments delivered through coordinated and structured clinical planning.'
+            text: 'Our dental and facial specialists collaborate under one roof to deliver comprehensive, coordinated treatment plans — from smile makeovers to advanced facial aesthetics.'
+        },
+        {
+            icon: Stethoscope,
+            title: 'Experienced Doctors You Can Trust',
+            text: 'Backed by years of clinical expertise, our qualified dentists and aesthetic physicians at Olive Dental & Face Clinic, Kunnumpuram bring precision and care to every procedure.'
         },
         {
             icon: ClipboardCheck,
             title: 'Structured Diagnosis & Treatment Planning',
-            text: 'Digital diagnostics and detailed evaluation ensure accurate, predictable, and long-term results.'
+            text: 'Advanced digital diagnostics and detailed clinical evaluation ensure accurate, predictable, and long-lasting dental and facial treatment results.'
         },
         {
             icon: ShieldCheck,
-            title: 'Strict Sterilization Standards',
-            text: 'Every procedure follows standardized sterilization protocols to ensure maximum patient safety.'
+            title: 'Strict Sterilization & Safety Standards',
+            text: 'Every procedure follows international sterilization protocols and infection control standards to ensure maximum patient safety at all times.'
         },
         {
-            icon: Scan,
-            title: 'Transparent Consultation Process',
-            text: 'Clear explanations, treatment options, and informed decisions before every procedure.'
-        }
+            icon: BadgeCheck,
+            title: 'Official Invisalign® Provider',
+            text: 'Olive Dental & Face Clinic is a certified Invisalign® provider — offering genuine Invisalign® treatment with 3D digital planning, not generic aligners. Trusted by patients across Kondotty and Malappuram.'
+        },
+        {
+            icon: Wallet,
+            title: 'Affordable & Transparent Pricing',
+            text: 'Flexible payment options and clear, upfront pricing make high-quality dental and facial care accessible to every patient in Kunnumpuram and nearby areas.'
+        },
     ];
 
     const containerVariants = {
@@ -75,7 +85,7 @@ export default function Features() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
                 >
                     {features.map((feature, idx) => (
                         <motion.div

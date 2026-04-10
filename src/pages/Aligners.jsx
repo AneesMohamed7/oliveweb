@@ -7,6 +7,7 @@ import {
     HeartPulse, Award, Users, MonitorSmartphone
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import ContactCTA from '../components/ContactCTA';
 
 /* ───────────── DATA ───────────── */
 
@@ -493,36 +494,7 @@ export default function Aligners() {
                 </div>
             </section>
 
-            {/* ═══════════ 12. FINAL CTA ═══════════ */}
-            <section className="py-24 bg-primary text-white text-center">
-                <div className="max-w-3xl mx-auto px-4">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready for Your New Smile?</h2>
-                        <p className="text-xl text-blue-100 mb-10 max-w-xl mx-auto">
-                            Book a consultation today. We'll scan your teeth and show you
-                            exactly what your new smile could look like.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a
-                                href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I'm%20interested%20in%20Clear%20Aligners"
-                                className="px-8 py-4 bg-accent text-white rounded-xl font-bold hover:bg-accent-dark transition-all flex items-center justify-center gap-2 shadow-lg"
-                            >
-                                <MessageCircle size={20} /> WhatsApp Us
-                            </a>
-                            <a
-                                href="tel:+918891494731"
-                                className="px-8 py-4 bg-white text-primary rounded-xl font-bold hover:bg-blue-50 transition-all flex items-center justify-center gap-2 shadow-sm"
-                            >
-                                <Phone size={20} /> Call Now
-                            </a>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
+            <ContactCTA />
         </div>
     );
 }

@@ -34,7 +34,7 @@ export default function ClinicHours() {
                                             </li>
                                             <li className="flex justify-between w-48 text-gray-500">
                                                 <span>Sunday</span>
-                                                <span>Closed</span>
+                                                <span>Appointment based</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -62,7 +62,7 @@ export default function ClinicHours() {
                                 initial={{ scale: 1.1 }}
                                 whileInView={{ scale: 1 }}
                                 transition={{ duration: 1.5 }}
-                                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2068"
+                                src="public/images/clinic-front-inside.jpg"
                                 alt="Modern Dental Clinic Reception"
                                 className="absolute inset-0 w-full h-full object-cover opacity-80"
                             />

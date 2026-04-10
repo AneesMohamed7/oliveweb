@@ -1,9 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ShieldCheck, Microscope, Users, Search, CheckCircle2, Star, Heart, Phone, MessageCircle, Clock, Award } from 'lucide-react';
+import { ShieldCheck, Microscope, Users, Search, CheckCircle2, Star, Heart, Phone, MessageCircle, Clock, Award, Sparkles, Trophy } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import DoctorsSection from '../components/DoctorsSection';
+import ContactCTA from '../components/ContactCTA';
+import GoogleReviews from '../components/GoogleReviews';
 
 const fadeUp = {
     hidden: { opacity: 0, y: 24 },
@@ -94,12 +96,12 @@ export default function About() {
                             className="flex flex-wrap gap-3"
                         >
                             {[
-                                { icon: '⭐', label: '5.0 Google Rating', sub: 'Verified Patient Reviews' },
-                                { icon: '👥', label: '6000+ Patients', sub: 'Served' },
-                                { icon: '🦷', label: '6 Specialists', sub: 'Under One Roof' },
+                                { icon: Star, label: '5.0 Google Rating', sub: 'Verified Patient Reviews' },
+                                { icon: Users, label: '6000+ Patients', sub: 'Served' },
+                                { icon: ShieldCheck, label: 'Invisalign®', sub: 'Certified Provider' },
                             ].map((chip) => (
                                 <div key={chip.label} className="bg-white/10 border border-white/15 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2">
-                                    <span className="text-base">{chip.icon}</span>
+                                    <chip.icon size={18} className="text-primary" />
                                     <div>
                                         <p className="text-white font-semibold text-xs leading-none mb-0.5">{chip.label}</p>
                                         <p className="text-gray-400 text-[10px]">{chip.sub}</p>
@@ -129,92 +131,223 @@ export default function About() {
             </section>
 
             {/* ═══════════════════════════════════════════
-                2. ABOUT / STORY — Merged content
-                   who you are · why you started · what makes you different · your approach
+                2. OUR STORY — Reimagined with depth
             ═══════════════════════════════════════════ */}
-            <section className="py-24 bg-white overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section className="py-32 bg-white relative overflow-hidden">
+                {/* Decorative Background Elements */}
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/30 -skew-x-12 translate-x-1/4 pointer-events-none" />
+                <div className="absolute top-1/4 left-0 text-[20rem] font-black text-gray-50 leading-none select-none pointer-events-none -translate-x-1/4">
+                    OLIVE
+                </div>
 
-                    {/* Section header */}
-                    <motion.div
-                        initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-                        className="text-center mb-16"
-                    >
-                        <span className="text-primary font-bold tracking-[0.22em] uppercase text-xs mb-3 block">Our Story</span>
-                        <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                            Built to Bridge a Gap<br className="hidden lg:block" /> in Dental Care
-                        </h2>
-                    </motion.div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-                    {/* Two-column layout: image left, text right */}
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-                        {/* Left — Image + badge */}
+                        {/* Left — Image Composition */}
                         <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.7 }}
+                            transition={{ duration: 0.8 }}
                             className="relative"
                         >
-                            <div className="rounded-3xl overflow-hidden shadow-xl" style={{ aspectRatio: '4/5' }}>
+                            {/* Decorative square behind image */}
+                            <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-3xl -z-10 animate-pulse" />
+
+                            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group">
                                 <img
-                                    src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&q=80&w=700"
-                                    alt="Dentist consulting a patient at Olive Dental Kondotty"
-                                    className="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&q=80&w=800"
+                                    alt="Expert consultation at Olive Dental"
+                                    className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
-                            </div>
-                            {/* Years badge */}
-                            <div className="absolute -bottom-4 -right-4 bg-primary text-white rounded-2xl px-5 py-4 shadow-xl shadow-primary/30">
-                                <p className="text-3xl font-extrabold leading-none">6+</p>
-                                <p className="text-[11px] font-semibold text-blue-100 mt-1">Years of Care</p>
+                                <div className="absolute inset-0 bg-primary/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity" />
                             </div>
 
+                            {/* Floating Stats Badge */}
+                            <motion.div
+                                initial={{ y: 20, opacity: 0 }}
+                                whileInView={{ y: 0, opacity: 1 }}
+                                transition={{ delay: 0.5, duration: 0.6 }}
+                                className="absolute -bottom-8 -right-8 bg-white p-1 rounded-3xl shadow-2xl"
+                            >
+                                <div className="bg-primary text-white rounded-[1.25rem] px-8 py-6 text-center">
+                                    <p className="text-4xl font-extrabold mb-1">6+</p>
+                                    <p className="text-[10px] font-bold uppercase tracking-wider text-blue-100">Years of Care</p>
+                                </div>
+                            </motion.div>
                         </motion.div>
 
-                        {/* Right — Story content blocks */}
+                        {/* Right — Story Content */}
+                        <div className="space-y-12">
+                            <motion.div
+                                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+                            >
+                                <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">The Olive Journey</span>
+                                <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-[1.15] mb-6">
+                                    Built to Bridge the Gap in <span className="text-primary">Advanced Dental Care</span>
+                                </h2>
+                            </motion.div>
+
+                            <div className="grid sm:grid-cols-2 gap-8">
+                                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1}>
+                                    <h3 className="flex items-center gap-3 text-sm font-bold text-gray-900 uppercase tracking-widest mb-4">
+                                        <div className="w-1.5 h-6 bg-primary rounded-full" />
+                                        Who We Are
+                                    </h3>
+                                    <p className="text-gray-500 text-sm leading-relaxed">
+                                        Olive Dental & Face Clinic is a multi-specialty hub in Kunnumpuram & Kondotty, where 6 specialist doctors collaborate to provide medically-guided excellence under one roof.
+                                    </p>
+                                </motion.div>
+
+                                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={2}>
+                                    <h3 className="flex items-center gap-3 text-sm font-bold text-gray-900 uppercase tracking-widest mb-4">
+                                        <div className="w-1.5 h-6 bg-accent rounded-full" />
+                                        Why We Started
+                                    </h3>
+                                    <p className="text-gray-500 text-sm leading-relaxed">
+                                        Founded in 2018, we aimed to bring metropolitan-standard dental procedures to Malappuram, ensuring every family has access to tech-driven, ethical healthcare.
+                                    </p>
+                                </motion.div>
+                            </div>
+
+                            {/* Features Glass Card */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0.4 }}
+                                className="bg-white/40 backdrop-blur-md border border-gray-100 rounded-3xl p-8 shadow-sm relative overflow-hidden group hover:shadow-xl transition-all"
+                            >
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700" />
+                                <h3 className="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-6">What Makes Us Different</h3>
+                                <div className="space-y-4 relative z-10">
+                                    {[
+                                        '6 Dental Specialists',
+                                        'Certified Invisalign® Providers',
+                                        'Digital-First Treatment Protocols',
+                                        'Radical Cost Transparency',
+                                        'Medically-Guided Aesthetic Care'
+                                    ].map((point, idx) => (
+                                        <div key={idx} className="flex items-center gap-4 group/item">
+                                            <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                                                <CheckCircle2 size={14} />
+                                            </div>
+                                            <span className="text-gray-700 text-sm font-medium">{point}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </motion.div>
+
+                            {/* Approach Quote Box */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="bg-gray-900 rounded-[2rem] p-10 text-white relative overflow-hidden shadow-2xl shadow-primary/20"
+                            >
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[80px] -z-0" />
+                                <h3 className="text-primary font-bold text-xs uppercase tracking-widest mb-4 relative z-10">Our Approach</h3>
+                                <p className="text-gray-300 text-sm leading-relaxed relative z-10 italic">
+                                    "Every treatment begins with a digital diagnosis and a transparent consultation. We believe patients deserve to understand their options and costs upfront. Precision and long-term outcomes guide everything we do."
+                                </p>
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            {/* ═══════════════════════════════════════════
+                3. LEADERSHIP — Dr. Shahana — Refined
+            ═══════════════════════════════════════════ */}
+            <section className="py-32 bg-[#FAFBFD] relative overflow-hidden">
+                {/* Background Leadership Typography */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+                    <span className="text-[15vw] font-black text-gray-200/40 leading-none whitespace-nowrap translate-y-1/4">
+                        DR. SHAHANA
+                    </span>
+                </div>
+
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+                        {/* Left — Doctor's Profile Image */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="relative"
+                        >
+                            {/* Accent Glow */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/5 blur-[100px] rounded-full -z-10" />
+
+                            <div className="relative group">
+                                <div className="absolute -inset-4 border border-primary/10 rounded-[3rem] -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl transition-transform duration-700 hover:scale-[1.02]">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800"
+                                        alt="Dr. Shahana — Lead Clinician at Olive Dental"
+                                        className="w-full aspect-[4/5] object-cover"
+                                    />
+                                </div>
+
+                                {/* Professional Designation Badge */}
+                                <div className="absolute -bottom-6 -right-6 bg-white p-2 rounded-[2rem] shadow-2xl">
+                                    <div className="bg-gray-900 text-white px-8 py-5 rounded-[1.5rem]">
+                                        <p className="text-sm font-bold tracking-wider mb-0.5">Implantologist</p>
+                                        <p className="text-[10px] text-gray-400 font-medium uppercase tracking-[0.2em]">& Cosmetic Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* Right — Clinical Philosophy */}
                         <motion.div
                             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+                            className="space-y-10"
                         >
-                            {/* Who We Are */}
-                            <div className="mb-8">
-                                <h3 className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Who We Are</h3>
-                                <p className="text-gray-600 text-base leading-relaxed">
-                                    Olive Dental & Face Clinic is a multi-specialty dental and facial aesthetics clinic in Kunnumpuram & Kondotty, Malappuram. We bring together 6 specialist doctors — Complete dental and facial care handled by specialists — under one roof.
+                            <div>
+                                <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block underline underline-offset-8 decoration-primary/30">Clinical Leadership</span>
+                                <h2 className="text-4xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                                    Meet Dr. Shahana
+                                </h2>
+                                <p className="text-xl font-medium text-primary/80">Expert Implantologist & Smile Designer</p>
+                            </div>
+
+                            <div className="space-y-6 text-gray-600 text-lg leading-relaxed max-w-xl">
+                                <p>
+                                    Leading with a philosophy of <span className="text-gray-900 font-semibold">Precision-Driven Care</span>, Dr. Shahana focuses on long-term treatment outcomes that balance clinical accuracy with natural aesthetics.
+                                </p>
+                                <p>
+                                    Her approach is simple: Every patient deserves a clear diagnosis and honest guidance. She advocates for treatments that are medically necessary, ensuring patients feel confident and informed at every step.
                                 </p>
                             </div>
 
-                            {/* Why We Started */}
-                            <div className="mb-8">
-                                <h3 className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Why We Started</h3>
-                                <p className="text-gray-600 text-base leading-relaxed">
-                                    Many advanced dental procedures were once accessible only in larger cities. We founded Olive Dental in 2018 to change that — making comprehensive, technology-driven care available to families right here in Malappuram district.
-                                </p>
-                            </div>
-
-                            {/* What Makes Us Different */}
-                            <div className="mb-8">
-                                <h3 className="text-xs font-bold text-primary uppercase tracking-widest mb-3">What Makes Us Different</h3>
-                                <div className="space-y-3">
+                            {/* Core Specializations — Glass Tags */}
+                            <div className="pt-6">
+                                <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.25em] mb-6">Expertise Focus</h4>
+                                <div className="flex flex-wrap gap-3">
                                     {[
-                                        '6 dental specialists under one roof',
-                                        'Digital diagnostics & structured treatment planning',
-                                        'Transparent consultations — no hidden costs',
-                                        'Medically guided facial care, not cosmetic shortcuts',
-                                    ].map((point) => (
-                                        <div key={point} className="flex items-center gap-3">
-                                            <CheckCircle2 size={16} className="text-primary shrink-0" />
-                                            <span className="text-gray-700 text-sm font-medium">{point}</span>
+                                        { title: 'Dental Implants', icon: Award },
+                                        { title: 'Smile Design', icon: Star },
+                                        { title: 'Cosmetic Dentistry', icon: Heart },
+                                        { title: 'Aesthetic Treatments', icon: Microscope }
+                                    ].map((spec, i) => (
+                                        <div
+                                            key={i}
+                                            className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all cursor-default group"
+                                        >
+                                            <spec.icon size={16} className="text-primary/60 group-hover:text-primary transition-colors" />
+                                            <span className="text-sm font-semibold text-gray-700">{spec.title}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
 
-                            {/* Our Approach */}
-                            <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
-                                <h3 className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Our Approach</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    Every treatment begins with a thorough digital diagnosis, followed by a transparent consultation. We believe patients deserve to understand their options, know the costs upfront, and make confident decisions. Safety, precision, and long-term outcomes guide everything we do.
+                            {/* Trust Statement */}
+                            <div className="p-8 bg-primary/5 rounded-[2rem] border border-primary/10">
+                                <p className="text-gray-800 font-medium italic text-base">
+                                    "Patients choose Dr. Shahana not just for her surgical expertise, but for the absolute clarity and peace of mind she brings to complex consultations."
                                 </p>
                             </div>
                         </motion.div>
@@ -222,72 +355,6 @@ export default function About() {
                 </div>
             </section>
 
-            {/* ═══════════════════════════════════════════
-                3. MEET THE DOCTOR — Dr. Shahana
-            ═══════════════════════════════════════════ */}
-            <section className="py-24 bg-[#FAFBFD] overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-                        {/* Left — Doctor image */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7 }}
-                            className="relative"
-                        >
-                            <div className="rounded-3xl overflow-hidden shadow-xl" style={{ aspectRatio: '4/5' }}>
-                                <img
-                                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=700"
-                                    alt="Dr. Shahana — Implantologist & Cosmetic Dentist at Olive Dental"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            {/* Credential badge */}
-                            <div className="absolute -bottom-4 -right-4 bg-gray-900 text-white rounded-2xl px-5 py-4 shadow-xl">
-                                <p className="text-sm font-bold leading-none">Implantologist</p>
-                                <p className="text-[11px] text-gray-400 mt-1">& Cosmetic Dentist</p>
-                            </div>
-                        </motion.div>
-
-                        {/* Right — Doctor content */}
-                        <motion.div
-                            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-                        >
-                            <span className="text-primary font-bold tracking-[0.22em] uppercase text-xs mb-3 block">The Doctor Behind Olive</span>
-                            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight mb-2">
-                                Meet Dr. Shahana
-                            </h2>
-                            <p className="text-primary font-semibold text-lg mb-8">Implantologist & Cosmetic Dentist</p>
-
-                            <div className="space-y-5 text-gray-600 text-base leading-relaxed">
-                                <p>
-                                    Olive Dental & Face Clinic is led by Dr. Shahana, an implantologist and cosmetic dentist focused on precision-driven, long-term treatment outcomes.
-                                </p>
-                                <p>
-                                    Her approach is simple — every patient deserves a clear diagnosis, honest guidance, and treatment that is necessary, not excessive.
-                                </p>
-                                <p>
-                                    With a strong focus on dental implants, smile design, and aesthetic treatments, she ensures that results are not only clinically accurate but also natural and balanced.
-                                </p>
-                                <p className="text-gray-800 font-medium">
-                                    Patients choose Dr. Shahana not just for her expertise, but for the clarity and confidence she brings to every consultation.
-                                </p>
-                            </div>
-
-                            {/* Specialties */}
-                            <div className="flex flex-wrap gap-2 mt-8">
-                                {['Dental Implants', 'Smile Design', 'Cosmetic Dentistry', 'Aesthetic Treatments'].map((tag) => (
-                                    <span key={tag} className="inline-flex items-center px-4 py-2 rounded-full bg-primary/5 border border-primary/10 text-primary text-xs font-semibold">
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
 
             {/* ═══════════════════════════════════════════
                  OUR SPECIALISTS — Doctors Grid
@@ -311,7 +378,7 @@ export default function About() {
                         {[
                             { icon: Users, title: 'Multi-Specialty Expertise', desc: 'From dental implants and aligners to PRP and advanced facial rejuvenation, our coordinated approach ensures comprehensive care without fragmented referrals.' },
                             { icon: Microscope, title: 'Clinical Precision & Technology', desc: 'Digital diagnostics, structured treatment planning, and strict sterilization protocols ensure safety and predictable results.' },
-                            { icon: Search, title: 'Medically Guided Aesthetic Care', desc: 'Our facial treatments focus on skin health, collagen stimulation, and balanced enhancement — never artificial transformation.' },
+                            { icon: Sparkles, title: 'Medically Guided Aesthetic Care', desc: 'Our facial treatments focus on skin health, collagen stimulation, and balanced enhancement — never artificial transformation.' },
                             { icon: Heart, title: 'Community-Based Trust', desc: 'Our growth in Kunnumpuram and Kondotty is built on referrals, repeat visits, and genuine patient satisfaction.' }
                         ].map((item, i) => (
                             <motion.div
@@ -329,6 +396,11 @@ export default function About() {
                     </div>
                 </div>
             </section>
+
+            {/* ═══════════════════════════════════════════
+                PATIENT VOICES — Google Reviews
+            ═══════════════════════════════════════════ */}
+            <GoogleReviews />
 
             {/* ═══════════════════════════════════════════
                 4. PROOF SECTION — Stats / Trust / Results
@@ -400,10 +472,10 @@ export default function About() {
                 >
                     <img
                         src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&q=85&w=1600"
-                        alt="Clear aligners — invisible teeth straightening at Olive Dental"
+                        alt="Authorized Invisalign Provider at Olive Dental"
                         className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-gray-950/85 via-gray-900/70 to-gray-900/40" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-950/90 via-gray-900/70 to-gray-900/40" />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent" />
                 </motion.div>
 
@@ -411,49 +483,41 @@ export default function About() {
                 <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
                     <motion.div
                         initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-                        className="max-w-lg"
+                        className="max-w-2xl"
                     >
-                        <span className="text-primary font-bold tracking-[0.22em] uppercase text-xs mb-4 block">Aligners</span>
+                        <div className="flex items-center gap-3 mb-4">
+                            <span className="text-primary font-bold tracking-[0.22em] uppercase text-xs block">Official Invisalign® Provider</span>
+                            <div className="h-px w-8 bg-primary/40" />
+                            <ShieldCheck size={16} className="text-primary" />
+                        </div>
                         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6">
-                            Straighten Your Smile with Clear Aligners
+                            Precision Smile Alignment <br />
+                            <span className="text-primary">with Invisalign®</span>
                         </h2>
-                        <p className="text-gray-300 text-lg leading-relaxed mb-10 max-w-md">
-                            Olive Dental offers clear aligners — a comfortable, removable alternative to metal braces that straighten your teeth effectively and discreetly.
+                        <p className="text-gray-300 text-lg leading-relaxed mb-10 max-w-lg font-medium">
+                            As certified Invisalign® providers, we combine advanced intraoral 3D scanning with clinical expertise to straighten your teeth effectively, discreetly, and with predictable results.
                         </p>
-                        <a
-                            href="https://wa.me/918891494731?text=Hi%2C%20I%27d%20like%20to%20book%20an%20aligner%20consultation"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-bold text-base rounded-2xl hover:bg-primary hover:text-white transition-all shadow-xl hover:-translate-y-0.5"
-                        >
-                            Book An Appointment
-                        </a>
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* ═══════════════════════════════════════════
-                6. CTA
-            ═══════════════════════════════════════════ */}
-            <section className="py-24 bg-primary text-white text-center">
-                <div className="max-w-4xl mx-auto px-4">
-                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                        <h2 className="text-3xl lg:text-5xl font-bold mb-6">Ready to Experience the Olive Difference?</h2>
-                        <p className="text-xl text-blue-100 mb-14 max-w-2xl mx-auto leading-relaxed">
-                            Whether you are seeking a trusted dental clinic in Kunnumpuram or advanced facial treatments in Kerala, our team is committed to delivering care that is precise, transparent, and patient-focused.
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="https://wa.me/918891494731" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary font-bold rounded-2xl hover:bg-blue-50 transition-all shadow-xl shadow-blue-900/30 hover:-translate-y-0.5">
-                                <MessageCircle size={20} /> Schedule Consultation
+                        <div className="flex flex-wrap gap-4">
+                            <a
+                                href="https://wa.me/918891494731?text=Hi%2C%20I%27d%20like%20to%20book%20an%20Invisalign%20consultation"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-bold text-base rounded-2xl hover:bg-white hover:text-gray-900 transition-all shadow-xl hover:-translate-y-0.5"
+                            >
+                                Book Invisalign® Consultation
                             </a>
-                            <a href="tel:+918891494731" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-bold rounded-2xl hover:bg-white/10 transition-all">
-                                <Phone size={20} /> Call Now
-                            </a>
+                            <Link
+                                to="/aligners"
+                                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-base rounded-2xl hover:bg-white/20 transition-all"
+                            >
+                                Learn More
+                            </Link>
                         </div>
                     </motion.div>
                 </div>
             </section>
+
+            <ContactCTA />
         </div>
     );
 }

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { doctors } from '../data/doctors';
 import { motion } from 'framer-motion';
 import { Phone, MessageCircle, Award, GraduationCap, Stethoscope } from 'lucide-react';
+import ContactCTA from '../components/ContactCTA';
 
 export default function Doctors() {
     return (
@@ -23,29 +24,32 @@ export default function Doctors() {
             </Helmet>
 
             {/* ─── HERO ─── */}
-            <section className="bg-gradient-to-b from-blue-50 via-white to-white pt-12 pb-8 lg:pt-16 lg:pb-12">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section className="relative py-24 bg-gray-900 overflow-hidden">
+                <div className="absolute inset-0 opacity-25">
+                    <img
+                        src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?q=80&w=1600&auto=format&fit=crop"
+                        alt="Background"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-gray-900" />
+                <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
                     <motion.div
-                        initial={{ opacity: 0, y: 16 }}
+                        initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4 }}
-                        className="max-w-2xl"
+                        transition={{ duration: 0.6 }}
                     >
-                        <span className="text-primary font-semibold tracking-wide uppercase text-sm mb-3 block">
-                            Our Specialists
-                        </span>
-                        <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-gray-900 leading-tight mb-4">
-                            Multi-Specialty Dental Experts Under One Roof
-                        </h1>
-                        <p className="text-gray-500 text-base leading-relaxed">
-                            Every doctor at Olive Dental is a qualified specialist — not a general practitioner performing all procedures. You get focused, expert care for your specific treatment.
+                        <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Our Team</span>
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">Multi-Specialty Dental Experts</h1>
+                        <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                            Every doctor at Olive Dental is a qualified specialist. You get focused, expert care for your specific treatment.
                         </p>
                     </motion.div>
                 </div>
             </section>
 
             {/* ─── DOCTORS GRID ─── */}
-            <section className="pb-16 lg:pb-20 bg-white">
+            <section className="py-16 lg:py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
                         {doctors.map((doctor, index) => (
@@ -109,88 +113,7 @@ export default function Doctors() {
                 </div>
             </section>
 
-            {/* ─── TRUST BAR ─── */}
-            <section className="py-12 bg-gray-50 border-y border-gray-100">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid sm:grid-cols-3 gap-8 text-center">
-                        <motion.div
-                            initial={{ opacity: 0, y: 12 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="flex flex-col items-center"
-                        >
-                            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
-                                <Stethoscope size={22} className="text-primary" />
-                            </div>
-                            <h3 className="font-bold text-gray-900 text-lg mb-1">6 Specialists</h3>
-                            <p className="text-gray-500 text-sm">Covering every branch of dental care</p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 12 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.1 }}
-                            className="flex flex-col items-center"
-                        >
-                            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
-                                <GraduationCap size={22} className="text-primary" />
-                            </div>
-                            <h3 className="font-bold text-gray-900 text-lg mb-1">MDS Qualified</h3>
-                            <p className="text-gray-500 text-sm">Post-graduate trained specialists</p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 12 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.2 }}
-                            className="flex flex-col items-center"
-                        >
-                            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
-                                <Award size={22} className="text-primary" />
-                            </div>
-                            <h3 className="font-bold text-gray-900 text-lg mb-1">ISO 9001:2015</h3>
-                            <p className="text-gray-500 text-sm">Quality-certified standards</p>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-
-            {/* ─── CTA ─── */}
-            <section className="py-14 lg:py-16 bg-gray-900">
-                <div className="max-w-3xl mx-auto px-4 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 12 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="text-2xl lg:text-3xl font-bold text-white mb-3">
-                            Book With a Specialist
-                        </h2>
-                        <p className="text-gray-400 text-sm mb-8 max-w-lg mx-auto">
-                            Tell us your concern and we'll connect you with the right specialist.
-                            No referrals needed — walk in or book online.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                            <a
-                                href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20an%20appointment%20with%20a%20specialist"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="px-8 py-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-all shadow-lg flex items-center justify-center gap-2"
-                            >
-                                <MessageCircle size={18} />
-                                WhatsApp Appointment
-                            </a>
-                            <a
-                                href="tel:+918891494731"
-                                className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2"
-                            >
-                                <Phone size={18} />
-                                Call +91 88914 94731
-                            </a>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
+            <ContactCTA />
         </>
     );
 }

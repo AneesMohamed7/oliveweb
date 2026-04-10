@@ -4,7 +4,7 @@ import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import StickyFooter from './components/StickyFooter';
-import ScrollToTop from './components/ScrollToTop';
+
 import Home from './pages/Home';
 import About from './pages/About';
 import Doctors from './pages/Doctors';
@@ -16,6 +16,7 @@ import Veneers from './pages/Veneers';
 import Implants from './pages/Implants';
 import DentalTreatments from './pages/DentalTreatments';
 import FacialAesthetics from './pages/FacialAesthetics';
+import Gallery from './pages/Gallery';
 
 // Dental Treatments
 import RootCanal from './pages/RootCanal';
@@ -80,6 +81,7 @@ export default function App() {
 
             <Route path="/dental-treatments" element={<PageWrapper><DentalTreatments /></PageWrapper>} />
             <Route path="/facial-aesthetics" element={<PageWrapper><FacialAesthetics /></PageWrapper>} />
+            <Route path="/gallery" element={<PageWrapper><Gallery /></PageWrapper>} />
             <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
             <Route path="/faq" element={<PageWrapper><FAQPage /></PageWrapper>} />
           </Routes>
@@ -87,7 +89,6 @@ export default function App() {
       </main>
       <Footer />
       <StickyFooter />
-      <ScrollToTop />
     </div>
   );
 }

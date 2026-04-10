@@ -1,14 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, ArrowRight, Phone } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Phone, ShieldCheck } from 'lucide-react';
 
 const highlights = [
-    'Virtually invisible — no metal wires',
-    'Removable for eating & brushing',
-    'Comfortable, custom-fit trays',
-    'FDA-approved technology',
-    'Results in as little as 6 months',
+    'Near-invisible aligners — nobody notices you\'re wearing them',
+    'Genuine Invisalign® brand — not generic clear aligners',
+    'Eat anything. Remove for meals, brush normally',
+    '3D-scanned for your exact bite — not a one-size fit',
+    'FDA-approved & clinically proven global system',
+    'Visible change in weeks — most cases complete in 6–18 months',
 ];
 
 export default function InvisalignParallax() {
@@ -47,8 +48,8 @@ export default function InvisalignParallax() {
                                         <CheckCircle2 size={20} className="text-primary" />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-bold text-gray-900">200+ Aligners Delivered</p>
-                                        <p className="text-xs text-gray-500">Trusted by patients across Kondotty</p>
+                                        <p className="text-sm font-bold text-gray-900">200+ Invisalign® Cases Completed</p>
+                                        <p className="text-xs text-gray-500">Certified specialist · Digital precision planning</p>
                                     </div>
                                 </div>
                             </div>
@@ -67,16 +68,29 @@ export default function InvisalignParallax() {
                             transition={{ duration: 0.6 }}
                         >
                             <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">
-                                Clear Aligner Treatment
+                                Invisalign® Certified Treatment
                             </span>
                             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                                Straighten Your Teeth{' '}
-                                <span className="text-primary">Without Metal Braces</span>
+                                Straighten Your Smile with{' '}
+                                <span className="text-primary">Invisalign®</span>
+                                {' '}—{' '}
+                                <span className="text-gray-700">Kerala's Certified Clear Aligner Specialists</span>
                             </h2>
+
+                            {/* Authority Callout */}
+                            <div className="flex items-start gap-3 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl px-4 py-3 mb-6">
+                                <ShieldCheck size={18} className="text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2} />
+                                <div>
+                                    <p className="text-sm font-bold text-blue-900">Olive Dental is an Official Invisalign® Provider.</p>
+                                    <p className="text-xs text-blue-700 mt-0.5">Treatment planned with certified digital precision — not generic aligners.</p>
+                                </div>
+                            </div>
+
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                Get the smile you've always wanted with clear, removable aligners.
-                                Our certified specialists use 3D digital scanning to plan your
-                                treatment with precision — results you can preview before you begin.
+                                Our certified Invisalign® specialists use intraoral 3D scanning to
+                                map your teeth precisely and preview your final smile before
+                                treatment even begins. No guesswork — just a clear plan, transparent
+                                pricing, and real results.
                             </p>
                         </motion.div>
 
@@ -111,22 +125,24 @@ export default function InvisalignParallax() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.5 }}
-                            className="flex flex-col sm:flex-row gap-3"
+                            className="flex flex-col gap-3"
                         >
-                            <a
-                                href="tel:+918891494731"
-                                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-all duration-300 shadow-md"
-                            >
-                                <Phone size={16} />
-                                Book Consultation
-                            </a>
-                            <Link
-                                to="/aligners"
-                                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-primary/20 text-primary font-semibold rounded-xl hover:bg-primary/5 transition-all duration-300"
-                            >
-                                Learn More
-                                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                            </Link>
+                            <div className="flex flex-col sm:flex-row gap-3">
+                                <a
+                                    href="tel:+918891494731"
+                                    className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-all duration-300 shadow-md"
+                                >
+                                    <Phone size={16} />
+                                    Book Your Invisalign® Consultation
+                                </a>
+                                <Link
+                                    to="/aligners"
+                                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-primary/20 text-primary font-semibold rounded-xl hover:bg-primary/5 transition-all duration-300"
+                                >
+                                    See How Invisalign® Works
+                                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                                </Link>
+                            </div>
                         </motion.div>
                     </div>
                 </div>

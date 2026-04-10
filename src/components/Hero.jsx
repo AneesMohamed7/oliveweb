@@ -14,16 +14,16 @@ import { motion } from 'framer-motion';
 import BookingModal from './BookingModal';
 
 const TRUST_BADGES = [
-    { icon: ShieldCheck, label: 'Experienced Doctors' },
-    { icon: Cpu, label: 'Modern Technology' },
-    { icon: Heart, label: 'Gentle & Comfortable' },
-    { icon: Users, label: 'Trusted Locally' },
+    { icon: ShieldCheck, label: 'BDS & MDS Qualified Doctors' },
+    { icon: Cpu, label: '3D Digital Scanning' },
+    { icon: Heart, label: 'Pain-Free Protocols' },
+    { icon: Users, label: 'Serving Kondotty & Beyond' },
 ];
 
 const STATS = [
     { value: '2,000+', label: 'Happy Patients' },
     { value: '4.9★', label: 'Google Rating' },
-    { value: '10+', label: 'Years of Care' },
+    { value: '4+', label: 'Years of Care' },
 ];
 
 const stagger = {
@@ -53,7 +53,7 @@ export default function Hero() {
                 {/* BG IMAGE */}
                 <div className="absolute inset-0 -z-20">
                     <img
-                        src="https://images.unsplash.com/photo-1629909615184-74f495363b67?q=85&w=1800&auto=format&fit=crop"
+                        src="/images/herobg-img.webp"
                         alt=""
                         aria-hidden="true"
                         className="w-full h-full object-cover object-center"
@@ -91,11 +91,20 @@ export default function Hero() {
                                 animate="show"
                                 className="flex flex-col"
                             >
+                                {/* Overline Trust Pill */}
+                                <motion.div
+                                    variants={fadeUp}
+                                    className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full mb-5 text-xs font-semibold text-sky-300 border border-sky-400/30 bg-sky-400/10 backdrop-blur-sm"
+                                >
+                                    <span className="text-sky-400">✦</span>
+                                    Official Invisalign® Provider · Kunnumpuram's Multi-Specialty Clinic
+                                </motion.div>
+
                                 <motion.h1
                                     variants={fadeUp}
                                     className="text-4xl sm:text-5xl lg:text-[3.2rem] font-extrabold text-white leading-[1.1] tracking-tight mb-5"
                                 >
-                                    Advanced Dental &amp;{' '}
+                                    Dental Implants,{' '}
                                     <span
                                         style={{
                                             background: 'linear-gradient(95deg, #7dd3fc 0%, #38bdf8 50%, #bae6fd 100%)',
@@ -104,8 +113,9 @@ export default function Hero() {
                                             backgroundClip: 'text',
                                         }}
                                     >
-                                        Facial Care
+                                        Invisalign®
                                     </span>
+                                    {' '}& Facial Aesthetics
                                     <br />in Kunnumpuram
                                 </motion.h1>
 
@@ -113,9 +123,9 @@ export default function Hero() {
                                     variants={fadeUp}
                                     className="text-base sm:text-lg text-white/70 leading-relaxed mb-8 max-w-[500px]"
                                 >
-                                    From dental implants and aligners to advanced facial aesthetic
-                                    treatments — experience modern care with trusted specialists,
-                                    all under one roof.
+                                    From certified Invisalign® clear aligners and precision implants
+                                    to advanced facial aesthetic treatments — trusted specialists,
+                                    modern technology, all in one clinic.
                                 </motion.p>
 
                                 <motion.div
@@ -154,13 +164,7 @@ export default function Hero() {
                                     </a>
                                 </motion.div>
 
-                                <motion.p
-                                    variants={fadeUp}
-                                    className="flex items-center gap-1.5 text-sm text-white/50"
-                                >
-                                    <CheckCircle2 size={13} className="text-green-400 flex-shrink-0" strokeWidth={2.5} />
-                                    Trusted by Kunnumpuram and nearby communities
-                                </motion.p>
+
                             </motion.div>
 
                             {/* RIGHT — image card */}
@@ -182,15 +186,22 @@ export default function Hero() {
                                     style={{ aspectRatio: '4/3' }}
                                 >
                                     <img
-                                        src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop"
+                                        src="/images/oliveclinic-img1.webp"
                                         alt="Dental specialist with patient"
                                         className="w-full h-full object-cover object-top"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a1840]/70 via-transparent to-transparent pointer-events-none" />
                                     <div className="absolute bottom-5 left-5 right-5">
                                         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3">
-                                            <p className="text-white font-semibold text-sm">Olive Dental &amp; Face Clinic</p>
-                                            <p className="text-white/60 text-xs mt-0.5">Multi-Specialty · Kunnumpuram</p>
+                                            <div className="flex items-center justify-between gap-2">
+                                                <div>
+                                                    <p className="text-white font-semibold text-sm">Olive Dental &amp; Face Clinic</p>
+                                                    <p className="text-sky-300 text-xs mt-0.5 font-medium">Official Invisalign® Provider · Kunnumpuram</p>
+                                                </div>
+                                                <div className="flex-shrink-0 bg-sky-400/20 border border-sky-400/30 rounded-lg px-2 py-1">
+                                                    <span className="text-sky-300 text-[10px] font-bold tracking-wide">Invisalign®</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

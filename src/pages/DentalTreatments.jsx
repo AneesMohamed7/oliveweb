@@ -4,6 +4,7 @@ import { dentalServices } from '../data/services';
 import { ArrowRight, ShieldCheck, Cpu, Scan, Heart, ChevronDown, ChevronUp, Phone, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import ContactCTA from '../components/ContactCTA';
 
 const dentalFaqs = [
     {
@@ -59,57 +60,45 @@ export default function DentalTreatments() {
             </Helmet>
 
             {/* ─── HERO ─── */}
-            <section className="relative bg-gradient-to-br from-blue-50 via-white to-background-soft py-16 lg:py-24 overflow-hidden">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <span className="text-primary font-bold tracking-wider uppercase text-xs mb-4 block">Dental Clinic in Kunnumpuram</span>
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                                Advanced Dental Care<br />
-                                <span className="text-primary">in Kunnumpuram</span>
-                            </h1>
-                            <p className="text-lg text-gray-500 mb-8 max-w-xl leading-relaxed">
-                                Precision-driven dental treatments for long-term oral health and confident smiles. Trusted by families across Kerala.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <a
-                                    href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20a%20dental%20consultation"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="px-8 py-4 bg-primary text-white rounded-xl font-semibold shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 text-center"
-                                >
-                                    <MessageCircle size={20} />
-                                    Book Dental Consultation
-                                </a>
-                                <a
-                                    href="tel:+918891494731"
-                                    className="px-8 py-4 bg-white text-primary border-2 border-primary/20 rounded-xl font-semibold hover:bg-blue-50 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 text-center"
-                                >
-                                    <Phone size={20} />
-                                    Call Now
-                                </a>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative"
-                        >
-                            <div className="absolute inset-0 bg-primary/10 rounded-[2rem] blur-2xl -rotate-6 scale-95"></div>
-                            <img
-                                src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=1000&auto=format&fit=crop"
-                                alt="Modern Dental Treatment"
-                                className="relative w-full h-auto rounded-[2rem] shadow-2xl z-10 object-cover aspect-[4/3] lg:aspect-square"
-                            />
-                        </motion.div>
-                    </div>
+            <section className="relative py-24 bg-gray-900 overflow-hidden">
+                <div className="absolute inset-0 opacity-25">
+                    <img
+                        src="/images/clinic-chair (3).webp"
+                        alt="Background"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-gray-900" />
+                <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Dental Clinic in Kunnumpuram</span>
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">Advanced Dental Care</h1>
+                        <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                            Precision-driven dental treatments for long-term oral health and confident smiles. Trusted by families across Kerala.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                            <a
+                                href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20a%20dental%20consultation"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-8 py-4 bg-primary text-white rounded-xl font-semibold shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2"
+                            >
+                                <MessageCircle size={20} />
+                                Book Dental Consultation
+                            </a>
+                            <a
+                                href="tel:+918891494731"
+                                className="px-8 py-4 bg-white/10 border border-white/20 text-white rounded-xl font-semibold hover:bg-white/20 transition-all flex items-center justify-center gap-2"
+                            >
+                                <Phone size={20} />
+                                Call Now
+                            </a>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -228,30 +217,7 @@ export default function DentalTreatments() {
                 </div>
             </section>
 
-            {/* ─── CTA ─── */}
-            <section className="py-16 bg-gray-900">
-                <div className="max-w-4xl mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-4">Begin Your Journey to Better Dental Health</h2>
-                    <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-                        Our dental specialists are ready to create a personalised treatment plan for you. Book your consultation today.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a
-                            href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20a%20dental%20consultation"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-all shadow-lg flex items-center justify-center gap-2"
-                        >
-                            <MessageCircle size={20} />
-                            Book Dental Consultation
-                        </a>
-                        <a href="tel:+918891494731" className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2">
-                            <Phone size={20} />
-                            Call Now
-                        </a>
-                    </div>
-                </div>
-            </section>
+            <ContactCTA />
         </>
     );
 }

@@ -9,7 +9,7 @@ export const dentalServices = [
         type: 'core',
         description: 'Precision-placed titanium implants using advanced digital planning for permanent, natural-looking tooth restoration with minimal discomfort and maximum longevity.',
         icon: Anchor,
-        image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop',
+        image: '/images/implants-problem.webp',
         link: '/treatments/implants'
     },
     {
@@ -19,7 +19,7 @@ export const dentalServices = [
         type: 'core',
         description: 'Digitally crafted invisible aligners for precise teeth straightening — comfortable, removable, and designed for predictable results without traditional braces.',
         icon: Smile,
-        image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop',
+        image: '/images/clearaligner-img (1).webp',
         link: '/treatments/aligners'
     },
     {
@@ -29,7 +29,7 @@ export const dentalServices = [
         type: 'core',
         description: 'Comprehensive smile transformation combining veneers, whitening, and alignment — tailored with digital design for a naturally stunning, confident smile.',
         icon: Sparkles,
-        image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
+        image: '/images/smileMakeOver-img.jpg',
         link: '/treatments/veneers'
     },
     {
@@ -39,7 +39,7 @@ export const dentalServices = [
         type: 'core',
         description: 'Advanced endodontic care using rotary instruments and apex locators for painless, precise root canal therapy that preserves your natural tooth structure.',
         icon: HeartPulse,
-        image: 'https://images.unsplash.com/photo-1583912267550-d44d7a125e7e?q=80&w=800&auto=format&fit=crop',
+        image: '/images/rootCanal-img.png',
         link: '/treatments/root-canal'
     },
     {
@@ -49,7 +49,7 @@ export const dentalServices = [
         type: 'secondary',
         description: 'Ultra-thin porcelain shells custom-crafted to refine tooth shape, colour, and alignment for a flawless, natural-looking smile.',
         icon: Sparkles,
-        image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=800&auto=format&fit=crop',
+        image: '/images/veneers-treatment-img.webp',
         link: '/treatments/veneers'
     },
     {
@@ -59,7 +59,7 @@ export const dentalServices = [
         type: 'secondary',
         description: 'High-quality Zirconia and ceramic restorations to rebuild damaged teeth and bridge gaps with precision-fitted, long-lasting results.',
         icon: Crown,
-        image: 'https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?q=80&w=800&auto=format&fit=crop',
+        image: '/images/crownbridge-treatment-img.webp',
         link: '/treatments/crowns-bridges'
     },
     {
@@ -69,7 +69,7 @@ export const dentalServices = [
         type: 'secondary',
         description: 'Professional laser whitening to brighten your smile by several shades in a single, comfortable clinical session.',
         icon: Sun,
-        image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop',
+        image: '/images/teethwhitening-img.webp',
         link: '/treatments/teeth-whitening'
     },
     {
@@ -79,7 +79,7 @@ export const dentalServices = [
         type: 'secondary',
         description: 'Gentle, fearless dental care for children — including fluoride application, sealants, and early habit correction in a child-friendly environment.',
         icon: Baby,
-        image: 'https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?q=80&w=800&auto=format&fit=crop',
+        image: '/images/kidsdentistry-img.webp',
         link: '/treatments/kids-dentistry'
     },
     {
@@ -89,7 +89,7 @@ export const dentalServices = [
         type: 'secondary',
         description: 'Painless extraction of impacted wisdom teeth by expert oral surgeons using minimally invasive techniques.',
         icon: Syringe,
-        image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop',
+        image: '/images/wisdomtoothremoval-img.webp',
         link: '/treatments/wisdom-tooth'
     },
 ];
@@ -104,7 +104,7 @@ export const facialServices = [
         type: 'core',
         description: 'Platelet-rich plasma therapy stimulates deep collagen production for natural skin tightening and rejuvenation — medically supervised for safe, lasting results.',
         icon: Droplets,
-        image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=800&auto=format&fit=crop',
+        image: '/images/prpskin-rejuvenation.webp',
         link: '/treatments/prp'
     },
     {
@@ -114,7 +114,7 @@ export const facialServices = [
         type: 'core',
         description: 'Precision-administered anti-ageing injections to smooth fine lines and restore volume — delivering subtle, natural-looking facial refinement under clinical supervision.',
         icon: Syringe,
-        image: 'https://images.unsplash.com/photo-1522335789203-aa9fb3ad2fda?q=80&w=800&auto=format&fit=crop',
+        image: '/images/bortox-img.webp',
         link: '/treatments/botox'
     },
     {
@@ -124,7 +124,7 @@ export const facialServices = [
         type: 'core',
         description: 'Controlled micro-injuries trigger the skin\'s natural healing response, boosting collagen and reducing scars, pores, and fine lines with minimal downtime.',
         icon: CircleDot,
-        image: 'https://images.unsplash.com/photo-1614806687383-29471f0084ba?q=80&w=800&auto=format&fit=crop',
+        image: '/images/microneedling-img.webp',
         link: '/treatments/microneedling'
     },
     {
@@ -134,7 +134,7 @@ export const facialServices = [
         type: 'core',
         description: 'Non-surgical face lifting using dissolvable threads to tighten sagging skin and stimulate collagen — a minimally invasive alternative to traditional surgery.',
         icon: Sparkles,
-        image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?q=80&w=800&auto=format&fit=crop',
+        image: '/images/threadlift-img.webp',
         link: '/treatments/thread-lift'
     },
     {
@@ -144,7 +144,7 @@ export const facialServices = [
         type: 'core',
         description: 'Multi-step facial treatment combining deep cleansing, exfoliation, extraction, and hydration for instantly radiant, revitalised skin in a single session.',
         icon: Waves,
-        image: 'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?q=80&w=800&auto=format&fit=crop',
+        image: '/images/hydrafacial-img.webp',
         link: '/treatments/hydrafacial'
     },
     // ADVANCED
@@ -153,7 +153,7 @@ export const facialServices = [
         title: 'Chemical Peels',
         category: 'facial',
         type: 'advanced',
-        image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=800&auto=format&fit=crop',
+        image: '/images/chemicalPeeling_converted.webp',
         description: 'Medical-grade peels to improve skin texture, reduce pigmentation, and promote cellular renewal.'
     },
     {
@@ -161,7 +161,7 @@ export const facialServices = [
         title: 'Skin Resurfacing',
         category: 'facial',
         type: 'advanced',
-        image: 'https://images.unsplash.com/photo-1614806687383-29471f0084ba?q=80&w=800&auto=format&fit=crop',
+        image: '/images/skinResurfesing-converted-from-jpg.webp',
         description: 'Advanced techniques to smooth uneven skin tone, reduce scarring, and restore a youthful complexion.'
     },
     {
@@ -169,7 +169,7 @@ export const facialServices = [
         title: 'Mesotherapy',
         category: 'facial',
         type: 'advanced',
-        image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?q=80&w=800&auto=format&fit=crop',
+        image: '/images/Mesotherapy.webp',
         description: 'Targeted microinjections delivering vitamins and hyaluronic acid deep into the skin for intensive hydration and glow.'
     },
     {
@@ -177,7 +177,7 @@ export const facialServices = [
         title: 'Lip Pigmentation',
         category: 'facial',
         type: 'advanced',
-        image: 'https://images.unsplash.com/photo-1629532661574-8b8941fc360b?q=80&w=800&auto=format&fit=crop',
+        image: '/images/prptreatment-img.jpg',
         description: 'Gentle depigmentation therapy to restore natural, even-toned lip colour with clinical precision.'
     },
     {
@@ -185,7 +185,7 @@ export const facialServices = [
         title: 'Microblading',
         category: 'facial',
         type: 'advanced',
-        image: 'https://images.unsplash.com/photo-1588698125556-9cd593845bbf?q=80&w=800&auto=format&fit=crop',
+        image: '/images/Microblading.webp',
         description: 'Semi-permanent eyebrow enhancement using fine strokes for naturally defined, fuller brows.'
     },
     // MINOR
@@ -194,7 +194,7 @@ export const facialServices = [
         title: 'Wart Removal',
         category: 'facial',
         type: 'minor',
-        image: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop',
+        image: '/images/Wart Removal1.webp',
         description: 'Safe clinical removal of warts.'
     },
     {
@@ -202,7 +202,7 @@ export const facialServices = [
         title: 'Mole Removal',
         category: 'facial',
         type: 'minor',
-        image: 'https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=800&auto=format&fit=crop',
+        image: '/images/moleRemove.webp',
         description: 'Precise mole excision with minimal scarring.'
     },
     {
@@ -210,7 +210,7 @@ export const facialServices = [
         title: 'Skin Tag Removal',
         category: 'facial',
         type: 'minor',
-        image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=800&auto=format&fit=crop',
+        image: '/images/prpskin-rejuvenation.webp',
         description: 'Quick, painless skin tag removal.'
     },
     {
@@ -218,7 +218,7 @@ export const facialServices = [
         title: 'Dandruff Treatment',
         category: 'facial',
         type: 'minor',
-        image: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop',
+        image: '/images/dandruffRemovalTreatment.webp',
         description: 'Clinical scalp therapy for persistent dandruff.'
     },
     {
@@ -226,7 +226,7 @@ export const facialServices = [
         title: 'Under Eye Treatment',
         category: 'facial',
         type: 'minor',
-        image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?q=80&w=800&auto=format&fit=crop',
+        image: '/images/underEyeTreatment.webp',
         description: 'Targeted treatment for dark circles and puffiness.'
     },
     {
@@ -234,7 +234,7 @@ export const facialServices = [
         title: 'Dermaplaning',
         category: 'facial',
         type: 'minor',
-        image: 'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?q=80&w=800&auto=format&fit=crop',
+        image: '/images/dermaplaningtreatment.webp',
         description: 'Professional exfoliation for smooth, radiant skin.'
     }
 ];

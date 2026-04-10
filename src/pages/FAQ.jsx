@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import FAQ from '../components/FAQ';
+import ContactCTA from '../components/ContactCTA';
 
 export default function FAQPage() {
     return (
@@ -12,6 +13,7 @@ export default function FAQPage() {
             <div className="pt-10">
                 <FAQ />
             </div>
+            <ContactCTA />
         </>
     );
 }

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Stethoscope, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ContactCTA from '../components/ContactCTA';
 
 export default function Treatments() {
     return (
@@ -12,18 +13,32 @@ export default function Treatments() {
                 <meta name="description" content="Advanced dental treatments and facial aesthetics at Olive Dental & Face Clinic, Kunnumpuram. Explore our specialised dental and aesthetic services." />
             </Helmet>
 
-            <section className="py-20 lg:py-28 bg-gradient-to-b from-blue-50 to-white">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <section className="relative py-24 bg-gray-900 overflow-hidden">
+                <div className="absolute inset-0 opacity-25">
+                    <img
+                        src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1600&auto=format&fit=crop"
+                        alt="Background"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-gray-900" />
+                <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
                     >
-                        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Specialisations</h1>
-                        <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-16">
-                            Olive Dental & Face Clinic offers two distinct areas of expertise — each led by dedicated specialists.
+                        <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Our Expertise</span>
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">Our Specialisations</h1>
+                        <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                            Olive Dental &amp; Face Clinic offers two distinct areas of expertise — each led by dedicated specialists.
                         </p>
                     </motion.div>
+                </div>
+            </section>
 
+            <section className="py-20 lg:py-28 bg-white">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <div className="grid md:grid-cols-2 gap-8">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -81,6 +96,7 @@ export default function Treatments() {
                     </div>
                 </div>
             </section>
+            <ContactCTA />
         </>
     );
 }

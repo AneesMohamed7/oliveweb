@@ -30,6 +30,18 @@ export default function Contact() {
         'Facial Aesthetics (PRP/Botox)',
         'Kids Dentistry',
         'General Check-up',
+        'Tooth Extraction',
+        'Wisdom Tooth Removal',
+        'Dental Crown & Bridge',
+        'Dentures / Removable Prosthetics',
+        'Scaling & Polishing',
+        'Gum Treatment (Periodontology)',
+        'Orthodontic Braces',
+        'Composite Bonding',
+        'Fluoride Treatment',
+        'Dental X-Ray',
+        'Mouth Guard / Night Guard',
+        'Smile Consultation',
         'Other',
     ];
 

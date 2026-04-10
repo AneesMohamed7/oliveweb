@@ -8,30 +8,27 @@ export default function Footer() {
         <footer>
 
             {/* ── Main Footer Grid (Classic Dark Blue) ── */}
-            <div className="bg-[#0f172a] text-gray-300 pt-16 pb-8 md:pb-6">
+            <div className="bg-[#0f172a] text-gray-300 pt-12 pb-8 md:pb-6">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-12">
 
                         {/* Brand Column */}
-                        <div className="lg:col-span-4">
-                            <div className="flex items-center gap-3 mb-6">
-                                <img
-                                    src={oliveLogo}
-                                    alt="Olive Dental & Face Clinic"
-                                    className="h-14 w-auto object-contain brightness-0 invert"
-                                />
-                                <h3 className="text-2xl font-bold text-white">
-                                    Olive Dental & Face Clinic
-                                </h3>
-                            </div>
+                        <div className="lg:col-span-4 flex flex-col gap-0 border-t-0">
+                            <img
+                                src={oliveLogo}
+                                alt="Olive Dental"
+                                className="h-[300px] w-auto object-contain brightness-0 invert -mb-32 self-start"
+                            />
 
-                            <p className="text-gray-400 text-sm leading-relaxed mb-8 pr-4">
+                            {/* Row 2: Description */}
+                            <p className="text-gray-300 text-lg leading-snug pr-4 max-w-md mt-0">
                                 Multi-specialty dental and facial aesthetic clinic serving
                                 Kunnumpuram and Kondotty, Malappuram. Focused on ethical
                                 treatment, precision, and long-term patient trust.
                             </p>
 
-                            <div className="flex gap-3">
+                            {/* Row 3: Social Links */}
+                            <div className="flex gap-4 mt-6">
                                 <a
                                     href="https://www.facebook.com/olivedentalofficial"
                                     target="_blank"
@@ -96,7 +93,7 @@ export default function Footer() {
                                     </h5>
                                     <p className="text-gray-400 leading-relaxed mb-2">
                                         Opp. Daru Shifa Hospital,<br />
-                                        Kondotty, Malappuram 676305
+                                        Kolappuram Road, Kunnumpuram
                                     </p>
                                     <a
                                         href="tel:+918891494731"
@@ -104,11 +101,19 @@ export default function Footer() {
                                     >
                                         +91 88914 94731
                                     </a>
+
+                                    {/* Email Contact Block */}
                                     <a
                                         href="mailto:olivedentalofficial@gmail.com"
-                                        className="text-gray-400 hover:text-white transition-colors text-sm block mt-1"
+                                        className="inline-flex items-start gap-3 mt-4 group"
                                     >
-                                        olivedentalofficial@gmail.com
+                                        <div className="w-8 h-8 rounded-md bg-[#1e3a6e] flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-primary transition-colors">
+                                            <Mail size={15} className="text-amber-400" />
+                                        </div>
+                                        <div>
+                                            <p className="text-white font-semibold text-sm leading-tight">Send a Message</p>
+                                            <p className="text-primary text-sm mt-0.5 group-hover:text-white transition-colors">olivedentalofficial@gmail.com</p>
+                                        </div>
                                     </a>
                                 </div>
 

@@ -6,6 +6,7 @@ import {
     ShieldCheck, Sparkles, Award, Heart, Droplets, Star
 } from 'lucide-react';
 import BookingModal from '../components/BookingModal';
+import ContactCTA from '../components/ContactCTA';
 
 const faqs = [
     {
@@ -209,27 +210,7 @@ export default function PRP() {
                 </div>
             </section>
 
-            {/* ═══ FINAL CTA ═══ */}
-            <section className="py-24 bg-primary text-white text-center">
-                <div className="max-w-3xl mx-auto px-4">
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready for a Natural Glow?</h2>
-                        <p className="text-xl text-blue-100 mb-10 max-w-xl mx-auto">
-                            Schedule a clinical skin assessment today. We'll design a personalised PRP treatment plan to restore your skin's natural beauty.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button onClick={() => setModalOpen(true)}
-                                className="px-8 py-4 bg-accent text-white rounded-xl font-bold hover:bg-accent-dark transition-all flex items-center justify-center gap-2 shadow-lg">
-                                <MessageCircle size={20} /> Book Consultation
-                            </button>
-                            <a href="tel:+918891494731"
-                                className="px-8 py-4 bg-white text-primary rounded-xl font-bold hover:bg-blue-50 transition-all flex items-center justify-center gap-2 shadow-sm">
-                                <Phone size={20} /> Call Now
-                            </a>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
+            <ContactCTA />
         </div>
     );
 }
