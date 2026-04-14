@@ -7,7 +7,7 @@ export const doctors = [
         role: 'Founder & Lead Dentist',
         focus: ['General Dentistry', 'Smile Design', 'Cosmetic Dentistry'],
         bio: 'Leads Olive Dental with a patient-first philosophy, specialising in comprehensive smile design and cosmetic dental care.',
-        image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=600&h=600'
+        image: 'images/drshahana.img.webp?auto=format&fit=crop&q=80&w=600&h=600'
     },
     {
         id: 2,
@@ -17,46 +17,67 @@ export const doctors = [
         role: 'Implant Specialist',
         focus: ['Dental Implants', 'Gum Surgery', 'Bone Grafting'],
         bio: 'Specialist in advanced implant placement using digital planning for precise, long-lasting tooth restoration.',
-        image: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=600&h=600'
+        image: '/dist/images/basithdoctor.webp?auto=format&fit=crop&q=80&w=600&h=600'
     },
     {
         id: 3,
-        name: 'Dr. Noufal',
-        qualification: 'MDS (Orthodontics)',
-        specialty: 'Orthodontist',
-        role: 'Aligners & Braces Specialist',
-        focus: ['Clear Aligners', 'Braces', 'Bite Correction'],
-        bio: 'Expert in teeth alignment using clear aligners and advanced orthodontic techniques for children and adults.',
-        image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=600&h=600'
-    },
-    {
-        id: 4,
         name: 'Dr. Pravish Vishnudas',
         qualification: 'MDS (Oral Surgery)',
         specialty: 'Oral & Maxillofacial Surgeon',
         role: 'Oral Surgeon',
         focus: ['Wisdom Tooth Removal', 'Jaw Surgery', 'Facial Trauma'],
         bio: 'Experienced oral surgeon specialising in minimally invasive extractions and maxillofacial procedures.',
-        image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600&h=600'
+        image: '/dist/images/pravishvishnudr.jpeg?auto=format&fit=crop&q=80&w=600&h=600'
     },
     {
-        id: 5,
+        id: 4,
         name: 'Dr. Zaheer K',
         qualification: 'MDS (Endodontics)',
         specialty: 'Endodontist',
         role: 'Root Canal Specialist',
         focus: ['Root Canal Treatment', 'Re-treatment', 'Tooth Preservation'],
         bio: 'Specialises in painless root canal therapy using rotary instruments and advanced apex locators.',
-        image: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&q=80&w=600&h=600'
+        image: '/dist/images/noprofile.jpeg?auto=format&fit=crop&q=80&w=600&h=600'
     },
     {
+        id: 5,
+        name: 'Dr. Deepthi Cheriyan',
+        qualification: 'MDS (Periodontics) & Fellowship in Laser Dentistry',
+        specialty: 'Periodontist & Laser Specialist',
+        role: 'Laser Dentistry Expert',
+        focus: ['Laser Periodontics', 'Gum Care', 'Laser Treatments'],
+        bio: 'Specialist in periodontics with advanced training in laser dentistry, providing minimally invasive gum treatments and precision care.',
+        image: '/dist/images/deepthiCheriyandoctor.webp?auto=format&fit=crop&q=80&w=600&h=600'
+    },
+
+    {
         id: 6,
-        name: 'Dr. Nabeeh',
+        name: 'Dr. Abdul Rahiman',
+        qualification: 'MDS (Orthodontics & Dentofacial Orthopaedics)',
+        specialty: 'Orthodontist & Dentofacial Orthopaedist',
+        role: 'Orthodontics Specialist',
+        focus: ['Invisalign', 'Dentofacial Orthopaedics', 'Complex Braces'],
+        bio: 'Expert in orthodontics and dentofacial orthopaedics, focusing on comprehensive bite correction and facial harmony.',
+        image: '/dist/images/abdulrahimdoctor.webp?auto=format&fit=crop&q=80&w=600&h=600'
+    },
+    {
+        id: 7,
+        name: 'Dr. Shanila Abdul Majeed',
+        qualification: 'MDS (Oral Medicine & Radiology)',
+        specialty: 'Oral Medicine & Radiologist',
+        role: 'Diagnostic Specialist',
+        focus: ['Oral Diagnostics', 'Digital Radiology', 'Painless Lesion Management'],
+        bio: 'Specializes in oral medicine and radiology, providing precise diagnosis and management of oral diseases and maxillofacial pathologies.',
+        image: '/dist/images/shaniladoctor.webp?auto=format&fit=crop&q=80&w=600&h=600'
+    },
+    {
+        id: 8,
+        name: 'Dr. Jincy KP',
         qualification: 'MDS (Pedodontics)',
         specialty: 'Pedodontist',
         role: 'Children\'s Dentist',
-        focus: ['Kids Dentistry', 'Preventive Care', 'Early Orthodontics'],
-        bio: 'Gentle and caring approach to children\'s dental health, from first visits to habit correction and prevention.',
-        image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=600&h=600'
+        focus: ['Paediatric Dentistry', 'Child Care', 'Preventive Dentistry'],
+        bio: 'Specialist in children\'s dental care, focused on creating a positive and fear-free experience for young patients while ensuring their oral health development.',
+        image: '/dist/images/noprofile.jpeg?auto=format&fit=crop&q=80&w=600&h=600'
     }
 ];

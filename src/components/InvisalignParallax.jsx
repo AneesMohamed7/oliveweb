@@ -18,7 +18,7 @@ export default function InvisalignParallax() {
             {/* ── Parallax Background ── */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
-                style={{ backgroundImage: "url('/images/invisalign-parallax-bg.png')" }}
+                style={{ backgroundImage: "url('/images/invisalign-parallax-bg.jpg')" }}
             />
             {/* Soft clinical overlay */}
             <div className="absolute inset-0 bg-white/50 backdrop-blur-[1px]" />
@@ -37,9 +37,13 @@ export default function InvisalignParallax() {
                     >
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary/10 border border-gray-100">
                             <img
-                                src="/images/aligners-product.jpg"
+                                src="/dist/images/smile-with-aligner.webp"
                                 alt="Clear aligner trays at Olive Dental"
                                 className="w-full aspect-[4/3] object-cover"
+                                loading="lazy"
+                                decoding="async"
+                                width={800}
+                                height={600}
                             />
                             {/* Floating badge */}
                             <div className="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-lg border border-gray-100">
@@ -48,7 +52,7 @@ export default function InvisalignParallax() {
                                         <CheckCircle2 size={20} className="text-primary" />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-bold text-gray-900">200+ Invisalign® Cases Completed</p>
+                                        <p className="text-sm font-bold text-gray-900">60+ Invisalign® Cases Completed</p>
                                         <p className="text-xs text-gray-500">Certified specialist · Digital precision planning</p>
                                     </div>
                                 </div>

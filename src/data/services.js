@@ -9,7 +9,7 @@ export const dentalServices = [
         type: 'core',
         description: 'Precision-placed titanium implants using advanced digital planning for permanent, natural-looking tooth restoration with minimal discomfort and maximum longevity.',
         icon: Anchor,
-        image: '/images/implants-problem.webp',
+        image: '/images/dentalimplant.webp',
         link: '/treatments/implants'
     },
     {
@@ -114,7 +114,7 @@ export const facialServices = [
         type: 'core',
         description: 'Precision-administered anti-ageing injections to smooth fine lines and restore volume — delivering subtle, natural-looking facial refinement under clinical supervision.',
         icon: Syringe,
-        image: '/images/bortox-img.webp',
+        image: '/images/botox-img.webp',
         link: '/treatments/botox'
     },
     {

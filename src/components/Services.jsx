@@ -32,6 +32,10 @@ function ServiceCard({ service, variant = 'dental' }) {
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                    decoding="async"
+                    width={400}
+                    height={208}
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t ${isDental ? 'from-blue-900/60' : 'from-gray-900/40'
                     } to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300`}></div>

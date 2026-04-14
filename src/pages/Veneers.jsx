@@ -5,7 +5,7 @@ import {
     CheckCircle2, ChevronDown, ChevronUp, MessageCircle, Phone,
     ShieldCheck, Sparkles, Award, Heart, Star, Clock
 } from 'lucide-react';
-import BookingModal from '../components/BookingModal';
+
 import ContactCTA from '../components/ContactCTA';
 
 const faqs = [
@@ -50,7 +50,7 @@ const benefits = [
 
 export default function Veneers() {
     const [openFAQ, setOpenFAQ] = useState(null);
-    const [modalOpen, setModalOpen] = useState(false);
+
 
     return (
         <div className="bg-white font-sans text-gray-800">
@@ -60,7 +60,7 @@ export default function Veneers() {
                 <link rel="canonical" href="https://olivedentalofficial.in/treatments/veneers" />
             </Helmet>
 
-            <BookingModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+
 
             {/* ═══ HERO ═══ */}
             <section className="relative bg-[#FAF8F5] py-20 lg:py-28 overflow-hidden">
@@ -79,10 +79,12 @@ export default function Veneers() {
                                 Fix chips, gaps, and severe discoloration permanently with custom-crafted porcelain veneers. It's the secret behind a "Hollywood Smile" — natural, bright, and durable.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <button onClick={() => setModalOpen(true)}
+                                <a href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20a%20consultation%20for%20veneers"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="px-8 py-4 bg-primary text-white rounded-xl font-bold hover:bg-primary-dark transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
                                     <MessageCircle size={20} /> Book Consultation
-                                </button>
+                                </a>
                                 <a href="tel:+918891494731"
                                     className="px-8 py-4 bg-white text-primary border-2 border-primary/20 rounded-xl font-bold hover:bg-blue-50 transition-all flex items-center justify-center gap-2">
                                     <Phone size={20} /> Call Now
@@ -93,9 +95,13 @@ export default function Veneers() {
                         <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative">
                             <div className="rounded-3xl overflow-hidden shadow-2xl shadow-primary/10 border border-gray-100">
                                 <img
-                                    src="https://images.unsplash.com/photo-1609188076864-c35269136b09?auto=format&fit=crop&q=80&w=800"
+                                    src="/images/smileMakeOver-img.jpg"
                                     alt="Porcelain veneers transformation at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
+                                    fetchpriority="high"
+                                    decoding="async"
+                                    width={800}
+                                    height={600}
                                 />
                             </div>
                             <div className="absolute -bottom-4 -left-4 lg:-left-8 bg-white rounded-2xl px-5 py-4 shadow-xl border border-gray-100">
@@ -120,9 +126,13 @@ export default function Veneers() {
                     <div className="grid lg:grid-cols-2 gap-14 items-center">
                         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                             <img
-                                src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=800"
+                                src="/images/veneers-treatment-img.webp"
                                 alt="Cosmetic dentistry at Olive Dental"
                                 className="w-full rounded-2xl shadow-lg aspect-[4/3] object-cover"
+                                loading="lazy"
+                                decoding="async"
+                                width={800}
+                                height={600}
                             />
                         </motion.div>
                         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>

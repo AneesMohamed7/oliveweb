@@ -30,7 +30,7 @@ export default function Footer() {
                             {/* Row 3: Social Links */}
                             <div className="flex gap-4 mt-6">
                                 <a
-                                    href="https://www.facebook.com/olivedentalofficial"
+                                    href="https://www.facebook.com/profile.php?id=61553874942274"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors text-white"
@@ -39,7 +39,7 @@ export default function Footer() {
                                     <Facebook size={18} />
                                 </a>
                                 <a
-                                    href="https://www.instagram.com/olivedentalofficial"
+                                    href="https://www.instagram.com/olive_dental_face_clinics/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors text-white"
@@ -48,7 +48,7 @@ export default function Footer() {
                                     <Instagram size={18} />
                                 </a>
                                 <a
-                                    href="mailto:olivedentalofficial@gmail.com"
+                                    href="mailto:olivedental31@gmail.com"
                                     className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors text-white"
                                     aria-label="Email"
                                 >
@@ -104,7 +104,7 @@ export default function Footer() {
 
                                     {/* Email Contact Block */}
                                     <a
-                                        href="mailto:olivedentalofficial@gmail.com"
+                                        href="mailto:olivedental31@gmail.com"
                                         className="inline-flex items-start gap-3 mt-4 group"
                                     >
                                         <div className="w-8 h-8 rounded-md bg-[#1e3a6e] flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-primary transition-colors">
@@ -112,7 +112,7 @@ export default function Footer() {
                                         </div>
                                         <div>
                                             <p className="text-white font-semibold text-sm leading-tight">Send a Message</p>
-                                            <p className="text-primary text-sm mt-0.5 group-hover:text-white transition-colors">olivedentalofficial@gmail.com</p>
+                                            <p className="text-primary text-sm mt-0.5 group-hover:text-white transition-colors">olivedental31@gmail.com</p>
                                         </div>
                                     </a>
                                 </div>
@@ -124,8 +124,14 @@ export default function Footer() {
                                     </h5>
                                     <p className="text-gray-400 leading-relaxed">
                                         Opp. Taluk Supply Office,<br />
-                                        Kondotty, Malappuram
+                                        Near AMH Hospital, Kondotty, Malappuram
                                     </p>
+                                    <a
+                                        href="tel:+918848072635"
+                                        className="text-primary hover:text-white transition-colors text-sm block"
+                                    >
+                                        +91  88480 72635
+                                    </a>
                                 </div>
                             </div>
                         </div>

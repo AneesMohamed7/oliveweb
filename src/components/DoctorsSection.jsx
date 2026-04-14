@@ -49,6 +49,10 @@ export default function DoctorsSection() {
                                         src={doctor.image}
                                         alt={doctor.name}
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy"
+                                        decoding="async"
+                                        width={400}
+                                        height={500}
                                     />
                                     {/* Subtle gradient for text readability */}
                                     <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/50 to-transparent" />

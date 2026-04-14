@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MessageCircle, ChevronDown } from 'lucide-react';
 import { cn } from '../lib/utils';
-import BookingModal from './BookingModal';
+
 
 import oliveLogo from '../assets/olive-logo.png';
 import isoLogo from '../assets/iso-logo.svg';
@@ -10,7 +10,7 @@ import isoLogo from '../assets/iso-logo.svg';
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [treatmentsOpen, setTreatmentsOpen] = useState(false);
-    const [isBookingOpen, setIsBookingOpen] = useState(false);
+
     const location = useLocation();
     const dropdownRef = useRef(null);
 
@@ -141,14 +141,16 @@ export default function Navbar() {
                             </Link>
                         ))}
 
-                        <button
-                            onClick={() => setIsBookingOpen(true)}
+                        <a
+                            href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20an%20appointment"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="px-4 py-2 lg:px-5 lg:py-2.5 bg-accent text-white text-xs lg:text-sm font-medium rounded-full hover:bg-accent-dark transition-all shadow-lg hover:shadow-xl flex items-center gap-2 whitespace-nowrap cursor-pointer"
                         >
                             <MessageCircle size={16} />
                             <span className="hidden lg:inline">Book Appointment</span>
                             <span className="lg:hidden">Book</span>
-                        </button>
+                        </a>
                         <a
                             href="tel:+918891494731"
                             className="p-2 lg:p-2.5 bg-gray-100 text-primary rounded-full hover:bg-primary hover:text-white transition-all flex items-center justify-center"
@@ -244,20 +246,21 @@ export default function Navbar() {
                                 <Phone size={18} />
                                 Call
                             </a>
-                            <button
-                                onClick={() => { setIsBookingOpen(true); setIsOpen(false); }}
+                            <a
+                                href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20an%20appointment"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-accent text-white rounded-lg font-medium cursor-pointer"
                             >
                                 <MessageCircle size={18} />
                                 Book Now
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
             )}
 
-            {/* Booking Modal */}
-            <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
+
         </nav>
     );
 }

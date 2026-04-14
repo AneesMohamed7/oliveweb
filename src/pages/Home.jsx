@@ -1,17 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Hero from '../components/Hero';
-import Features from '../components/Features';
-import Services from '../components/Services';
-import StatsSection from '../components/StatsSection';
-import ClinicHours from '../components/ClinicHours';
-import BeforeAfter from '../components/BeforeAfter';
-import InvisalignParallax from '../components/InvisalignParallax';
-import DoctorsSection from '../components/DoctorsSection';
-import FAQ from '../components/FAQ';
-import ContactCTA from '../components/ContactCTA';
+import LazySection from '../components/LazySection';
 
-import GoogleReviews from '../components/GoogleReviews';
+// ─── Eagerly loaded (above the fold) ───
+import Hero from '../components/Hero';
+import StatsSection from '../components/StatsSection';
+import Features from '../components/Features';
 
 export default function Home() {
     return (
@@ -35,17 +29,53 @@ export default function Home() {
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
+
+            {/* ─── Above the fold (eagerly loaded) ─── */}
             <Hero />
             <StatsSection />
             <Features />
-            <Services />
-            <InvisalignParallax />
-            <BeforeAfter />
-            <DoctorsSection />
-            <GoogleReviews />
-            <ClinicHours />
-            <FAQ />
-            <ContactCTA />
+
+            {/* ─── Below the fold (Intersection Observer lazy loaded) ─── */}
+            <LazySection
+                component={() => import('../components/Services')}
+                minHeight="600px"
+                rootMargin="300px"
+            />
+            <LazySection
+                component={() => import('../components/InvisalignParallax')}
+                minHeight="500px"
+                rootMargin="200px"
+            />
+            <LazySection
+                component={() => import('../components/BeforeAfter')}
+                minHeight="500px"
+                rootMargin="200px"
+            />
+            <LazySection
+                component={() => import('../components/DoctorsSection')}
+                minHeight="400px"
+                rootMargin="200px"
+            />
+            <LazySection
+                component={() => import('../components/GoogleReviews')}
+                minHeight="400px"
+                rootMargin="150px"
+            />
+            <LazySection
+                component={() => import('../components/ClinicHours')}
+                minHeight="300px"
+                rootMargin="150px"
+            />
+            <LazySection
+                component={() => import('../components/FAQ')}
+                minHeight="400px"
+                rootMargin="100px"
+            />
+            <LazySection
+                component={() => import('../components/ContactCTA')}
+                minHeight="400px"
+                rootMargin="100px"
+            />
         </>
     );
 }

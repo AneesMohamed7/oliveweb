@@ -53,7 +53,7 @@ const beforeAfterCases = [
         duration: '6 months'
     },
     {
-        before: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=600&h=400',
+        before: '?auto=format&fit=crop&q=80&w=600&h=400',
         after: 'https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&q=80&w=600&h=400',
         label: 'Crooked Front Teeth',
         duration: '10 months'
@@ -93,15 +93,7 @@ const steps = [
     }
 ];
 
-const comparisonData = [
-    { feature: 'Appearance', aligners: 'Nearly invisible', braces: 'Visible metal/ceramic' },
-    { feature: 'Removable', aligners: 'Yes — for eating & cleaning', braces: 'No — fixed for duration' },
-    { feature: 'Comfort', aligners: 'Smooth plastic trays', braces: 'Metal brackets & wires' },
-    { feature: 'Cleaning', aligners: 'Easy — brush normally', braces: 'Difficult — food gets trapped' },
-    { feature: 'Diet', aligners: 'No restrictions', braces: 'Avoid hard / sticky foods' },
-    { feature: 'Appointments', aligners: 'Every 6–8 weeks', braces: 'Every 4–6 weeks' },
-    { feature: 'Treatment time', aligners: '6–18 months', braces: '18–36 months' }
-];
+
 
 const faqs = [
     {
@@ -195,9 +187,13 @@ export default function Aligners() {
                         >
                             <div className="rounded-3xl overflow-hidden shadow-2xl shadow-primary/10 border border-gray-100">
                                 <img
-                                    src="/images/aligners-product.jpg"
+                                    src="/dist/images/dentist-assisting-patient-wear-invisible-braces (1).webp"
                                     alt="Clear aligner trays at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
+                                    fetchpriority="high"
+                                    decoding="async"
+                                    width={800}
+                                    height={600}
                                 />
                             </div>
                             {/* Floating stat badge */}
@@ -228,9 +224,13 @@ export default function Aligners() {
                             transition={{ duration: 0.6 }}
                         >
                             <img
-                                src="/images/aligner-lifestyle.jpg"
+                                src="/dist/images/smile-with-aligner.webp"
                                 alt="Patient wearing clear aligners"
                                 className="w-full rounded-2xl shadow-lg aspect-[4/3] object-cover"
+                                loading="lazy"
+                                decoding="async"
+                                width={800}
+                                height={600}
                             />
                         </motion.div>
                         <motion.div
@@ -381,7 +381,7 @@ export default function Aligners() {
                                 className="relative text-center bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all z-10"
                             >
                                 <div className="mb-6 rounded-xl overflow-hidden aspect-video shadow-sm">
-                                    <img src={step.image} alt={step.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                    <img src={step.image} alt={step.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width={400} height={300} />
                                 </div>
                                 <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-xl flex items-center justify-center text-primary relative">
                                     <step.icon size={24} />

@@ -48,7 +48,7 @@ export default function Contact() {
 
 
     const hours = [
-        { day: 'Monday – Saturday', time: '9:00 AM – 7:00 PM' },
+        { day: 'Monday – Saturday', time: '9:00 AM – 9:00 PM' },
         { day: 'Sunday', time: 'By Appointment Only' },
     ];
 

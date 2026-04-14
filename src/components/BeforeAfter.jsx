@@ -1,36 +1,73 @@
-import React from 'react';
+import React, { useRef, useState, useCallback } from 'react';
+import LazyImage from './LazyImage';
 
 const transformations = [
-    {
-        img: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600&h=400',
-        label: 'Smile Makeover',
-    },
-    {
-        img: 'https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&q=80&w=600&h=400',
-        label: 'Teeth Whitening',
-    },
-    {
-        img: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=600&h=400',
-        label: 'Implant Restoration',
-    },
-    {
-        img: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=600&h=400',
-        label: 'Veneer Transformation',
-    },
-    {
-        img: 'https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&q=80&w=600&h=400',
-        label: 'Orthodontic Result',
-    },
-    {
-        img: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=600&h=400',
-        label: 'Full Mouth Rehab',
-    },
+    { img: '/images/beforeafter1.webp' },
+    { img: '/images/beforeafter2.webp' },
+    { img: '/images/beforeafter3.webp' },
+    { img: '/images/beforeafter4.webp' },
+    { img: '/images/beforeafter5.webp' },
+    { img: '/images/beforeafter6.webp' },
+    { img: '/images/beforeafter7.webp' },
+    { img: '/images/beforeafter8.webp' },
+    { img: '/images/beforeafter9.webp' },
+    { img: '/images/beforeafter10.webp' },
+    { img: '/images/beforeafter11.webp' },
+    { img: '/images/beforeafter12.webp' },
+    { img: '/images/beforeafter13.webp' },
 ];
 
-// Duplicate the items so the scroll loops seamlessly
 const doubledItems = [...transformations, ...transformations];
 
 export default function BeforeAfter() {
+    const [paused, setPaused] = useState(false);
+    const scrollRef = useRef(null);
+    const touchStartX = useRef(null);
+    const scrollStartLeft = useRef(null);
+
+    // Touch drag to scroll
+    const handleTouchStart = useCallback((e) => {
+        setPaused(true);
+        touchStartX.current = e.touches[0].clientX;
+        scrollStartLeft.current = scrollRef.current.scrollLeft;
+    }, []);
+
+    const handleTouchMove = useCallback((e) => {
+        if (touchStartX.current === null) return;
+        const delta = touchStartX.current - e.touches[0].clientX;
+        scrollRef.current.scrollLeft = scrollStartLeft.current + delta;
+    }, []);
+
+    const handleTouchEnd = useCallback(() => {
+        touchStartX.current = null;
+        setPaused(false);
+    }, []);
+
+    // Mouse drag to scroll
+    const isDragging = useRef(false);
+    const mouseStartX = useRef(null);
+    const mouseScrollLeft = useRef(null);
+
+    const handleMouseDown = useCallback((e) => {
+        isDragging.current = true;
+        setPaused(true);
+        mouseStartX.current = e.clientX;
+        mouseScrollLeft.current = scrollRef.current.scrollLeft;
+        scrollRef.current.style.cursor = 'grabbing';
+    }, []);
+
+    const handleMouseMove = useCallback((e) => {
+        if (!isDragging.current) return;
+        const delta = mouseStartX.current - e.clientX;
+        scrollRef.current.scrollLeft = mouseScrollLeft.current + delta;
+    }, []);
+
+    const handleMouseUp = useCallback(() => {
+        isDragging.current = false;
+        setPaused(false);
+        if (scrollRef.current) scrollRef.current.style.cursor = 'grab';
+    }, []);
+
     return (
         <section className="py-20 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,43 +81,57 @@ export default function BeforeAfter() {
                 </div>
             </div>
 
-            {/* Auto-scrolling carousel */}
-            <div className="relative w-full overflow-hidden">
+            <div
+                ref={scrollRef}
+                className="relative w-full overflow-x-auto"
+                style={{
+                    cursor: 'grab',
+                    scrollbarWidth: 'none',
+                    msOverflowStyle: 'none',
+                }}
+                onMouseEnter={() => setPaused(true)}
+                onMouseLeave={() => { setPaused(false); handleMouseUp(); }}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+            >
                 <div
-                    className="flex gap-6 w-max"
+                    className="flex gap-6 w-max px-6"
                     style={{
-                        animation: 'marquee 40s linear infinite',
+                        animation: `marquee 70s linear infinite`,
+                        animationPlayState: paused ? 'paused' : 'running',
                     }}
                 >
                     {doubledItems.map((item, idx) => (
                         <div
                             key={idx}
-                            className="flex-shrink-0 w-[340px] md:w-[400px] group"
+                            className="flex-shrink-0 w-[340px] md:w-[400px]"
                         >
                             <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
-                                <img
+                                <LazyImage
                                     src={item.img}
-                                    alt={item.label}
+                                    alt={`Smile transformation ${(idx % transformations.length) + 1}`}
                                     className="w-full h-full object-cover"
+                                    width={400}
+                                    height={300}
+                                    blur
+                                    draggable={false}
                                 />
-                                {/* Label overlay */}
-                                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent p-5">
-                                    <span className="text-white font-semibold text-sm">
-                                        {item.label}
-                                    </span>
-                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
 
-            {/* Keyframes injected via style tag */}
             <style>{`
                 @keyframes marquee {
-                    0% { transform: translateX(0); }
+                    0%   { transform: translateX(0); }
                     100% { transform: translateX(-50%); }
                 }
+                div::-webkit-scrollbar { display: none; }
             `}</style>
         </section>
     );

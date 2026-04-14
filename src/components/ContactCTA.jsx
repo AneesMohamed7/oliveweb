@@ -53,7 +53,7 @@ export default function ContactCTA() {
                         transition={{ duration: 0.6 }}
                     >
                         <h2 className="text-3xl lg:text-4xl font-bold mb-8">Visit Our Clinics</h2>
-                        
+
                         <div className="grid sm:grid-cols-2 gap-8 mb-10">
                             {/* Kunnumpuram Location */}
                             <div className="space-y-4">
@@ -65,10 +65,11 @@ export default function ContactCTA() {
                                 </div>
                                 <p className="text-blue-100/70 text-sm leading-relaxed">
                                     Opp. Daru Shifa Hospital,<br />
-                                    Kondotty, Malappuram 676305
+                                    Kolappuram Road, Kunnumpuram,
+                                    Malappuram 676305
                                 </p>
                                 <a
-                                    href="https://www.google.com/maps/search/Olive+Dental+%26+Face+Clinic+Kunnumpuram+Kondotty"
+                                    href="https://maps.app.goo.gl/Ydk2WzBThgPht2nD7"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 text-accent hover:text-white transition-colors text-sm font-medium"
@@ -87,10 +88,11 @@ export default function ContactCTA() {
                                 </div>
                                 <p className="text-blue-100/70 text-sm leading-relaxed">
                                     Opp. Taluk Supply Office,<br />
-                                    Kondotty, Malappuram
+                                    Near AMH Hospital, Kondotty,
+                                    Malappuram
                                 </p>
                                 <a
-                                    href="https://www.google.com/maps/search/Kottukkara+Kondotty+Malappuram"
+                                    href="https://maps.app.goo.gl/kLnwhGppMxWsA1Pi6"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 text-accent hover:text-white transition-colors text-sm font-medium"
@@ -106,13 +108,16 @@ export default function ContactCTA() {
                                 <a href="tel:+918891494731" className="text-white hover:text-accent transition-colors font-semibold text-xl">
                                     +91 88914 94731
                                 </a>
+                                <a href="tel:+918848072635" className="text-white hover:text-accent transition-colors font-semibold text-xl">
+                                    | +91 88480 72635
+                                </a>
                             </div>
 
                             <div className="flex items-start gap-4 bg-white/5 p-5 rounded-2xl border border-white/10">
                                 <Clock size={20} className="shrink-0 mt-1 text-primary-light" />
                                 <div>
                                     <h4 className="font-bold text-white mb-1">Clinic Timings</h4>
-                                    <p className="text-sm text-blue-100/70">Mon – Sat: 9:00 AM – 7:00 PM</p>
+                                    <p className="text-sm text-blue-100/70">Mon – Sat: 9:00 AM – 9:00 PM</p>
                                     <p className="text-sm text-blue-100/70">Sunday: By Appointment Only</p>
                                 </div>
                             </div>

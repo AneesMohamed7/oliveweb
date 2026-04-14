@@ -5,6 +5,7 @@ import { X, Maximize2, Camera, Sparkles, Building2, Stethoscope } from 'lucide-r
 import ContactCTA from '../components/ContactCTA';
 
 const galleryImages = [
+    // ── Clinic (formerly Clinic + Infrastructure) ──────────────────────────
     {
         id: 1,
         src: '/images/oliveclinic-img1.webp',
@@ -23,75 +24,248 @@ const galleryImages = [
         id: 3,
         src: '/images/clinic-chair (1).jpg',
         alt: 'Advanced Dental Chair',
-        category: 'Infrastructure',
+        category: 'Clinic',
         title: 'State-of-the-art Equipment'
     },
     {
         id: 4,
         src: '/images/clinic-chair (2).jpg',
         alt: 'Sterilized Treatment Room',
-        category: 'Infrastructure',
+        category: 'Clinic',
         title: 'Hygienic Environment'
     },
     {
         id: 5,
         src: '/images/clinic-chair (3).webp',
         alt: 'Dental Care Unit',
-        category: 'Infrastructure',
+        category: 'Clinic',
         title: 'Patient Comfort'
     },
     {
         id: 6,
         src: '/images/clinic-chair (4).webp',
         alt: 'Modern Treatment Suite',
-        category: 'Infrastructure',
+        category: 'Clinic',
         title: 'Advanced Facilities'
     },
+
+    // ── Dental Results ──────────────────────────────────────────────────────
     {
         id: 7,
-        src: '/images/smileMakeOver-img.jpg',
+        src: '/images/beforeafter6.webp',
         alt: 'Smile Makeover Result',
-        category: 'Results',
+        category: 'Dental Results',
         title: 'Smile Makeover'
     },
     {
         id: 8,
-        src: '/images/teethwhitening-img.webp',
+        src: '/images/beforeafter5.webp',
         alt: 'Teeth Whitening Result',
-        category: 'Results',
+        category: 'Dental Results',
         title: 'Professional Whitening'
     },
     {
-        id: 9,
-        src: '/images/hydrafacial-img.webp',
-        alt: 'HydraFacial Treatment',
-        category: 'Results',
-        title: 'Facial Rejuvenation'
-    },
-    {
-        id: 10,
-        src: '/images/bortox-img.webp',
-        alt: 'Botox Treatment Result',
-        category: 'Results',
-        title: 'Aesthetic Excellence'
-    },
-    {
         id: 11,
-        src: '/images/implants-solution.jpg',
+        src: '/images/beforeafter2.webp',
         alt: 'Dental Implant Solution',
-        category: 'Results',
+        category: 'Dental Results',
         title: 'Dental Restoration'
     },
     {
         id: 12,
-        src: '/images/veneers-solution.jpg',
+        src: '/images/beforeafter1.webp',
         alt: 'Veneers Solution',
-        category: 'Results',
+        category: 'Dental Results',
         title: 'Veneers Excellence'
-    }
+    },
+    // 24 new dental result images
+    {
+        id: 13,
+        src: '/images/beforeafter13.webp',
+        alt: 'Dental Treatment Result 13',
+        category: 'Dental Results',
+        title: 'Dental Result 13'
+    },
+    {
+        id: 14,
+        src: '/images/beforeafter14.webp',
+        alt: 'Dental Treatment Result 14',
+        category: 'Dental Results',
+        title: 'Dental Result 14'
+    },
+    {
+        id: 15,
+        src: '/images/beforeafter15.webp',
+        alt: 'Dental Treatment Result 15',
+        category: 'Dental Results',
+        title: 'Dental Result 15'
+    },
+    {
+        id: 16,
+        src: '/images/beforeafter16.webp',
+        alt: 'Dental Treatment Result 16',
+        category: 'Dental Results',
+        title: 'Dental Result 16'
+    },
+    {
+        id: 17,
+        src: '/images/beforeafter17.webp',
+        alt: 'Dental Treatment Result 17',
+        category: 'Dental Results',
+        title: 'Dental Result 17'
+    },
+    {
+        id: 18,
+        src: '/images/beforeafter18.webp',
+        alt: 'Dental Treatment Result 18',
+        category: 'Dental Results',
+        title: 'Dental Result 18'
+    },
+    {
+        id: 19,
+        src: '/images/beforeafter19.webp',
+        alt: 'Dental Treatment Result 19',
+        category: 'Dental Results',
+        title: 'Dental Result 19'
+    },
+    {
+        id: 20,
+        src: '/images/beforeafter20.webp',
+        alt: 'Dental Treatment Result 20',
+        category: 'Dental Results',
+        title: 'Dental Result 20'
+    },
+    {
+        id: 21,
+        src: '/images/beforeafter21.webp',
+        alt: 'Dental Treatment Result 21',
+        category: 'Dental Results',
+        title: 'Dental Result 21'
+    },
+    {
+        id: 22,
+        src: '/images/beforeafter22.webp',
+        alt: 'Dental Treatment Result 22',
+        category: 'Dental Results',
+        title: 'Dental Result 22'
+    },
+    {
+        id: 23,
+        src: '/images/beforeafter23.webp',
+        alt: 'Dental Treatment Result 23',
+        category: 'Dental Results',
+        title: 'Dental Result 23'
+    },
+    {
+        id: 24,
+        src: '/images/beforeafter24.webp',
+        alt: 'Dental Treatment Result 24',
+        category: 'Dental Results',
+        title: 'Dental Result 24'
+    },
+    {
+        id: 25,
+        src: '/images/beforeafter25.webp',
+        alt: 'Dental Treatment Result 25',
+        category: 'Dental Results',
+        title: 'Dental Result 25'
+    },
+    {
+        id: 26,
+        src: '/images/beforeafter26.webp',
+        alt: 'Dental Treatment Result 26',
+        category: 'Dental Results',
+        title: 'Dental Result 26'
+    },
+    {
+        id: 27,
+        src: '/images/beforeafter27.webp',
+        alt: 'Dental Treatment Result 27',
+        category: 'Dental Results',
+        title: 'Dental Result 27'
+    },
+    {
+        id: 28,
+        src: '/images/beforeafter28.webp',
+        alt: 'Dental Treatment Result 28',
+        category: 'Dental Results',
+        title: 'Dental Result 28'
+    },
+    {
+        id: 29,
+        src: '/images/beforeafter29.webp',
+        alt: 'Dental Treatment Result 29',
+        category: 'Dental Results',
+        title: 'Dental Result 29'
+    },
+    {
+        id: 30,
+        src: '/images/beforeafter30.webp',
+        alt: 'Dental Treatment Result 30',
+        category: 'Dental Results',
+        title: 'Dental Result 30'
+    },
+    {
+        id: 31,
+        src: '/images/beforeafter31.webp',
+        alt: 'Dental Treatment Result 31',
+        category: 'Dental Results',
+        title: 'Dental Result 31'
+    },
+    {
+        id: 32,
+        src: '/images/beforeafter32.webp',
+        alt: 'Dental Treatment Result 32',
+        category: 'Dental Results',
+        title: 'Dental Result 32'
+    },
+    {
+        id: 33,
+        src: '/images/beforeafter33.webp',
+        alt: 'Dental Treatment Result 33',
+        category: 'Dental Results',
+        title: 'Dental Result 33'
+    },
+    {
+        id: 34,
+        src: '/images/beforeafter34.webp',
+        alt: 'Dental Treatment Result 34',
+        category: 'Dental Results',
+        title: 'Dental Result 34'
+    },
+    {
+        id: 35,
+        src: '/images/beforeafter35.webp',
+        alt: 'Dental Treatment Result 35',
+        category: 'Dental Results',
+        title: 'Dental Result 35'
+    },
+    {
+        id: 36,
+        src: '/images/beforeafter36.webp',
+        alt: 'Dental Treatment Result 36',
+        category: 'Dental Results',
+        title: 'Dental Result 36'
+    },
+
+    // ── Face Results ────────────────────────────────────────────────────────
+    {
+        id: 9,
+        src: '/images/beforeafter4.webp',
+        alt: 'HydraFacial Treatment',
+        category: 'Face Results',
+        title: 'Facial Rejuvenation'
+    },
+    {
+        id: 10,
+        src: '/images/beforeafter3.webp',
+        alt: 'Botox Treatment Result',
+        category: 'Face Results',
+        title: 'Aesthetic Excellence'
+    },
 ];
 
-const categories = ['All', 'Clinic', 'Infrastructure', 'Results'];
+const categories = ['All', 'Clinic', 'Dental Results', 'Face Results'];
 
 export default function Gallery() {
     const [selectedCategory, setSelectedCategory] = useState('All');
@@ -143,8 +317,8 @@ export default function Gallery() {
                                 key={cat}
                                 onClick={() => setSelectedCategory(cat)}
                                 className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${selectedCategory === cat
-                                        ? 'bg-primary text-white shadow-lg'
-                                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                                    ? 'bg-primary text-white shadow-lg'
+                                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                                     }`}
                             >
                                 {cat}

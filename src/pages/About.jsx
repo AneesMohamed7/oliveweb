@@ -85,7 +85,7 @@ export default function About() {
                             transition={{ duration: 0.7, delay: 0.6 }}
                             className="text-gray-300 text-lg lg:text-xl leading-relaxed mb-10 max-w-xl"
                         >
-                            6000+ patients choose Olive Dental & Face Clinic for accurate diagnosis, ethical treatment, and natural-looking results — all under one roof.
+                            4000+ patients choose Olive Dental & Face Clinic for accurate diagnosis, ethical treatment, and natural-looking results — all under one roof.
                         </motion.p>
 
                         {/* Stat chips row */}
@@ -97,7 +97,7 @@ export default function About() {
                         >
                             {[
                                 { icon: Star, label: '5.0 Google Rating', sub: 'Verified Patient Reviews' },
-                                { icon: Users, label: '6000+ Patients', sub: 'Served' },
+                                { icon: Users, label: '4000+ Patients', sub: 'Served' },
                                 { icon: ShieldCheck, label: 'Invisalign®', sub: 'Certified Provider' },
                             ].map((chip) => (
                                 <div key={chip.label} className="bg-white/10 border border-white/15 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2">
@@ -171,7 +171,7 @@ export default function About() {
                                 className="absolute -bottom-8 -right-8 bg-white p-1 rounded-3xl shadow-2xl"
                             >
                                 <div className="bg-primary text-white rounded-[1.25rem] px-8 py-6 text-center">
-                                    <p className="text-4xl font-extrabold mb-1">6+</p>
+                                    <p className="text-4xl font-extrabold mb-1">3+</p>
                                     <p className="text-[10px] font-bold uppercase tracking-wider text-blue-100">Years of Care</p>
                                 </div>
                             </motion.div>
@@ -205,7 +205,7 @@ export default function About() {
                                         Why We Started
                                     </h3>
                                     <p className="text-gray-500 text-sm leading-relaxed">
-                                        Founded in 2018, we aimed to bring metropolitan-standard dental procedures to Malappuram, ensuring every family has access to tech-driven, ethical healthcare.
+                                        Founded in 2023, we aimed to bring metropolitan-standard dental procedures to Malappuram, ensuring every family has access to tech-driven, ethical healthcare.
                                     </p>
                                 </motion.div>
                             </div>
@@ -285,7 +285,7 @@ export default function About() {
                                 <div className="absolute -inset-4 border border-primary/10 rounded-[3rem] -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                 <div className="rounded-[2.5rem] overflow-hidden shadow-2xl transition-transform duration-700 hover:scale-[1.02]">
                                     <img
-                                        src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800"
+                                        src="images/drshahana.img.webp?auto=format&fit=crop&q=80&w=800"
                                         alt="Dr. Shahana — Lead Clinician at Olive Dental"
                                         className="w-full aspect-[4/5] object-cover"
                                     />
@@ -423,8 +423,8 @@ export default function About() {
                     >
                         {[
                             { value: '5.0', label: 'Google Rating', extra: '⭐⭐⭐⭐⭐' },
-                            { value: '6000+', label: 'Happy Patients' },
-                            { value: '6+', label: 'Years of Care' },
+                            { value: '4000+', label: 'Happy Patients' },
+                            { value: '3+', label: 'Years of Care' },
                             { value: '6', label: 'Specialists' },
                         ].map((stat, i) => (
                             <div

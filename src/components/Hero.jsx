@@ -11,7 +11,7 @@ import {
     ArrowRight,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import BookingModal from './BookingModal';
+
 
 const TRUST_BADGES = [
     { icon: ShieldCheck, label: 'BDS & MDS Qualified Doctors' },
@@ -42,11 +42,11 @@ const scaleIn = {
 };
 
 export default function Hero() {
-    const [bookingOpen, setBookingOpen] = useState(false);
+
 
     return (
         <>
-            <BookingModal isOpen={bookingOpen} onClose={() => setBookingOpen(false)} />
+
 
             <section className="relative min-h-screen flex flex-col overflow-hidden">
 
@@ -57,7 +57,11 @@ export default function Hero() {
                         alt=""
                         aria-hidden="true"
                         className="w-full h-full object-cover object-center"
-                        loading="lazy"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
+                        width={1920}
+                        height={1080}
                     />
                 </div>
 
@@ -147,13 +151,15 @@ export default function Hero() {
                                     variants={fadeUp}
                                     className="flex flex-col sm:flex-row gap-3.5 mb-6"
                                 >
-                                    <button
-                                        onClick={() => setBookingOpen(true)}
+                                    <a
+                                        href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20an%20appointment"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-green-500 hover:bg-green-400 text-white font-bold text-sm shadow-lg shadow-green-900/40 hover:shadow-green-500/40 transition-all duration-200 hover:-translate-y-0.5"
                                     >
                                         Book An Appointment
                                         <ArrowRight size={15} className="opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
-                                    </button>
+                                    </a>
 
                                     <a
                                         href="tel:+918891494731"
@@ -187,8 +193,12 @@ export default function Hero() {
                                 >
                                     <img
                                         src="/images/oliveclinic-img1.webp"
-                                        alt="Dental specialist with patient"
+                                        alt="Dental specialist with patient at Olive Dental Clinic"
                                         className="w-full h-full object-cover object-top"
+                                        loading="eager"
+                                        decoding="async"
+                                        width={800}
+                                        height={600}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a1840]/70 via-transparent to-transparent pointer-events-none" />
                                     <div className="absolute bottom-5 left-5 right-5">

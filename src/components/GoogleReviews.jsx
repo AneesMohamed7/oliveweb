@@ -88,6 +88,10 @@ function ReviewCard({ review }) {
                     src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
                     alt="Google"
                     className="h-4 opacity-70 flex-shrink-0"
+                    loading="lazy"
+                    decoding="async"
+                    width={59}
+                    height={16}
                 />
             </div>
 
@@ -125,6 +129,10 @@ export default function GoogleReviews() {
                             src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
                             alt="Google"
                             className="h-5"
+                            loading="lazy"
+                            decoding="async"
+                            width={74}
+                            height={20}
                         />
                         <span className="font-semibold text-gray-700">Reviews</span>
                         <span className="flex items-center gap-1 bg-yellow-50 text-yellow-700 px-2.5 py-0.5 rounded-full text-sm font-bold border border-yellow-100">

@@ -165,7 +165,7 @@ export default function FacialAesthetics() {
             </section>
 
             {/* ─── FAQ ─── */}
-            <section className="py-20 bg-[#FAF8F5]">
+            <section className="py-20 bg-background-soft/30">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-14">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Facial Treatment FAQs</h2>

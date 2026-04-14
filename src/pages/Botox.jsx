@@ -5,7 +5,7 @@ import {
     CheckCircle2, ChevronDown, ChevronUp, MessageCircle, Phone,
     ShieldCheck, Sparkles, Award, Heart, Syringe, Star
 } from 'lucide-react';
-import BookingModal from '../components/BookingModal';
+
 import ContactCTA from '../components/ContactCTA';
 
 const faqs = [
@@ -54,7 +54,7 @@ const benefits = [
 
 export default function Botox() {
     const [openFAQ, setOpenFAQ] = useState(null);
-    const [modalOpen, setModalOpen] = useState(false);
+
 
     return (
         <div className="bg-white font-sans text-gray-800">
@@ -64,12 +64,12 @@ export default function Botox() {
                 <link rel="canonical" href="https://olivedentalofficial.in/treatments/botox" />
             </Helmet>
 
-            <BookingModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+
 
             {/* ═══ HERO ═══ */}
-            <section className="relative bg-[#FAF8F5] py-20 lg:py-28 overflow-hidden">
+            <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50/30 py-20 lg:py-28 overflow-hidden">
                 <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-[100px]" />
-                <div className="absolute bottom-0 -left-32 w-80 h-80 bg-blue-50/50 rounded-full blur-[80px]" />
+                <div className="absolute bottom-0 -left-32 w-80 h-80 bg-accent/5 rounded-full blur-[80px]" />
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -84,10 +84,12 @@ export default function Botox() {
                                 Clinical expertise for a naturally refreshed and youthful appearance.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <button onClick={() => setModalOpen(true)}
+                                <a href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20a%20consultation%20for%20botox"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="px-8 py-4 bg-primary text-white rounded-xl font-bold hover:bg-primary-dark transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
                                     <MessageCircle size={20} /> Book Consultation
-                                </button>
+                                </a>
                                 <a href="tel:+918891494731"
                                     className="px-8 py-4 bg-white text-primary border-2 border-primary/20 rounded-xl font-bold hover:bg-blue-50 transition-all flex items-center justify-center gap-2">
                                     <Phone size={20} /> Call Now
@@ -98,9 +100,13 @@ export default function Botox() {
                         <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative">
                             <div className="rounded-3xl overflow-hidden shadow-2xl shadow-primary/10 border border-gray-100">
                                 <img
-                                    src="https://images.unsplash.com/photo-1522335789203-aa9fb3ad2fda?q=80&w=800&auto=format&fit=crop"
+                                    src="/images/botox-img.webp"
                                     alt="Botox treatment at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
+                                    fetchpriority="high"
+                                    decoding="async"
+                                    width={800}
+                                    height={600}
                                 />
                             </div>
                             <div className="absolute -bottom-4 -left-4 lg:-left-8 bg-white rounded-2xl px-5 py-4 shadow-xl border border-gray-100">
@@ -125,9 +131,13 @@ export default function Botox() {
                     <div className="grid lg:grid-cols-2 gap-14 items-center">
                         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                             <img
-                                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop"
-                                alt="Facial aesthetics consultation"
+                                src="/images/botox-img.webp"
+                                alt="Botox procedure explained"
                                 className="w-full rounded-2xl shadow-lg aspect-[4/3] object-cover"
+                                loading="lazy"
+                                decoding="async"
+                                width={800}
+                                height={600}
                             />
                         </motion.div>
                         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
@@ -155,7 +165,7 @@ export default function Botox() {
             </section>
 
             {/* ═══ WHY CHOOSE US ═══ */}
-            <section className="py-20 bg-[#FAF8F5]">
+            <section className="py-20 bg-background-soft">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
                         <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">Our Expertise</span>

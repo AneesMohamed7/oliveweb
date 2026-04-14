@@ -30,7 +30,7 @@ export default function ClinicHours() {
                                         <ul className="space-y-1 text-gray-300 text-sm">
                                             <li className="flex justify-between w-48">
                                                 <span>Monday - Saturday</span>
-                                                <span className="font-mono">09:00 AM - 07:00 PM</span>
+                                                <span className="font-mono">09:00 AM - 09:00 PM</span>
                                             </li>
                                             <li className="flex justify-between w-48 text-gray-500">
                                                 <span>Sunday</span>
@@ -62,7 +62,7 @@ export default function ClinicHours() {
                                 initial={{ scale: 1.1 }}
                                 whileInView={{ scale: 1 }}
                                 transition={{ duration: 1.5 }}
-                                src="public/images/clinic-front-inside.jpg"
+                                src="/images/oliveclinic-img1.webp"
                                 alt="Modern Dental Clinic Reception"
                                 className="absolute inset-0 w-full h-full object-cover opacity-80"
                             />
