@@ -1,4 +1,7 @@
-import { Smile, Anchor, Sparkles, HeartPulse, Sun, Crown, Baby, Syringe, Droplets, CircleDot, Waves } from 'lucide-react';
+import {
+    Smile, Anchor, Sparkles, HeartPulse, Sun, Crown, Baby, Syringe,
+    Droplets, CircleDot, Waves, Leaf, Activity, Feather, Eye, Scissors
+} from 'lucide-react';
 
 // ─── DENTAL SERVICES ───────────────────────────────────────────────
 export const dentalServices = [
@@ -96,13 +99,13 @@ export const dentalServices = [
 
 // ─── FACIAL AESTHETIC SERVICES ─────────────────────────────────────
 export const facialServices = [
-    // CORE (high-ticket, premium)
+    // CORE
     {
         id: 'prp',
         title: 'PRP Skin Rejuvenation',
         category: 'facial',
         type: 'core',
-        description: 'Platelet-rich plasma therapy stimulates deep collagen production for natural skin tightening and rejuvenation — medically supervised for safe, lasting results.',
+        description: 'Boosts collagen using your own growth factors for firmer, healthier skin.',
         icon: Droplets,
         image: '/images/prpskin-rejuvenation.webp',
         link: '/treatments/prp'
@@ -112,7 +115,7 @@ export const facialServices = [
         title: 'Botox & Dermal Fillers',
         category: 'facial',
         type: 'core',
-        description: 'Precision-administered anti-ageing injections to smooth fine lines and restore volume — delivering subtle, natural-looking facial refinement under clinical supervision.',
+        description: 'Smooths wrinkles and restores volume with precise, natural-looking results.',
         icon: Syringe,
         image: '/images/botox-img.webp',
         link: '/treatments/botox'
@@ -122,7 +125,7 @@ export const facialServices = [
         title: 'Microneedling',
         category: 'facial',
         type: 'core',
-        description: 'Controlled micro-injuries trigger the skin\'s natural healing response, boosting collagen and reducing scars, pores, and fine lines with minimal downtime.',
+        description: 'Stimulates collagen to reduce scars, pores, and fine lines.',
         icon: CircleDot,
         image: '/images/microneedling-img.webp',
         link: '/treatments/microneedling'
@@ -132,7 +135,7 @@ export const facialServices = [
         title: 'Thread Lift',
         category: 'facial',
         type: 'core',
-        description: 'Non-surgical face lifting using dissolvable threads to tighten sagging skin and stimulate collagen — a minimally invasive alternative to traditional surgery.',
+        description: 'Lifts and tightens sagging skin without surgery.',
         icon: Sparkles,
         image: '/images/threadlift-img.webp',
         link: '/treatments/thread-lift'
@@ -142,102 +145,114 @@ export const facialServices = [
         title: 'HydraFacial',
         category: 'facial',
         type: 'core',
-        description: 'Multi-step facial treatment combining deep cleansing, exfoliation, extraction, and hydration for instantly radiant, revitalised skin in a single session.',
+        description: 'Deep cleansing and hydration for instantly glowing skin.',
         icon: Waves,
         image: '/images/hydrafacial-img.webp',
         link: '/treatments/hydrafacial'
     },
+
     // ADVANCED
     {
         id: 'chemical-peels',
         title: 'Chemical Peels',
         category: 'facial',
         type: 'advanced',
+        icon: Leaf,
         image: '/images/chemicalPeeling_converted.webp',
-        description: 'Medical-grade peels to improve skin texture, reduce pigmentation, and promote cellular renewal.'
+        description: 'Improves texture and reduces pigmentation with medical-grade exfoliation.'
     },
     {
         id: 'skin-resurfacing',
         title: 'Skin Resurfacing',
         category: 'facial',
         type: 'advanced',
+        icon: Activity,
         image: '/images/skinResurfesing-converted-from-jpg.webp',
-        description: 'Advanced techniques to smooth uneven skin tone, reduce scarring, and restore a youthful complexion.'
+        description: 'Smoothens uneven skin and reduces scars for a refined appearance.'
     },
     {
         id: 'mesotherapy',
         title: 'Mesotherapy',
         category: 'facial',
         type: 'advanced',
+        icon: Droplets,
         image: '/images/Mesotherapy.webp',
-        description: 'Targeted microinjections delivering vitamins and hyaluronic acid deep into the skin for intensive hydration and glow.'
+        description: 'Delivers nutrients deep into skin for hydration and glow.'
     },
     {
         id: 'lip-pigmentation',
         title: 'Lip Pigmentation',
         category: 'facial',
         type: 'advanced',
-        image: '/images/prptreatment-img.jpg',
-        description: 'Gentle depigmentation therapy to restore natural, even-toned lip colour with clinical precision.'
+        icon: Feather,
+        image: '/images/lippigmentation.jpg',
+        description: 'Restores natural lip colour and improves tone evenly.'
     },
     {
         id: 'microblading',
         title: 'Microblading',
         category: 'facial',
         type: 'advanced',
+        icon: Scissors,
         image: '/images/Microblading.webp',
-        description: 'Semi-permanent eyebrow enhancement using fine strokes for naturally defined, fuller brows.'
+        description: 'Creates fuller, natural-looking brows with fine strokes.'
     },
+
     // MINOR
     {
         id: 'wart-removal',
         title: 'Wart Removal',
         category: 'facial',
         type: 'minor',
+        icon: CircleDot,
         image: '/images/Wart Removal1.webp',
-        description: 'Safe clinical removal of warts.'
+        description: 'Safe and quick removal of unwanted skin growths.'
     },
     {
         id: 'mole-removal',
         title: 'Mole Removal',
         category: 'facial',
         type: 'minor',
+        icon: CircleDot,
         image: '/images/moleRemove.webp',
-        description: 'Precise mole excision with minimal scarring.'
+        description: 'Precise removal with minimal scarring.'
     },
     {
         id: 'skin-tag',
         title: 'Skin Tag Removal',
         category: 'facial',
         type: 'minor',
+        icon: CircleDot,
         image: '/images/prpskin-rejuvenation.webp',
-        description: 'Quick, painless skin tag removal.'
+        description: 'Quick and painless removal of skin tags.'
     },
     {
         id: 'dandruff',
         title: 'Dandruff Treatment',
         category: 'facial',
         type: 'minor',
+        icon: Leaf,
         image: '/images/dandruffRemovalTreatment.webp',
-        description: 'Clinical scalp therapy for persistent dandruff.'
+        description: 'Targets scalp issues and controls recurring dandruff.'
     },
     {
         id: 'under-eye',
         title: 'Under Eye Treatment',
         category: 'facial',
         type: 'minor',
+        icon: Eye,
         image: '/images/underEyeTreatment.webp',
-        description: 'Targeted treatment for dark circles and puffiness.'
+        description: 'Reduces dark circles and under-eye puffiness.'
     },
     {
         id: 'dermaplaning',
         title: 'Dermaplaning',
         category: 'facial',
         type: 'minor',
+        icon: Sparkles,
         image: '/images/dermaplaningtreatment.webp',
-        description: 'Professional exfoliation for smooth, radiant skin.'
+        description: 'Removes dead skin and peach fuzz for smoother skin.'
     }
 ];
-
 // Combined for backwards compatibility
 export const services = [...dentalServices.filter(s => s.type === 'core' || s.type === 'secondary'), ...facialServices.filter(s => s.type === 'core')];

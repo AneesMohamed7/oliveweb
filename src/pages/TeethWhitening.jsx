@@ -103,7 +103,7 @@ export default function TeethWhitening() {
                                     src="/images/teethwhitening-img.webp"
                                     alt="Teeth whitening treatment at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
-                                    fetchpriority="high"
+                                    fetchPriority="high"
                                     decoding="async"
                                     width={800}
                                     height={600}

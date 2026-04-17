@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
-import { Smile, Anchor, Users, Sparkles } from 'lucide-react';
+import { Smile, Anchor, Users } from 'lucide-react';
 
 function Counter({ from, to, label, suffix = "+", icon: Icon, delay = 0 }) {
     const ref = useRef(null);
@@ -102,7 +102,7 @@ export default function StatsSection() {
                 </motion.div>
 
                 <div className="grid md:grid-cols-3 gap-12 md:gap-8">
-                    <Counter from={0} to={80} label="Aligners Delivered" icon={Smile} delay={0} />
+                    <Counter from={0} to={100} label="Aligners Delivered" icon={Smile} delay={0} />
                     <Counter from={0} to={75} label="Dental Implants" icon={Anchor} delay={0.2} />
                     <Counter from={0} to={4000} label="Happy Patients" icon={Users} delay={0.4} />
                 </div>

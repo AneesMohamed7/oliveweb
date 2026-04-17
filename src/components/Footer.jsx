@@ -13,7 +13,7 @@ export default function Footer() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-12">
 
                         {/* Brand Column */}
-                        <div className="lg:col-span-4 flex flex-col gap-0 border-t-0">
+                        <div className="lg:col-span-4 flex flex-col gap-6 -mt-24">
                             <img
                                 src={oliveLogo}
                                 alt="Olive Dental"

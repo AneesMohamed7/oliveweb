@@ -36,7 +36,7 @@ export default function DentalTreatments() {
     const coreDental = allDental;
 
     const trustPillars = [
-        { icon: Cpu, title: 'Digital Diagnostics', text: 'CBCT scans and digital impressions for precise treatment planning.' },
+        { icon: Cpu, title: 'Digital Diagnostics', text: 'Advanced digital X-rays and diagnostic tools for accurate treatment planning.' },
         { icon: ShieldCheck, title: 'Pain-Minimized Care', text: 'Advanced anaesthesia and minimally invasive techniques for your comfort.' },
         { icon: Scan, title: 'Sterile Environment', text: 'Hospital-grade sterilisation protocols for complete safety and hygiene.' },
         { icon: Heart, title: 'Experienced Professionals', text: 'Multi-specialty dental team with years of clinical expertise.' }
@@ -78,7 +78,7 @@ export default function DentalTreatments() {
                         <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Dental Clinic in Kunnumpuram</span>
                         <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">Advanced Dental Care</h1>
                         <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-                            Precision-driven dental treatments for long-term oral health and confident smiles. Trusted by families across Kerala.
+                            Personalized dental treatments that improve your smile, comfort, and long-term oral health.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                             <a
@@ -183,6 +183,30 @@ export default function DentalTreatments() {
                 </div>
             </section>
 
+            {/* ─── DENTAL CONSULTATION CTA ─── */}
+            <section className="py-16 bg-gradient-to-r from-primary to-blue-600 text-white">
+                <div className="max-w-3xl mx-auto px-4 text-center">
+
+                    <h3 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">
+                        Book Your Dental Consultation
+                    </h3>
+
+                    <p className="text-lg md:text-xl text-white/85 mb-8 font-medium leading-relaxed">
+                        Get expert evaluation and the right treatment plan for your dental problem.
+                    </p>
+
+                    <a
+                        href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20a%20dental%20consultation"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-xl hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-base"
+                    >
+                        <MessageCircle size={20} />
+                        Book Dental Consultation
+                    </a>
+
+                </div>
+            </section>
             {/* ─── FAQ ─── */}
             <section className="py-20 bg-background-soft">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

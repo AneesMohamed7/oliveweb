@@ -103,7 +103,7 @@ export default function ThreadLift() {
                                     src="/images/threadlift-img.webp"
                                     alt="Thread lift at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
-                                    fetchpriority="high"
+                                    fetchPriority="high"
                                     decoding="async"
                                     width={800}
                                     height={600}

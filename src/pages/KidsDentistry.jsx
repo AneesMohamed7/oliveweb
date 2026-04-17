@@ -37,7 +37,6 @@ const faqs = [
 
 const whyUs = [
     { icon: Baby, title: 'Child-Friendly, Fearless Environment', desc: 'Our clinic is designed to make children feel welcome, calm, and safe from the very first visit.' },
-    { icon: Award, title: 'Specialist Paediatric Dentist — Dr. Nabeeh', desc: 'MDS-qualified pedodontist with expertise in child behaviour management and gentle dentistry.' },
     { icon: ShieldCheck, title: 'Gentle Techniques & Safe Anaesthesia', desc: 'Child-appropriate dosing, numbing gels, and a calm approach ensure every procedure is pain-free.' },
     { icon: Sparkles, title: 'Preventive-First Approach', desc: 'We focus on fluoride, sealants, and oral hygiene education to prevent problems before they start.' },
     { icon: Heart, title: 'Habit Correction & Early Orthodontics', desc: 'We monitor dental development and correct habits like thumb-sucking and tongue thrusting early.' },
@@ -103,7 +102,7 @@ export default function KidsDentistry() {
                                     src="/images/kidsdentistry-img.webp"
                                     alt="Kids dentistry at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
-                                    fetchpriority="high"
+                                    fetchPriority="high"
                                     decoding="async"
                                     width={800}
                                     height={600}

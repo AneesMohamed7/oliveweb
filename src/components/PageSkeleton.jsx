@@ -1,57 +1,69 @@
 import React from 'react';
+import oliveLogo from '../assets/olive-logo.png';
 
-/**
- * PageSkeleton — Branded loading state for Suspense fallback.
- * Prevents white flash during route chunk loading.
- * Uses site brand colors and a subtle shimmer animation.
- */
 export default function PageSkeleton() {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-            <div className="text-center">
-                {/* Animated brand dot */}
-                <div className="relative inline-flex items-center justify-center w-16 h-16 mb-6">
-                    <div
-                        className="absolute inset-0 rounded-full bg-primary/20"
-                        style={{
-                            animation: 'skeleton-pulse 1.2s ease-in-out infinite',
-                        }}
-                    />
-                    <div
-                        className="w-8 h-8 rounded-full bg-primary/40"
-                        style={{
-                            animation: 'skeleton-pulse 1.2s ease-in-out infinite 0.3s',
-                        }}
-                    />
-                </div>
+        <div className="min-h-screen flex items-center justify-center bg-white">
+            <div className="flex flex-col items-center text-center">
 
-                {/* Shimmer bars */}
-                <div className="space-y-3 w-64 mx-auto">
-                    <div
-                        className="h-3 bg-gray-200 rounded-full"
-                        style={{
-                            animation: 'skeleton-shimmer 1.5s ease-in-out infinite',
-                            background: 'linear-gradient(90deg, #e5e7eb 0%, #f3f4f6 50%, #e5e7eb 100%)',
-                            backgroundSize: '200% 100%',
-                        }}
-                    />
-                    <div
-                        className="h-3 bg-gray-200 rounded-full w-3/4 mx-auto"
-                        style={{
-                            animation: 'skeleton-shimmer 1.5s ease-in-out infinite 0.2s',
-                            background: 'linear-gradient(90deg, #e5e7eb 0%, #f3f4f6 50%, #e5e7eb 100%)',
-                            backgroundSize: '200% 100%',
-                        }}
-                    />
-                </div>
+                {/* Logo */}
+                <img
+                    src={oliveLogo}
+                    alt="Olive Dental"
+                    style={{
+                        height: "55px",
+                        marginBottom: "20px",
+                        objectFit: "contain",
+                        opacity: 0.9
+                    }}
+                />
+
+                {/* Loader Ring */}
+                <div
+                    style={{
+                        width: "40px",
+                        height: "40px",
+                        border: "3px solid #e5e7eb",
+                        borderTop: "3px solid #0ea5e9", // primary color
+                        borderRadius: "50%",
+                        animation: "spin 1s linear infinite",
+                        marginBottom: "16px"
+                    }}
+                />
+
+                {/* Loading Text */}
+                <p
+                    style={{
+                        fontSize: "14px",
+                        color: "#6b7280",
+                        fontWeight: 500,
+                        letterSpacing: "0.3px"
+                    }}
+                >
+                    Loading your experience...
+                </p>
+
+                {/* Sub shimmer line */}
+                <div
+                    style={{
+                        marginTop: "12px",
+                        width: "160px",
+                        height: "6px",
+                        borderRadius: "999px",
+                        background: "linear-gradient(90deg, #e5e7eb 0%, #f3f4f6 50%, #e5e7eb 100%)",
+                        backgroundSize: "200% 100%",
+                        animation: "shimmer 1.5s infinite"
+                    }}
+                />
+
             </div>
 
             <style>{`
-                @keyframes skeleton-pulse {
-                    0%, 100% { transform: scale(1); opacity: 0.5; }
-                    50% { transform: scale(1.15); opacity: 1; }
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
                 }
-                @keyframes skeleton-shimmer {
+                @keyframes shimmer {
                     0% { background-position: 200% 0; }
                     100% { background-position: -200% 0; }
                 }

@@ -12,9 +12,6 @@ const transformations = [
     { img: '/images/beforeafter8.webp' },
     { img: '/images/beforeafter9.webp' },
     { img: '/images/beforeafter10.webp' },
-    { img: '/images/beforeafter11.webp' },
-    { img: '/images/beforeafter12.webp' },
-    { img: '/images/beforeafter13.webp' },
 ];
 
 const doubledItems = [...transformations, ...transformations];

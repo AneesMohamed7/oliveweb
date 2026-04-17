@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Phone,
     Star,
@@ -6,22 +6,21 @@ import {
     Cpu,
     Heart,
     Users,
-    MapPin,
-    CheckCircle2,
     ArrowRight,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import invisalignLogo from '../assets/invisalign-logo.png';
+
 
 
 const TRUST_BADGES = [
-    { icon: ShieldCheck, label: 'BDS & MDS Qualified Doctors' },
+    { icon: ShieldCheck, label: 'BDS & MDS Qualified' },
     { icon: Cpu, label: '3D Digital Scanning' },
     { icon: Heart, label: 'Pain-Free Protocols' },
-    { icon: Users, label: 'Serving Kondotty & Beyond' },
 ];
 
 const STATS = [
-    { value: '2,000+', label: 'Happy Patients' },
+    { value: '4000+', label: 'Happy Patients' },
     { value: '4.9★', label: 'Google Rating' },
     { value: '4+', label: 'Years of Care' },
 ];
@@ -58,7 +57,7 @@ export default function Hero() {
                         aria-hidden="true"
                         className="w-full h-full object-cover object-center"
                         loading="eager"
-                        fetchpriority="high"
+                        fetchPriority="high"
                         decoding="async"
                         width={1920}
                         height={1080}
@@ -98,7 +97,7 @@ export default function Hero() {
                                 {/* Overline Trust Pill */}
                                 <motion.div
                                     variants={fadeUp}
-                                    className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full mb-5 text-xs font-semibold text-sky-300 border border-sky-400/30 bg-sky-400/10 backdrop-blur-sm"
+                                    className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full mb-3 text-xs font-semibold text-sky-300 border border-sky-400/30 bg-sky-400/10 backdrop-blur-sm"
                                 >
                                     <span className="text-sky-400">✦</span>
                                     Official Invisalign® Provider · Kunnumpuram's Multi-Specialty Clinic
@@ -106,7 +105,7 @@ export default function Hero() {
 
                                 <motion.h1
                                     variants={fadeUp}
-                                    className="text-4xl sm:text-5xl lg:text-[3.2rem] font-extrabold text-white leading-[1.1] tracking-tight mb-5"
+                                    className="text-4xl sm:text-5xl lg:text-[3.1rem] font-extrabold text-white leading-[1.1] tracking-tight mb-4"
                                 >
                                     Dental Implants,{' '}
                                     <span
@@ -125,31 +124,28 @@ export default function Hero() {
 
                                 <motion.p
                                     variants={fadeUp}
-                                    className="text-base sm:text-lg text-white/70 leading-relaxed mb-8 max-w-[500px]"
+                                    className="text-base sm:text-lg text-white/70 leading-relaxed mb-5 max-w-[500px]"
                                 >
-                                    From certified Invisalign® clear aligners and precision implants
-                                    to advanced facial aesthetic treatments — trusted specialists,
-                                    modern technology, all in one clinic.
+                                    Expert care, clear treatment plans, and results you can trust — all in one clinic.
                                 </motion.p>
 
                                 <motion.div
                                     variants={fadeUp}
-                                    className="flex flex-wrap gap-2 mb-9"
+                                    className="flex items-center gap-2 mb-6 sm:hidden"
                                 >
-                                    {TRUST_BADGES.map(({ icon: Icon, label }) => (
-                                        <div
-                                            key={label}
-                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white/85 text-xs font-medium"
-                                        >
-                                            <Icon size={13} className="text-sky-300" strokeWidth={2} />
-                                            {label}
-                                        </div>
-                                    ))}
+                                    <div className="flex gap-0.5">
+                                        {[...Array(5)].map((_, i) => (
+                                            <Star key={i} size={15} className="text-yellow-400 fill-yellow-400" />
+                                        ))}
+                                    </div>
+                                    <span className="text-white/90 font-semibold text-sm">
+                                        4.9 Google Rating
+                                    </span>
                                 </motion.div>
 
                                 <motion.div
                                     variants={fadeUp}
-                                    className="flex flex-col sm:flex-row gap-3.5 mb-6"
+                                    className="flex flex-col sm:flex-row gap-3.5 mb-5"
                                 >
                                     <a
                                         href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20an%20appointment"
@@ -168,6 +164,22 @@ export default function Hero() {
                                         <Phone size={18} strokeWidth={2} />
                                         Call Now
                                     </a>
+                                </motion.div>
+
+                                <motion.div
+                                    variants={fadeUp}
+                                    className="hidden sm:flex flex-wrap gap-2"
+
+                                >
+                                    {TRUST_BADGES.map(({ icon: Icon, label }) => (
+                                        <div
+                                            key={label}
+                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white/85 text-xs font-medium"
+                                        >
+                                            <Icon size={13} className="text-sky-300" strokeWidth={2} />
+                                            {label}
+                                        </div>
+                                    ))}
                                 </motion.div>
 
 
@@ -209,7 +221,7 @@ export default function Hero() {
                                                     <p className="text-sky-300 text-xs mt-0.5 font-medium">Official Invisalign® Provider · Kunnumpuram</p>
                                                 </div>
                                                 <div className="flex-shrink-0 bg-sky-400/20 border border-sky-400/30 rounded-lg px-2 py-1">
-                                                    <span className="text-sky-300 text-[10px] font-bold tracking-wide">Invisalign®</span>
+                                                    <img src={invisalignLogo} alt="Invisalign" className="h-5 w-auto brightness-0 invert opacity-90" />
                                                 </div>
                                             </div>
                                         </div>

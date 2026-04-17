@@ -36,7 +36,6 @@ const faqs = [
 ];
 
 const whyUs = [
-    { icon: Award, title: 'Specialist Oral Surgeon — Dr. Pravish Vishnudas', desc: 'MDS-qualified maxillofacial surgeon experienced in complex impacted wisdom tooth removals.' },
     { icon: Zap, title: 'Minimally Invasive Techniques', desc: 'We use surgical loupes and precision instruments to minimise trauma and reduce recovery time.' },
     { icon: ShieldCheck, title: 'Safe & Sterile Environment', desc: 'Hospital-grade sterilisation of all instruments and complete aseptic protocol for every procedure.' },
     { icon: Syringe, title: 'Advanced Anaesthesia', desc: 'Modern block anaesthesia ensures you are fully numb and comfortable throughout the procedure.' },
@@ -103,7 +102,7 @@ export default function WisdomTooth() {
                                     src="/images/wisdomtoothremoval-img.webp"
                                     alt="Wisdom tooth removal at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
-                                    fetchpriority="high"
+                                    fetchPriority="high"
                                     decoding="async"
                                     width={800}
                                     height={600}

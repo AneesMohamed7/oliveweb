@@ -5,6 +5,8 @@ import { ArrowRight, ShieldCheck, Sparkles, FlaskConical, Heart, ChevronDown, Ch
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ContactCTA from '../components/ContactCTA';
+import LazyImage from '../components/LazyImage';
+import { cn } from '../lib/utils';
 
 const facialFaqs = [
     {
@@ -32,7 +34,7 @@ const facialFaqs = [
 export default function FacialAesthetics() {
     const [openFaq, setOpenFaq] = useState(null);
 
-    const coreFacial = facialServices;
+    const allServices = facialServices;
 
     return (
         <>
@@ -52,15 +54,19 @@ export default function FacialAesthetics() {
             </Helmet>
 
             {/* ─── HERO ─── */}
-            <section className="relative py-24 bg-gray-900 overflow-hidden">
-                <div className="absolute inset-0 opacity-25">
-                    <img
-                        src="/images/clinic-front-inside.webp"
+            <section className="relative py-24 bg-gray-900 overflow-hidden min-h-[450px] flex items-center">
+                <div className="absolute inset-0 opacity-40">
+                    <LazyImage
+                        src="/images/clinic-chair (3).webp"
                         alt="Background"
+                        width={1920}
+                        height={1080}
+                        eager={true}
+                        fetchPriority="high"
                         className="w-full h-full object-cover"
                     />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-gray-900" />
+                <div className="absolute inset-0 bg-gradient-to-b from-gray-900/60 via-gray-900/80 to-gray-900" />
                 <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -104,28 +110,34 @@ export default function FacialAesthetics() {
                         className="mb-14"
                     >
                         <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">Specialist Treatments</span>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Core Skin Rejuvenation</h2>
+                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Facial Aesthetic Services</h2>
                         <p className="text-gray-500 max-w-2xl">
                             Clinically proven facial procedures performed under medical supervision for natural, healthy, and lasting results.
                         </p>
                     </motion.div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
-                        {coreFacial.map((service, index) => (
+                        {allServices.map((service, index) => (
                             <motion.div
                                 key={service.id}
                                 initial={{ opacity: 0, y: 24 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
+                                transition={{ delay: index * 0.05 }}
                                 className="bg-white rounded-2xl border border-gray-100 overflow-hidden group hover:shadow-xl hover:border-primary/20 hover:-translate-y-1 transition-all duration-300 flex flex-col"
                             >
                                 {service.image && (
-                                    <div className="h-52 overflow-hidden relative">
-                                        <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent opacity-60" />
-                                        <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1 rounded-full bg-primary/90 text-white shadow-sm">
-                                            Medical Aesthetic
+                                    <div className="h-56 overflow-hidden relative bg-gray-100">
+                                        <LazyImage
+                                            src={service.image}
+                                            alt={service.title}
+                                            width={400}
+                                            height={300}
+                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent opacity-30" />
+                                        <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1 rounded-full bg-white/90 text-primary shadow-sm">
+                                            Certified Clinical
                                         </span>
                                     </div>
                                 )}
@@ -141,29 +153,37 @@ export default function FacialAesthetics() {
                                         Learn More <ArrowRight size={14} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
-                            </motion.div>
+                                </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
+
             {/* ─── SKIN ASSESSMENT CTA ─── */}
-            <section className="py-14 bg-blue-50/30 border-t border-blue-100">
+            <section className="py-16 bg-gradient-to-r from-primary to-blue-600 text-white">
                 <div className="max-w-3xl mx-auto px-4 text-center">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Professional Skin Assessment</h3>
-                    <p className="text-gray-500 mb-6 font-medium">Schedule a clinical assessment to receive a personalised treatment plan from our specialists.</p>
+
+                    <h3 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">
+                        Professional Skin Assessment
+                    </h3>
+
+                    <p className="text-lg md:text-xl text-white/85 mb-8 font-medium leading-relaxed">
+                        Get a personalised skin treatment plan from our specialists.
+                    </p>
+
                     <a
                         href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20a%20skin%20assessment"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-all shadow-lg shadow-primary/20"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-xl hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-base"
                     >
-                        <MessageCircle size={18} />
+                        <MessageCircle size={20} />
                         Book Skin Assessment
                     </a>
+
                 </div>
             </section>
-
             {/* ─── FAQ ─── */}
             <section className="py-20 bg-background-soft/30">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -103,7 +103,7 @@ export default function Microneedling() {
                                     src="/images/microneedling-img.webp"
                                     alt="Microneedling at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
-                                    fetchpriority="high"
+                                    fetchPriority="high"
                                     decoding="async"
                                     width={800}
                                     height={600}

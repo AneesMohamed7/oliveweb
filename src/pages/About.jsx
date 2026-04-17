@@ -1,11 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ShieldCheck, Microscope, Users, Search, CheckCircle2, Star, Heart, Phone, MessageCircle, Clock, Award, Sparkles, Trophy } from 'lucide-react';
+import { ShieldCheck, Microscope, Users, CheckCircle2, Star, Heart, Phone, MessageCircle, Award, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import DoctorsSection from '../components/DoctorsSection';
 import ContactCTA from '../components/ContactCTA';
 import GoogleReviews from '../components/GoogleReviews';
+import invisalignLogo from '../assets/invisalign-logo.png';
 
 const fadeUp = {
     hidden: { opacity: 0, y: 24 },
@@ -112,22 +113,6 @@ export default function About() {
                     </div>
                 </div>
 
-                {/* Scroll cue */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1.2, duration: 0.6 }}
-                    className="absolute bottom-8 right-10 hidden lg:flex flex-col items-center gap-2"
-                >
-                    <span className="text-white/40 text-xs tracking-widest uppercase rotate-90 mb-4">Scroll</span>
-                    <motion.div
-                        animate={{ y: [0, 8, 0] }}
-                        transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
-                        className="w-5 h-8 border-2 border-white/20 rounded-full flex items-start justify-center pt-1.5"
-                    >
-                        <div className="w-1 h-2 bg-white/50 rounded-full" />
-                    </motion.div>
-                </motion.div>
             </section>
 
             {/* ═══════════════════════════════════════════
@@ -156,7 +141,7 @@ export default function About() {
 
                             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group">
                                 <img
-                                    src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&q=80&w=800"
+                                    src="/public/images/oliveclinic-img1.webp?auto=format&fit=crop&q=80&w=800"
                                     alt="Expert consultation at Olive Dental"
                                     className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
@@ -221,7 +206,7 @@ export default function About() {
                                 <h3 className="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-6">What Makes Us Different</h3>
                                 <div className="space-y-4 relative z-10">
                                     {[
-                                        '6 Dental Specialists',
+                                        '7+ Dental Specialists',
                                         'Certified Invisalign® Providers',
                                         'Digital-First Treatment Protocols',
                                         'Radical Cost Transparency',
@@ -425,7 +410,7 @@ export default function About() {
                             { value: '5.0', label: 'Google Rating', extra: '⭐⭐⭐⭐⭐' },
                             { value: '4000+', label: 'Happy Patients' },
                             { value: '3+', label: 'Years of Care' },
-                            { value: '6', label: 'Specialists' },
+                            { value: '7+', label: 'Specialists' },
                         ].map((stat, i) => (
                             <div
                                 key={i}
@@ -486,7 +471,7 @@ export default function About() {
                         className="max-w-2xl"
                     >
                         <div className="flex items-center gap-3 mb-4">
-                            <span className="text-primary font-bold tracking-[0.22em] uppercase text-xs block">Official Invisalign® Provider</span>
+                            <img src={invisalignLogo} alt="Invisalign" className="h-8 w-auto" />
                             <div className="h-px w-8 bg-primary/40" />
                             <ShieldCheck size={16} className="text-primary" />
                         </div>

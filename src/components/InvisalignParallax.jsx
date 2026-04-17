@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, ArrowRight, Phone, ShieldCheck } from 'lucide-react';
+import invisalignLogo from '../assets/invisalign-logo.png';
+
 
 const highlights = [
     'Near-invisible aligners — nobody notices you\'re wearing them',
@@ -52,7 +54,7 @@ export default function InvisalignParallax() {
                                         <CheckCircle2 size={20} className="text-primary" />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-bold text-gray-900">60+ Invisalign® Cases Completed</p>
+                                        <p className="text-sm font-bold text-gray-900">100+ Invisalign® Cases Completed</p>
                                         <p className="text-xs text-gray-500">Certified specialist · Digital precision planning</p>
                                     </div>
                                 </div>
@@ -71,9 +73,12 @@ export default function InvisalignParallax() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">
-                                Invisalign® Certified Treatment
-                            </span>
+                            <div className="flex items-center gap-3 mb-4">
+                                <img src={invisalignLogo} alt="Invisalign" className="h-6 w-auto object-contain opacity-90" />
+                                <span className="text-primary font-bold tracking-wider uppercase text-xs">
+                                    Certified Treatment
+                                </span>
+                            </div>
                             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
                                 Straighten Your Smile with{' '}
                                 <span className="text-primary">Invisalign®</span>

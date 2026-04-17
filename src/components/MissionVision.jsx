@@ -235,7 +235,7 @@ export default function MissionVision() {
 
                             {/* AEO: Stat chips */}
                             <div className="flex flex-wrap gap-3 mt-8 relative z-10">
-                                {['5★ Rated on Google', '10,000+ Patients', 'Est. Kondotty 2018'].map((stat) => (
+                                {['5★ Rated on Google', '10,000+ Patients', 'Est. Kondotty 2023', '7+ Specialists'].map((stat) => (
                                     <span
                                         key={stat}
                                         className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/10 text-white text-xs font-semibold backdrop-blur-sm"

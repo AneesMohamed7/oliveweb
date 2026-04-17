@@ -103,7 +103,7 @@ export default function HydraFacial() {
                                     src="/images/hydrafacial-img.webp"
                                     alt="HydraFacial treatment at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
-                                    fetchpriority="high"
+                                    fetchPriority="high"
                                     decoding="async"
                                     width={800}
                                     height={600}

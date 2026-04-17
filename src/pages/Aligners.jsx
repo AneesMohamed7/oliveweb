@@ -162,7 +162,7 @@ export default function Aligners() {
                                 removable trays — designed for comfort and discretion.
                                 No metal. No wires. Just results.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
+                            <div className="flex flex-col sm:flex-row gap-4 mb-4">
                                 <a
                                     href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I'm%20interested%20in%20Clear%20Aligners"
                                     className="px-8 py-4 bg-primary text-white rounded-xl font-bold hover:bg-primary-dark transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20"
@@ -176,6 +176,7 @@ export default function Aligners() {
                                     <Phone size={20} /> Call Now
                                 </a>
                             </div>
+                            <p className="text-sm text-gray-500 font-medium bg-gray-50/50 inline-block px-3 py-1.5 rounded-lg border border-gray-100">✨ <span className="text-primary font-bold">0% EMI</span> Flexible Payment Plans Available</p>
                         </motion.div>
 
                         {/* Right — Image */}
@@ -187,10 +188,10 @@ export default function Aligners() {
                         >
                             <div className="rounded-3xl overflow-hidden shadow-2xl shadow-primary/10 border border-gray-100">
                                 <img
-                                    src="/dist/images/dentist-assisting-patient-wear-invisible-braces (1).webp"
+                                    src="/dist/images/smile-with-aligner.webp"
                                     alt="Clear aligner trays at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
-                                    fetchpriority="high"
+                                    fetchPriority="high"
                                     decoding="async"
                                     width={800}
                                     height={600}
@@ -203,8 +204,8 @@ export default function Aligners() {
                                         <CheckCircle2 size={20} className="text-accent" />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-bold text-gray-900">200+ Cases Completed</p>
-                                        <p className="text-xs text-gray-500">Trusted across Kondotty</p>
+                                        <p className="text-sm font-bold text-gray-900">100+ Cases Completed</p>
+                                        <p className="text-xs text-gray-500">Trusted for Clear Aligner Treatments in Kunnumpuram</p>
                                     </div>
                                 </div>
                             </div>
@@ -302,106 +303,6 @@ export default function Aligners() {
                     </div>
                 </div>
             </section>
-
-            {/* ═══════════ 4. REAL PATIENT TRANSFORMATIONS ═══════════ */}
-            <section className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-14"
-                    >
-                        <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">Proven Results</span>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Real Patient Transformations</h2>
-                        <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-                            See the difference clear aligners can make. These results speak for themselves.
-                        </p>
-                    </motion.div>
-
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {beforeAfterCases.map((c, idx) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
-                            >
-                                <div className="grid grid-cols-2">
-                                    <div className="relative">
-                                        <img src={c.before} alt={`Before — ${c.label}`} className="w-full h-52 object-cover" />
-                                        <span className="absolute bottom-3 left-3 bg-gray-900/80 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Before</span>
-                                    </div>
-                                    <div className="relative">
-                                        <img src={c.after} alt={`After — ${c.label}`} className="w-full h-52 object-cover" />
-                                        <span className="absolute bottom-3 right-3 bg-accent/90 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">After</span>
-                                    </div>
-                                </div>
-                                <div className="p-5 flex items-center justify-between">
-                                    <div>
-                                        <p className="font-bold text-gray-900">{c.label}</p>
-                                        <p className="text-sm text-gray-500">Treatment time: {c.duration}</p>
-                                    </div>
-                                    <div className="w-9 h-9 bg-primary/10 rounded-full flex items-center justify-center">
-                                        <CheckCircle2 size={18} className="text-primary" />
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ═══════════ 5. HOW THE TREATMENT WORKS ═══════════ */}
-            <section className="py-20 bg-background-soft">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-16"
-                    >
-                        <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">Your Journey</span>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">How the Treatment Works</h2>
-                        <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-                            From first visit to final smile — a clear, predictable process.
-                        </p>
-                    </motion.div>
-
-                    <div className="grid md:grid-cols-4 gap-8">
-                        {steps.map((step, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: i * 0.12 }}
-                                className="relative text-center bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all z-10"
-                            >
-                                <div className="mb-6 rounded-xl overflow-hidden aspect-video shadow-sm">
-                                    <img src={step.image} alt={step.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width={400} height={300} />
-                                </div>
-                                <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-xl flex items-center justify-center text-primary relative">
-                                    <step.icon size={24} />
-                                </div>
-                                <span className="inline-block text-[11px] font-bold text-primary bg-primary/10 px-3 py-0.5 rounded-full mb-3">
-                                    Step {i + 1}
-                                </span>
-                                <h3 className="font-bold text-gray-900 text-lg mb-2">{step.title}</h3>
-                                <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-
-
-
-
-
             {/* ═══════════ 10. WHY CHOOSE OLIVE DENTAL ═══════════ */}
             <section className="py-20 bg-white">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

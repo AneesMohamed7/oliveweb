@@ -78,7 +78,7 @@ export default function Implants() {
                             <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-xl">
                                 Eat confidently, smile naturally, and protect your jawbone health. Implants are the gold standard for replacing missing teeth — stable, durable, and indistinguishable from natural teeth.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
+                            <div className="flex flex-col sm:flex-row gap-4 mb-4">
                                 <a href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20a%20consultation%20for%20dental%20implants"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -90,6 +90,7 @@ export default function Implants() {
                                     <Phone size={20} /> Call Now
                                 </a>
                             </div>
+                            <p className="text-sm text-gray-500 font-medium bg-gray-50/50 inline-block px-3 py-1.5 rounded-lg border border-gray-100">✨ <span className="text-primary font-bold">0% EMI</span> Flexible Payment Plans Available</p>
                         </motion.div>
 
                         <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative">
@@ -98,7 +99,7 @@ export default function Implants() {
                                     src="/dist/images/dentalimplant.webp?auto=format&fit=crop&q=80&w=800"
                                     alt="Dental implant treatment at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
-                                    fetchpriority="high"
+                                    fetchPriority="high"
                                     decoding="async"
                                     width={800}
                                     height={600}

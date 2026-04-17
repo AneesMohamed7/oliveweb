@@ -36,11 +36,11 @@ const faqs = [
 
 const whyUs = [
     { icon: Zap, title: 'Painless with Advanced Anaesthesia', desc: 'We use modern block anaesthesia techniques to ensure you feel nothing during treatment.' },
-    { icon: Award, title: 'Specialist Endodontist — Dr. Zaheer K', desc: 'MDS-qualified endodontist with extensive experience in single-visit root canals.' },
     { icon: ShieldCheck, title: 'Rotary Instruments & Apex Locators', desc: 'Digital apex locators ensure precise cleaning to the exact root tip — no guesswork.' },
     { icon: Heart, title: 'Tooth Preservation First', desc: 'We always aim to save your natural tooth rather than recommend extraction.' },
     { icon: Clock, title: 'Single-Visit Completion', desc: 'Most cases are completed in one appointment, saving you time and multiple trips.' },
-    { icon: Star, title: 'Proven Results & Happy Patients', desc: 'Hundreds of successful cases with high patient satisfaction and zero regrets.' }
+    { icon: Star, title: 'Proven Results & Happy Patients', desc: 'Hundreds of successful cases with high patient satisfaction and zero regrets.' },
+    { icon: Award, title: 'Precision Root Canal Care', desc: 'Accurate diagnosis and treatment focused on long-term tooth survival and comfort.' }
 ];
 
 const benefits = [
@@ -105,7 +105,7 @@ export default function RootCanal() {
                                     src="/images/rootcanal-surgery.webp"
                                     alt="Root canal treatment at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
-                                    fetchpriority="high"
+                                    fetchPriority="high"
                                     decoding="async"
                                     width={800}
                                     height={600}

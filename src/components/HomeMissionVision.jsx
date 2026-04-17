@@ -58,7 +58,7 @@ export default function HomeMissionVision() {
                         </div>
                         {/* Floating accent badge */}
                         <div className="absolute -bottom-4 -right-4 lg:-bottom-5 lg:-right-5 bg-primary text-white rounded-2xl px-5 py-3.5 shadow-xl shadow-primary/30">
-                            <p className="text-2xl font-extrabold leading-none">6+</p>
+                            <p className="text-2xl font-extrabold leading-none">7+</p>
                             <p className="text-[10px] font-semibold text-blue-100 mt-0.5">Years of Care</p>
                         </div>
                         {/* Decorative ring behind image */}
@@ -91,7 +91,7 @@ export default function HomeMissionVision() {
                         <div className="flex flex-wrap gap-3">
                             {[
                                 { value: '10k+', label: 'Patients Served' },
-                                { value: '6', label: 'Specialists' },
+                                { value: '7+', label: 'Specialists' },
                                 { value: '5.0', label: 'Google Rating' },
                             ].map((stat) => (
                                 <div key={stat.label} className="bg-white border border-gray-100 rounded-xl px-4 py-3 text-center shadow-sm min-w-[90px]">
@@ -224,7 +224,7 @@ export default function HomeMissionVision() {
 
                             {/* Achievement chips */}
                             <div className="flex flex-wrap gap-2 relative z-10">
-                                {['⭐ 5.0 Google Rating', '10,000+ Patients', '6 Specialists'].map((chip) => (
+                                {['⭐ 5.0 Google Rating', '10,000+ Patients', '7+ Specialists'].map((chip) => (
                                     <span
                                         key={chip}
                                         className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/10 text-white text-xs font-semibold"

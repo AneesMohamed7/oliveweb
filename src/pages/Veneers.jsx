@@ -98,7 +98,7 @@ export default function Veneers() {
                                     src="/images/smileMakeOver-img.jpg"
                                     alt="Porcelain veneers transformation at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
-                                    fetchpriority="high"
+                                    fetchPriority="high"
                                     decoding="async"
                                     width={800}
                                     height={600}

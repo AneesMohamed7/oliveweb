@@ -6,34 +6,34 @@ export default function Features() {
     const features = [
         {
             icon: Users,
-            title: 'Multi-Specialty Care Under One Roof',
-            text: 'Our dental and facial specialists collaborate under one roof to deliver comprehensive, coordinated treatment plans — from smile makeovers to advanced facial aesthetics.'
+            title: "Complete Care Under One Roof",
+            text: "Get dental and facial treatments in one convenient place."
         },
         {
             icon: Stethoscope,
-            title: 'Experienced Doctors You Can Trust',
-            text: 'Backed by years of clinical expertise, our qualified dentists and aesthetic physicians at Olive Dental & Face Clinic, Kunnumpuram bring precision and care to every procedure.'
+            title: "Experienced Doctors You Can Trust",
+            text: "Our skilled team focuses on safe care and lasting results."
         },
         {
             icon: ClipboardCheck,
-            title: 'Structured Diagnosis & Treatment Planning',
-            text: 'Advanced digital diagnostics and detailed clinical evaluation ensure accurate, predictable, and long-lasting dental and facial treatment results.'
+            title: "Clear Diagnosis, Clear Plan",
+            text: "We explain your condition and treatment step by step."
         },
         {
             icon: ShieldCheck,
-            title: 'Strict Sterilization & Safety Standards',
-            text: 'Every procedure follows international sterilization protocols and infection control standards to ensure maximum patient safety at all times.'
+            title: "Strict Safety & Sterilization",
+            text: "Every procedure follows high hygiene and sterilization standards."
         },
         {
             icon: BadgeCheck,
-            title: 'Official Invisalign® Provider',
-            text: 'Olive Dental & Face Clinic is a certified Invisalign® provider — offering genuine Invisalign® treatment with 3D digital planning, not generic aligners. Trusted by patients across Kondotty and Malappuram.'
+            title: "Certified Invisalign® Provider",
+            text: "Get expert Invisalign care with digital treatment planning."
         },
         {
             icon: Wallet,
-            title: 'Affordable & Transparent Pricing',
-            text: 'Flexible payment options and clear, upfront pricing make high-quality dental and facial care accessible to every patient in Kunnumpuram and nearby areas.'
-        },
+            title: "Transparent & Affordable Pricing",
+            text: "Know your treatment cost upfront with no hidden charges."
+        }
     ];
 
     const containerVariants = {

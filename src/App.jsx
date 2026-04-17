@@ -62,7 +62,7 @@ export default function App() {
       />
 
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow pt-[71px] sm:pt-[81px] lg:pt-[88px]">
         <AnimatePresence mode="wait">
           <Suspense fallback={<PageSkeleton />}>
             <Routes location={location} key={location.pathname}>
@@ -104,6 +104,12 @@ export default function App() {
 }
 
 function PageWrapper({ children }) {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [pathname]);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
