@@ -136,9 +136,7 @@ export default function FacialAesthetics() {
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent opacity-30" />
-                                        <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1 rounded-full bg-white/90 text-primary shadow-sm">
-                                            Certified Clinical
-                                        </span>
+
                                     </div>
                                 )}
                                 <div className="p-6 flex flex-col flex-grow">
@@ -153,7 +151,7 @@ export default function FacialAesthetics() {
                                         Learn More <ArrowRight size={14} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
-                                </motion.div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
