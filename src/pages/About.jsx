@@ -141,7 +141,7 @@ export default function About() {
 
                             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group">
                                 <img
-                                    src="/public/images/oliveclinic-img1.webp?auto=format&fit=crop&q=80&w=800"
+                                    src="/images/oliveclinic-img1.webp?auto=format&fit=crop&q=80&w=800"
                                     alt="Expert consultation at Olive Dental"
                                     className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
