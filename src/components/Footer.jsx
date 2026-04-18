@@ -64,6 +64,7 @@ export default function Footer() {
                                 <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
                                 <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About the Clinic</Link></li>
                                 <li><Link to="/doctors" className="text-gray-400 hover:text-white transition-colors">Our Specialists</Link></li>
+                                <li><Link to="/gallery" className="text-gray-400 hover:text-white transition-colors">Our Gallery</Link></li>
                                 <li><Link to="/faq" className="text-gray-400 hover:text-white transition-colors">Patient FAQs</Link></li>
                                 <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</Link></li>
                             </ul>
@@ -78,6 +79,10 @@ export default function Footer() {
                                 <li><Link to="/treatments/aligners" className="text-gray-400 hover:text-white transition-colors">Clear Aligners</Link></li>
                                 <li><Link to="/treatments/veneers" className="text-gray-400 hover:text-white transition-colors">Veneers & Smile Makeover</Link></li>
                                 <li><Link to="/facial-aesthetics" className="text-gray-400 hover:text-white transition-colors">Facial Aesthetics</Link></li>
+                                <li><Link to="/treatments/root-canal" className="text-gray-400 hover:text-white transition-colors">Root Canal Treatment</Link></li>
+                                <li><Link to="/treatments/wisdom-tooth" className="text-gray-400 hover:text-white transition-colors">Wisdom Tooth Removal</Link></li>
+                                <li><Link to="/treatments/kids-dentistry" className="text-gray-400 hover:text-white transition-colors">Kids Dentistry</Link></li>
+                                <li><Link to="/treatments/hydrafacial" className="text-gray-400 hover:text-white transition-colors">HydraFacial</Link></li>
                             </ul>
                         </div>
 

@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import StickyFooter from './components/StickyFooter';
 import PageSkeleton from './components/PageSkeleton';
+import InitialLoader from './components/InitialLoader';
 import Home from './pages/Home';
 
 // ─── Lazy loaded pages (route-based code splitting) ───
@@ -38,6 +39,7 @@ const ThreadLift = lazy(() => import('./pages/ThreadLift'));
 const HydraFacial = lazy(() => import('./pages/HydraFacial'));
 
 export default function App() {
+  const [isInitialLoading, setIsInitialLoading] = React.useState(true);
   const location = useLocation();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -51,6 +53,13 @@ export default function App() {
   // Prefetch high-traffic routes during idle time
   useEffect(() => {
     prefetchOnIdle(['/about', '/treatments', '/contact', '/doctors']);
+    
+    // Initial loading timer
+    const timer = setTimeout(() => {
+      setIsInitialLoading(false);
+    }, 2200);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -62,6 +71,10 @@ export default function App() {
       />
 
       <Navbar />
+      
+      <AnimatePresence mode="wait">
+        {isInitialLoading && <InitialLoader key="loader" />}
+      </AnimatePresence>
       <main className="flex-grow pt-[71px] sm:pt-[81px] lg:pt-[88px]">
         <AnimatePresence mode="wait">
           <Suspense fallback={<PageSkeleton />}>

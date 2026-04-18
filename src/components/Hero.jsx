@@ -47,7 +47,7 @@ export default function Hero() {
         <>
 
 
-            <section className="relative min-h-screen flex flex-col overflow-hidden">
+            <section className="relative min-h-[90svh] sm:min-h-[85vh] lg:min-h-[80vh] flex flex-col overflow-hidden">
 
                 {/* BG IMAGE */}
                 <div className="absolute inset-0 -z-20">
@@ -77,14 +77,14 @@ export default function Hero() {
                     initial={{ opacity: 0, y: -12 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="relative z-10 flex items-center justify-end px-5 sm:px-8 lg:px-14 py-5"
+                    className="relative z-10 flex items-center justify-end px-5 sm:px-8 lg:px-14 py-2 lg:py-5"
                 >
 
                 </motion.div>
 
                 {/* MAIN CONTENT */}
-                <div className="relative z-10 flex-1 flex items-center">
-                    <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 py-12 lg:py-0">
+                <div className="relative z-10 flex-1 flex items-start lg:items-center">
+                    <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 pt-24 pb-12 lg:py-0">
                         <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
                             {/* LEFT */}
@@ -97,7 +97,7 @@ export default function Hero() {
                                 {/* Overline Trust Pill */}
                                 <motion.div
                                     variants={fadeUp}
-                                    className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full mb-3 text-xs font-semibold text-sky-300 border border-sky-400/30 bg-sky-400/10 backdrop-blur-sm"
+                                    className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full mb-3 text-[13px] font-semibold text-sky-300 border border-sky-400/30 bg-sky-400/10 backdrop-blur-sm"
                                 >
                                     <span className="text-sky-400">✦</span>
                                     Official Invisalign® Provider · Kunnumpuram's Multi-Specialty Clinic
@@ -105,7 +105,7 @@ export default function Hero() {
 
                                 <motion.h1
                                     variants={fadeUp}
-                                    className="text-4xl sm:text-5xl lg:text-[3.1rem] font-extrabold text-white leading-[1.1] tracking-tight mb-4"
+                                    className="text-[2.6rem] sm:text-5xl lg:text-[3.1rem] font-extrabold text-white leading-[1.1] tracking-tight mb-4"
                                 >
                                     Dental Implants,{' '}
                                     <span
@@ -124,7 +124,7 @@ export default function Hero() {
 
                                 <motion.p
                                     variants={fadeUp}
-                                    className="text-base sm:text-lg text-white/70 leading-relaxed mb-5 max-w-[500px]"
+                                    className="text-lg sm:text-lg text-white/70 leading-relaxed mb-5 max-w-[500px]"
                                 >
                                     Expert care, clear treatment plans, and results you can trust — all in one clinic.
                                 </motion.p>
@@ -138,7 +138,7 @@ export default function Hero() {
                                             <Star key={i} size={15} className="text-yellow-400 fill-yellow-400" />
                                         ))}
                                     </div>
-                                    <span className="text-white/90 font-semibold text-sm">
+                                    <span className="text-white/90 font-semibold text-base">
                                         4.9 Google Rating
                                     </span>
                                 </motion.div>
@@ -151,7 +151,7 @@ export default function Hero() {
                                         href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20an%20appointment"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-green-500 hover:bg-green-400 text-white font-bold text-sm shadow-lg shadow-green-900/40 hover:shadow-green-500/40 transition-all duration-200 hover:-translate-y-0.5"
+                                        className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-green-500 hover:bg-green-400 text-white font-bold text-base shadow-lg shadow-green-900/40 hover:shadow-green-500/40 transition-all duration-200 hover:-translate-y-0.5"
                                     >
                                         Book An Appointment
                                         <ArrowRight size={15} className="opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
@@ -159,7 +159,7 @@ export default function Hero() {
 
                                     <a
                                         href="tel:+918891494731"
-                                        className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/25 hover:bg-white/20 text-white font-bold text-sm transition-all duration-200 hover:-translate-y-0.5"
+                                        className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/25 hover:bg-white/20 text-white font-bold text-base transition-all duration-200 hover:-translate-y-0.5"
                                     >
                                         <Phone size={18} strokeWidth={2} />
                                         Call Now
