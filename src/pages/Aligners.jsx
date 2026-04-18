@@ -39,59 +39,8 @@ const problems = [
     }
 ];
 
-const beforeAfterCases = [
-    {
-        before: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600&h=400',
-        after: 'https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&q=80&w=600&h=400',
-        label: 'Crowding Correction',
-        duration: '8 months'
-    },
-    {
-        before: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600&h=400',
-        after: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=600&h=400',
-        label: 'Gap Closure',
-        duration: '6 months'
-    },
-    {
-        before: '?auto=format&fit=crop&q=80&w=600&h=400',
-        after: 'https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&q=80&w=600&h=400',
-        label: 'Crooked Front Teeth',
-        duration: '10 months'
-    },
-    {
-        before: 'https://images.unsplash.com/photo-1595867372365-d6c2957e074d?auto=format&fit=crop&q=80&w=600&h=400',
-        after: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&q=80&w=600&h=400',
-        label: 'Overbite Improvement',
-        duration: '12 months'
-    }
-];
 
-const steps = [
-    {
-        icon: CalendarCheck,
-        image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=400&h=300',
-        title: 'Consultation',
-        desc: 'Discuss your goals, examine your teeth, and determine if aligners are right for you.'
-    },
-    {
-        icon: ScanLine,
-        image: '/images/scan-intraoral.jpg',
-        title: 'Digital Scan',
-        desc: '3D intraoral scan creates a precise model of your teeth — no messy impressions.'
-    },
-    {
-        icon: Layers,
-        image: '/images/aligners-product.jpg',
-        title: 'Custom Aligners',
-        desc: 'Your personalized trays are manufactured and delivered within 2–3 weeks.'
-    },
-    {
-        icon: Sparkles,
-        image: '/images/aligner-lifestyle.jpg',
-        title: 'Gradual Correction',
-        desc: 'Wear each set of trays for 1–2 weeks as teeth shift into perfect alignment.'
-    }
-];
+
 
 
 
@@ -176,7 +125,7 @@ export default function Aligners() {
                                     <Phone size={20} /> Call Now
                                 </a>
                             </div>
-                            <p className="text-sm text-gray-500 font-medium bg-gray-50/50 inline-block px-3 py-1.5 rounded-lg border border-gray-100">✨ <span className="text-primary font-bold">0% EMI</span> Flexible Payment Plans Available</p>
+                            <p className="text-sm text-gray-500 font-medium bg-gray-50/50 inline-block px-3 py-1.5 rounded-lg border border-gray-100">✨ <span className="text-primary font-bold">EMI</span> options available — plan your treatment comfortably</p>
                         </motion.div>
 
                         {/* Right — Image */}
@@ -188,7 +137,7 @@ export default function Aligners() {
                         >
                             <div className="rounded-3xl overflow-hidden shadow-2xl shadow-primary/10 border border-gray-100">
                                 <img
-                                    src="/dist/images/smile-with-aligner.webp"
+                                    src="/images/smile-with-aligner.webp"
                                     alt="Clear aligner trays at Olive Dental"
                                     className="w-full aspect-[4/3] object-cover"
                                     fetchPriority="high"
@@ -225,7 +174,7 @@ export default function Aligners() {
                             transition={{ duration: 0.6 }}
                         >
                             <img
-                                src="/dist/images/smile-with-aligner.webp"
+                                src="/images/smile-with-aligner.webp"
                                 alt="Patient wearing clear aligners"
                                 className="w-full rounded-2xl shadow-lg aspect-[4/3] object-cover"
                                 loading="lazy"
@@ -318,10 +267,10 @@ export default function Aligners() {
 
                     <div className="grid sm:grid-cols-2 gap-5">
                         {[
-                            { icon: Users, title: 'Multi-Specialty Dental Team', desc: 'Orthodontic expertise backed by a full dental team for comprehensive care.' },
-                            { icon: ScanLine, title: 'Digital Scanning Technology', desc: 'Accurate 3D scans replace messy impressions for precise aligner fabrication.' },
-                            { icon: Star, title: 'Personalized Treatment Plans', desc: 'Every case is unique — your plan is designed specifically for your teeth and goals.' },
-                            { icon: Award, title: 'Experienced Specialists', desc: '200+ aligner cases completed with high patient satisfaction and predictable outcomes.' }
+                            { icon: Users, title: 'Multi-Specialty Dental Team', desc: 'Expert orthodontic care backed by a full dental team.' },
+                            { icon: ScanLine, title: 'Digital Scanning Technology', desc: 'Accurate 3D scans replace messy impressions for precision.' },
+                            { icon: Star, title: 'Personalized Treatment Plans', desc: 'Custom treatment designed specifically for your unique smile.' },
+                            { icon: Award, title: 'Experienced Specialists', desc: 'Over 100+ successful aligner cases completed with results.' }
                         ].map((item, i) => (
                             <motion.div
                                 key={i}

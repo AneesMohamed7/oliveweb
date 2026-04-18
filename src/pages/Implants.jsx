@@ -32,12 +32,12 @@ const faqs = [
 ];
 
 const whyUs = [
-    { icon: Award, title: 'Experienced Implantologists', desc: 'Our clinical team has specialized training in complex implant surgery and restoration.' },
-    { icon: Zap, title: 'Guided Surgery Precision', desc: 'We use digital planning and surgical guides for exact implant placement with minimal trauma.' },
-    { icon: ShieldCheck, title: 'Sterile & Safe Environment', desc: 'Hospital-grade sterilization protocols and dedicated surgical suites for every implant procedure.' },
-    { icon: Star, title: 'Premium Material Quality', desc: 'We only use FDA-approved, medical-grade titanium implants from world-leading manufacturers.' },
-    { icon: Heart, title: 'Bone Preservation', desc: 'Implants are the only tooth replacement option that prevents jawbone loss and maintains facial structure.' },
-    { icon: Anchor, title: 'Affordable Payment Plans', desc: 'We offer flexible EMI options to ensure that high-quality implants are accessible to everyone.' }
+    { icon: Award, title: 'Experienced Implantologists', desc: 'Specialized training in complex implant surgery and restoration.' },
+    { icon: Zap, title: 'Guided Surgery Precision', desc: 'Exact implant placement with minimal trauma using digital planning.' },
+    { icon: ShieldCheck, title: 'Sterile & Safe Environment', desc: 'Hospital-grade sterilization for every surgical procedure.' },
+    { icon: Star, title: 'Premium Material Quality', desc: 'FDA-approved, medical-grade titanium from leading manufacturers.' },
+    { icon: Heart, title: 'Bone Preservation', desc: 'Maintains facial structure by preventing post-extraction bone loss.' },
+    { icon: Anchor, title: 'Affordable Payment Plans', desc: 'Flexible EMI options to make implants accessible to all.' }
 ];
 
 const benefits = [
@@ -90,7 +90,7 @@ export default function Implants() {
                                     <Phone size={20} /> Call Now
                                 </a>
                             </div>
-                            <p className="text-sm text-gray-500 font-medium bg-gray-50/50 inline-block px-3 py-1.5 rounded-lg border border-gray-100">✨ <span className="text-primary font-bold">0% EMI</span> Flexible Payment Plans Available</p>
+                            <p className="text-sm text-gray-500 font-medium bg-gray-50/50 inline-block px-3 py-1.5 rounded-lg border border-gray-100">✨ <span className="text-primary font-bold">EMI</span> options available — plan your treatment comfortably</p>
                         </motion.div>
 
                         <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative">

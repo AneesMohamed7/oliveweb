@@ -36,12 +36,12 @@ const faqs = [
 ];
 
 const whyUs = [
-    { icon: Crown, title: 'Zirconia & All-Ceramic Options', desc: 'We use high-strength zirconia for durability and all-ceramic for superior aesthetics in visible areas.' },
-    { icon: Award, title: 'Expert Restorative Team', desc: 'Experienced prosthodontists who specialise in precision-fitted crowns and bridge work.' },
-    { icon: Zap, title: 'Digital Impressions', desc: 'Accurate digital scans eliminate messy putty impressions for a more comfortable, precise fit.' },
-    { icon: ShieldCheck, title: 'Safe & Sterile Protocols', desc: 'Hospital-grade sterilisation ensures every procedure is conducted in a fully hygienic environment.' },
-    { icon: Heart, title: 'Personalised Shade Matching', desc: 'We match the exact shade of your natural teeth so your restoration blends in seamlessly.' },
-    { icon: Star, title: 'Long-Term Aftercare', desc: 'We guide you on care routines and schedule follow-ups to ensure lasting results.' }
+    { icon: Crown, title: 'Zirconia & All-Ceramic Options', desc: 'High-strength ceramic for maximum durability and aesthetics.' },
+    { icon: Award, title: 'Expert Restorative Team', desc: 'Specialists in precision-fitted crowns and aesthetic bridges.' },
+    { icon: Zap, title: 'Digital Impressions', desc: 'Accurate scans replace messy putty for a better fit.' },
+    { icon: ShieldCheck, title: 'Safe & Sterile Protocols', desc: 'Hospital-grade hygiene for every dental restoration.' },
+    { icon: Heart, title: 'Personalised Shade Matching', desc: 'Perfectly matched to your natural teeth for a seamless look.' },
+    { icon: Star, title: 'Long-Term Aftercare', desc: 'Dedicated follow-ups to ensure your restoration lasts years.' }
 ];
 
 const benefits = [

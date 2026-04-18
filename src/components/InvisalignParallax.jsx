@@ -6,12 +6,13 @@ import invisalignLogo from '../assets/invisalign-logo.png';
 
 
 const highlights = [
-    'Near-invisible aligners — nobody notices you\'re wearing them',
-    'Genuine Invisalign® brand — not generic clear aligners',
-    'Eat anything. Remove for meals, brush normally',
-    '3D-scanned for your exact bite — not a one-size fit',
-    'FDA-approved & clinically proven global system',
-    'Visible change in weeks — most cases complete in 6–18 months',
+    'Nearly invisible aligners',
+    'Original Invisalign® system',
+    'Remove while eating & brushing',
+    'Custom-fit using 3D scan',
+    'Safe & clinically tested',
+    'Results in months, not years',
+    'EMI options available',
 ];
 
 export default function InvisalignParallax() {
@@ -22,8 +23,14 @@ export default function InvisalignParallax() {
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
                 style={{ backgroundImage: "url('/images/invisalign-parallax-bg.jpg')" }}
             />
-            {/* Soft clinical overlay */}
-            <div className="absolute inset-0 bg-white/50 backdrop-blur-[1px]" />
+            {/* Deep premium overlay */}
+            <div
+                className="absolute inset-0"
+                style={{
+                    background: 'linear-gradient(135deg, rgba(10,24,60,0.75) 0%, rgba(10,40,80,0.65) 50%, rgba(5,20,50,0.6) 100%)',
+                }}
+            />
+            <div className="absolute inset-0 backdrop-blur-[0.5px]" />
 
             {/* ── Main Content ── */}
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -39,7 +46,7 @@ export default function InvisalignParallax() {
                     >
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary/10 border border-gray-100">
                             <img
-                                src="/dist/images/smile-with-aligner.webp"
+                                src="images/smile-with-aligner.webp"
                                 alt="Clear aligner trays at Olive Dental"
                                 className="w-full aspect-[4/3] object-cover"
                                 loading="lazy"
@@ -79,23 +86,23 @@ export default function InvisalignParallax() {
                                     Certified Treatment
                                 </span>
                             </div>
-                            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
                                 Straighten Your Smile with{' '}
                                 <span className="text-primary">Invisalign®</span>
                                 {' '}—{' '}
-                                <span className="text-gray-700">Kerala's Certified Clear Aligner Specialists</span>
+                                <span className="text-white/70">Kerala's Certified Clear Aligner Specialists</span>
                             </h2>
 
                             {/* Authority Callout */}
-                            <div className="flex items-start gap-3 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl px-4 py-3 mb-6">
-                                <ShieldCheck size={18} className="text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2} />
+                            <div className="flex items-start gap-3 bg-white/15 border-l-4 border-primary shadow-lg backdrop-blur-md rounded-r-xl px-4 py-3 mb-6">
+                                <ShieldCheck size={18} className="text-primary flex-shrink-0 mt-0.5" strokeWidth={2} />
                                 <div>
-                                    <p className="text-sm font-bold text-blue-900">Olive Dental is an Official Invisalign® Provider.</p>
-                                    <p className="text-xs text-blue-700 mt-0.5">Treatment planned with certified digital precision — not generic aligners.</p>
+                                    <p className="text-sm font-bold text-white">Olive Dental is an Official Invisalign® Provider.</p>
+                                    <p className="text-xs text-blue-200 mt-0.5">Treatment planned with certified digital precision — not generic aligners.</p>
                                 </div>
                             </div>
 
-                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                            <p className="text-white/85 text-lg leading-relaxed mb-8">
                                 Our certified Invisalign® specialists use intraoral 3D scanning to
                                 map your teeth precisely and preview your final smile before
                                 treatment even begins. No guesswork — just a clear plan, transparent
@@ -120,10 +127,10 @@ export default function InvisalignParallax() {
                                     transition={{ duration: 0.4, delay: 0.25 + idx * 0.08 }}
                                     className="flex items-center gap-3"
                                 >
-                                    <div className="w-6 h-6 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0">
+                                    <div className="w-6 h-6 rounded-full bg-accent/25 flex items-center justify-center flex-shrink-0">
                                         <CheckCircle2 size={14} className="text-accent" />
                                     </div>
-                                    <span className="text-gray-700 font-medium">{item}</span>
+                                    <span className="text-gray-200 font-medium">{item}</span>
                                 </motion.li>
                             ))}
                         </motion.ul>
@@ -146,7 +153,7 @@ export default function InvisalignParallax() {
                                 </a>
                                 <Link
                                     to="/aligners"
-                                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-primary/20 text-primary font-semibold rounded-xl hover:bg-primary/5 transition-all duration-300"
+                                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
                                 >
                                     See How Invisalign® Works
                                     <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

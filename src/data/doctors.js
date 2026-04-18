@@ -17,7 +17,7 @@ export const doctors = [
         role: 'Implant Specialist',
         focus: ['Dental Implants', 'Gum Surgery', 'Bone Grafting'],
         bio: 'Specialist in advanced implant placement using digital planning for precise, long-lasting tooth restoration.',
-        image: '/dist/images/basithdoctor.webp?auto=format&fit=crop&q=80&w=600&h=600'
+        image: 'images/drbasithdoctor.webp?auto=format&fit=crop&q=80&w=600&h=600'
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ export const doctors = [
         role: 'Oral Surgeon',
         focus: ['Wisdom Tooth Removal', 'Jaw Surgery', 'Facial Trauma'],
         bio: 'Experienced oral surgeon specialising in minimally invasive extractions and maxillofacial procedures.',
-        image: '/dist/images/pravishvishnudr.jpeg?auto=format&fit=crop&q=80&w=600&h=600'
+        image: 'images/drpravishvishnu.jpeg?auto=format&fit=crop&q=80&w=600&h=600'
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ export const doctors = [
         role: 'Root Canal Specialist',
         focus: ['Root Canal Treatment', 'Re-treatment', 'Tooth Preservation'],
         bio: 'Specialises in painless root canal therapy using rotary instruments and advanced apex locators.',
-        image: '/dist/images/noprofile.jpeg?auto=format&fit=crop&q=80&w=600&h=600'
+        image: 'images/drnoprofile.jpeg?auto=format&fit=crop&q=80&w=600&h=600'
     },
     {
         id: 5,
@@ -47,7 +47,7 @@ export const doctors = [
         role: 'Laser Dentistry Expert',
         focus: ['Laser Periodontics', 'Gum Care', 'Laser Treatments'],
         bio: 'Specialist in periodontics with advanced training in laser dentistry, providing minimally invasive gum treatments and precision care.',
-        image: '/dist/images/deepthiCheriyandoctor.webp?auto=format&fit=crop&q=80&w=600&h=600'
+        image: 'images/drdeepthiCheriyandoctor.webp?auto=format&fit=crop&q=80&w=600&h=600'
     },
 
     {
@@ -58,7 +58,7 @@ export const doctors = [
         role: 'Orthodontics Specialist',
         focus: ['Invisalign', 'Dentofacial Orthopaedics', 'Complex Braces'],
         bio: 'Expert in orthodontics and dentofacial orthopaedics, focusing on comprehensive bite correction and facial harmony.',
-        image: '/dist/images/abdulrahimdoctor.webp?auto=format&fit=crop&q=80&w=600&h=600'
+        image: 'images/drabdulrahimdoctor.webp?auto=format&fit=crop&q=80&w=600&h=600'
     },
     {
         id: 7,
@@ -68,7 +68,7 @@ export const doctors = [
         role: 'Diagnostic Specialist',
         focus: ['Oral Diagnostics', 'Digital Radiology', 'Painless Lesion Management'],
         bio: 'Specializes in oral medicine and radiology, providing precise diagnosis and management of oral diseases and maxillofacial pathologies.',
-        image: '/dist/images/shaniladoctor.webp?auto=format&fit=crop&q=80&w=600&h=600'
+        image: 'images/drshaniladoctor.webp?auto=format&fit=crop&q=80&w=600&h=600'
     },
     {
         id: 8,
@@ -78,6 +78,6 @@ export const doctors = [
         role: 'Children\'s Dentist',
         focus: ['Paediatric Dentistry', 'Child Care', 'Preventive Dentistry'],
         bio: 'Specialist in children\'s dental care, focused on creating a positive and fear-free experience for young patients while ensuring their oral health development.',
-        image: '/dist/images/noprofile.jpeg?auto=format&fit=crop&q=80&w=600&h=600'
+        image: 'images/drnoprofile.jpeg?auto=format&fit=crop&q=80&w=600&h=600'
     }
 ];

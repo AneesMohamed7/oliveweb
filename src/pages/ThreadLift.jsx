@@ -36,12 +36,12 @@ const faqs = [
 ];
 
 const whyUs = [
-    { icon: ShieldCheck, title: 'Expert Clinical Technique', desc: 'Our clinical specialists are highly trained in advanced thread placement for natural, effective lifting.' },
-    { icon: Award, title: 'Premium Dissolvable Threads', desc: 'We select only the highest quality, FDA-approved dissolvable sutures for safety and optimal results.' },
-    { icon: Sparkles, title: 'Non-Surgical Results', desc: 'Achieve a noticeable lift and tighter skin without the need for incisions, general anaesthesia, or long recovery.' },
-    { icon: Heart, title: 'Personalised Assessments', desc: 'We carefully evaluate your facial structure and skin laxity to ensure a thread lift is the right choice for you.' },
-    { icon: Star, title: 'Dual-Action Rejuvenation', desc: 'Provides immediate physical lift while triggering long-term natural collagen production.' },
-    { icon: ShieldCheck, title: 'Safe & Sterile Environment', desc: 'All procedures are performed in our medically-compliant facility under strict aseptic conditions.' }
+    { icon: ShieldCheck, title: 'Expert Clinical Technique', desc: 'Medical specialists trained in advanced, natural-looking lifting techniques.' },
+    { icon: Award, title: 'Premium Dissolvable Threads', desc: 'Highest quality, FDA-approved threads for safety and results.' },
+    { icon: Sparkles, title: 'Non-Surgical Results', desc: 'Noticeable lift without surgery, general anesthesia, or downtime.' },
+    { icon: Heart, title: 'Personalised Assessments', desc: 'Careful evaluation to ensure the right lifting approach for you.' },
+    { icon: Star, title: 'Dual-Action Rejuvenation', desc: 'Immediate physical lift plus long-term collagen production.' },
+    { icon: ShieldCheck, title: 'Safe & Sterile Environment', desc: 'Strict clinical protocols in a medically-compliant facility.' }
 ];
 
 const benefits = [

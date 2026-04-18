@@ -36,12 +36,12 @@ const faqs = [
 ];
 
 const whyUs = [
-    { icon: Droplet, title: 'Genuine HydraFacial Technology', desc: 'We use the authentic HydraFacial system and original serums for the best results and skin safety.' },
-    { icon: Award, title: 'Certified Practitioners', desc: 'Our skin specialists are fully trained and certified in the official HydraFacial protocols.' },
-    { icon: Sparkles, title: 'Instant "Glow" Results', desc: 'Perfect for special occasions or regular maintenance; you leave with visibly better skin in under an hour.' },
-    { icon: Heart, title: 'Tailored Serum Infusions', desc: 'We customise the boosters and serums used during your treatment to target your specific skin concerns.' },
-    { icon: ShieldCheck, title: 'Safe for All Skin Types', desc: 'HydraFacial is gentle enough for even the most sensitive skin and effective for all skin tones.' },
-    { icon: Star, title: 'Complete Skin Health', desc: 'More than just a facial; it is a clinical treatment that improves skin health over time.' }
+    { icon: Droplet, title: 'Genuine HydraFacial Technology', desc: 'Authentic equipment and serums for maximum safety and results.' },
+    { icon: Award, title: 'Certified Practitioners', desc: 'Skin specialists trained in official medical-grade HydraFacial protocols.' },
+    { icon: Sparkles, title: 'Instant "Glow" Results', desc: 'Visibly better skin and a natural glow in under an hour.' },
+    { icon: Heart, title: 'Tailored Serum Infusions', desc: 'Boosters and serums customized to your specific skin concerns.' },
+    { icon: ShieldCheck, title: 'Safe for All Skin Types', desc: 'Gentle enough for sensitive skin and effective for all tones.' },
+    { icon: Star, title: 'Complete Skin Health', desc: 'A clinical treatment that improves skin health with every session.' }
 ];
 
 const benefits = [

@@ -36,11 +36,11 @@ const faqs = [
 ];
 
 const whyUs = [
-    { icon: Zap, title: 'Minimally Invasive Techniques', desc: 'We use surgical loupes and precision instruments to minimise trauma and reduce recovery time.' },
-    { icon: ShieldCheck, title: 'Safe & Sterile Environment', desc: 'Hospital-grade sterilisation of all instruments and complete aseptic protocol for every procedure.' },
-    { icon: Syringe, title: 'Advanced Anaesthesia', desc: 'Modern block anaesthesia ensures you are fully numb and comfortable throughout the procedure.' },
-    { icon: Heart, title: 'Post-Op Care Included', desc: 'We provide prescriptions, detailed recovery instructions, and follow-up to ensure smooth healing.' },
-    { icon: Star, title: 'Digital X-Ray Assessment', desc: 'Accurate digital X-rays help us plan the procedure precisely before we make any incision.' }
+    { icon: Zap, title: 'Minimally Invasive Techniques', desc: 'Precision tools for less trauma and faster recovery.' },
+    { icon: ShieldCheck, title: 'Safe & Sterile Environment', desc: 'Hospital-grade sterilization for every procedure.' },
+    { icon: Syringe, title: 'Advanced Anaesthesia', desc: 'Modern numbing ensures a painless experience.' },
+    { icon: Heart, title: 'Post-Op Care Included', desc: 'Full recovery support and post-op follow-ups.' },
+    { icon: Star, title: 'Digital X-Ray Assessment', desc: 'Precise planning using low-radiation digital X-rays.' }
 ];
 
 const benefits = [

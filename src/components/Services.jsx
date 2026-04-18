@@ -162,10 +162,10 @@ export default function Services() {
             <section className="py-14 bg-gray-900">
                 <div className="max-w-4xl mx-auto px-4 text-center">
                     <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3">
-                        Book a Consultation at Olive Dental & Face Clinic
+                        Book Your Consultation at Olive Dental & Face Clinic
                     </h3>
                     <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-                        Experience precision care and premium results. Our specialists are ready to guide your journey.
+                        Speak with our doctors to understand your treatment options, costs, and expected results before getting started.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link

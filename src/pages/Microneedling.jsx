@@ -36,12 +36,12 @@ const faqs = [
 ];
 
 const whyUs = [
-    { icon: CircleDot, title: 'Medical-Grade Devices', desc: 'We use professional, medical-grade microneedling devices for precise, safe, and effective depth control.' },
-    { icon: Award, title: 'Medically Supervised', desc: 'All procedures are performed by trained clinical professionals under strict safety and hygiene protocols.' },
-    { icon: ShieldCheck, title: 'Safe for All Skin Types', desc: 'A versatile treatment that is safe and effective regardless of your skin tone or sensitivity.' },
-    { icon: Sparkles, title: 'Natural Collagen Induction', desc: 'Triggers your skin’s natural healing response to improve texture, tone, and firmness from within.' },
-    { icon: Heart, title: 'Customised Treatment', desc: 'We adjust needle depth and technique based on your skin’s thickness and specific concerns.' },
-    { icon: Star, title: 'Proven Skin Transformation', desc: 'A trusted clinical treatment for reducing the appearance of scars, pores, and fine lines.' }
+    { icon: CircleDot, title: 'Medical-Grade Devices', desc: 'Professional devices for precise, safe, and effective depth control.' },
+    { icon: Award, title: 'Medically Supervised', desc: 'Performed by clinical professionals under strict safety protocols.' },
+    { icon: ShieldCheck, title: 'Safe for All Skin Types', desc: 'A versatile treatment effective for all skin tones and sensitivities.' },
+    { icon: Sparkles, title: 'Natural Collagen Induction', desc: 'Triggers natural healing to improve texture and firmness.' },
+    { icon: Heart, title: 'Customised Treatment', desc: 'Needle depth and technique adjusted to your specific skin needs.' },
+    { icon: Star, title: 'Proven Skin Transformation', desc: 'Trusted clinical treatment for reducing scars, pores, and lines.' }
 ];
 
 const benefits = [

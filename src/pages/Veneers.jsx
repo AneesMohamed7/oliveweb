@@ -32,12 +32,12 @@ const faqs = [
 ];
 
 const whyUs = [
-    { icon: Award, title: 'Expert Cosmetic Dentists', desc: 'Our clinical team specializes in smile makeovers with hundreds of successful cases.' },
-    { icon: Sparkles, title: 'Digital Smile Design', desc: 'We digitally plan your smile transformation so you can see the expected results before we start.' },
-    { icon: ShieldCheck, title: 'Premium E-Max Porcelain', desc: 'We use only high-grade, translucent porcelain for the most natural and durable results.' },
-    { icon: Heart, title: 'Minimally Invasive', desc: 'Our advanced techniques preserve as much of your natural tooth structure as possible.' },
-    { icon: Clock, title: 'Fast Transformation', desc: 'Walk out with your permanent new smile in just two appointments over 1-2 weeks.' },
-    { icon: Star, title: 'Natural Results Guaranteed', desc: 'We focus on "believable" beauty — smiles that look naturally perfect, not artificial.' }
+    { icon: Award, title: 'Expert Cosmetic Dentists', desc: 'Specialists in smile makeovers and veneers.' },
+    { icon: Sparkles, title: 'Digital Smile Design', desc: 'Preview your new smile before we start.' },
+    { icon: ShieldCheck, title: 'Premium E-Max Porcelain', desc: 'High-grade porcelain for natural, durable results.' },
+    { icon: Heart, title: 'Minimally Invasive', desc: 'Preserving as much natural tooth structure as possible.' },
+    { icon: Clock, title: 'Fast Transformation', desc: 'Full smile makeover in just two appointments.' },
+    { icon: Star, title: 'Natural Results Guaranteed', desc: 'Naturally perfect smiles, never artificial.' }
 ];
 
 const benefits = [

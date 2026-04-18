@@ -36,12 +36,12 @@ const faqs = [
 ];
 
 const whyUs = [
-    { icon: Zap, title: 'In-Chair Laser Whitening', desc: 'Powerful professional whitening gel activated by a clinical light for fast, even results in one session.' },
-    { icon: Award, title: 'Expert Clinical Supervision', desc: 'Performed by dental professionals — not beauticians — ensuring safe application and optimal results.' },
-    { icon: ShieldCheck, title: 'Medically Approved Agents', desc: 'We use internationally regulated whitening agents at clinically safe concentrations only.' },
-    { icon: Sun, title: 'Visible Results in 60 Minutes', desc: 'Walk out with a noticeably brighter smile in a single appointment, no waiting.' },
-    { icon: Smile, title: 'Personalised Shade Assessment', desc: 'We photograph and assess your starting shade to calibrate treatment for your specific case.' },
-    { icon: Star, title: 'Post-Whitening Care Guidance', desc: 'Detailed advice on diet and maintenance to extend your whitening results as long as possible.' }
+    { icon: Zap, title: 'In-Chair Laser Whitening', desc: 'Fast, even results in one session with clinical-grade light.' },
+    { icon: Award, title: 'Expert Clinical Supervision', desc: 'Performed by dental professionals for safe and optimal results.' },
+    { icon: ShieldCheck, title: 'Medically Approved Agents', desc: 'Safe concentrations of internationally regulated whitening agents.' },
+    { icon: Sun, title: 'Visible Results in 60 Minutes', desc: 'Noticeably brighter smile in just a single appointment.' },
+    { icon: Smile, title: 'Personalised Shade Assessment', desc: 'Treatment calibrated to your specific teeth and goals.' },
+    { icon: Star, title: 'Post-Whitening Care Guidance', desc: 'Detailed advice to maintain and extend your results.' }
 ];
 
 const benefits = [

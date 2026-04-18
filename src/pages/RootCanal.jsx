@@ -35,12 +35,12 @@ const faqs = [
 ];
 
 const whyUs = [
-    { icon: Zap, title: 'Painless with Advanced Anaesthesia', desc: 'We use modern block anaesthesia techniques to ensure you feel nothing during treatment.' },
-    { icon: ShieldCheck, title: 'Rotary Instruments & Apex Locators', desc: 'Digital apex locators ensure precise cleaning to the exact root tip — no guesswork.' },
-    { icon: Heart, title: 'Tooth Preservation First', desc: 'We always aim to save your natural tooth rather than recommend extraction.' },
-    { icon: Clock, title: 'Single-Visit Completion', desc: 'Most cases are completed in one appointment, saving you time and multiple trips.' },
-    { icon: Star, title: 'Proven Results & Happy Patients', desc: 'Hundreds of successful cases with high patient satisfaction and zero regrets.' },
-    { icon: Award, title: 'Precision Root Canal Care', desc: 'Accurate diagnosis and treatment focused on long-term tooth survival and comfort.' }
+    { icon: Zap, title: 'Painless with Advanced Anaesthesia', desc: 'Modern numbing techniques ensure a painless experience.' },
+    { icon: ShieldCheck, title: 'Rotary Instruments & Apex Locators', desc: 'Digital precision for faster, more accurate results.' },
+    { icon: Heart, title: 'Tooth Preservation First', desc: 'Expert techniques to save and keep your natural tooth.' },
+    { icon: Clock, title: 'Single-Visit Completion', desc: 'Most treatments completed in just one comfortable visit.' },
+    { icon: Star, title: 'Proven Results & Happy Patients', desc: 'Hundreds of successful cases with high patient satisfaction.' },
+    { icon: Award, title: 'Precision Root Canal Care', desc: 'Focused on long-term tooth survival and comfort.' }
 ];
 
 const benefits = [

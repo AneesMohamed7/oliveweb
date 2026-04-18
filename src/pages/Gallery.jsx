@@ -22,33 +22,32 @@ const galleryImages = [
         category: 'Clinic',
 
     },
+
     {
         id: 3,
-        src: '/images/clinic-chair (1).jpg',
-        alt: 'Advanced Dental Chair',
-        category: 'Clinic',
-
-    },
-    {
-        id: 4,
-        src: '/images/clinic-chair (2).jpg',
-        alt: 'Sterilized Treatment Room',
-        category: 'Clinic',
-
-    },
-    {
-        id: 5,
         src: '/images/clinic-chair (3).webp',
         alt: 'Dental Care Unit',
         category: 'Clinic',
 
     },
     {
-        id: 6,
+        id: 4,
         src: '/images/clinic-chair (4).webp',
         alt: 'Modern Treatment Suite',
         category: 'Clinic',
 
+    },
+    {
+        id: 5,
+        src: '/images/clinic-img1.webp',
+        alt: 'Olive Dental Clinic Exterior',
+        category: 'Clinic',
+    },
+    {
+        id: 6,
+        src: '/images/clinic-img2.webp',
+        alt: 'Clinic Interior View',
+        category: 'Clinic',
     },
 
     // ── Dental Results ─────────────────────────────────

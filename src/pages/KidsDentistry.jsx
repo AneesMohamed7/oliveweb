@@ -36,11 +36,11 @@ const faqs = [
 ];
 
 const whyUs = [
-    { icon: Baby, title: 'Child-Friendly, Fearless Environment', desc: 'Our clinic is designed to make children feel welcome, calm, and safe from the very first visit.' },
-    { icon: ShieldCheck, title: 'Gentle Techniques & Safe Anaesthesia', desc: 'Child-appropriate dosing, numbing gels, and a calm approach ensure every procedure is pain-free.' },
-    { icon: Sparkles, title: 'Preventive-First Approach', desc: 'We focus on fluoride, sealants, and oral hygiene education to prevent problems before they start.' },
-    { icon: Heart, title: 'Habit Correction & Early Orthodontics', desc: 'We monitor dental development and correct habits like thumb-sucking and tongue thrusting early.' },
-    { icon: Star, title: 'Parent Guidance Included', desc: 'We educate parents on brushing techniques, diet tips, and what to watch for at home.' }
+    { icon: Baby, title: 'Child-Friendly, Fearless Environment', desc: 'Calm, welcoming space for stress-free visits.' },
+    { icon: ShieldCheck, title: 'Gentle Techniques & Safe Anaesthesia', desc: 'Pain-free care with safe, child-appropriate methods.' },
+    { icon: Sparkles, title: 'Preventive-First Approach', desc: 'Focus on prevention with fluoride and sealants.' },
+    { icon: Heart, title: 'Habit Correction & Early Orthodontics', desc: 'Early correction of habits and dental growth issues.' },
+    { icon: Star, title: 'Parent Guidance Included', desc: 'Clear guidance on care, diet, and oral habits.' }
 ];
 
 const benefits = [
@@ -66,7 +66,7 @@ export default function KidsDentistry() {
 
 
             {/* ═══ HERO ═══ */}
-            <section className="relative bg-gradient-to-br from-green-50 via-white to-blue-50/30 py-20 lg:py-28 overflow-hidden">
+            <section className="relative bg-[#F8FAFC] py-20 lg:py-28 overflow-hidden">
                 <div className="absolute -top-24 -right-24 w-96 h-96 bg-accent/8 rounded-full blur-[100px]" />
                 <div className="absolute bottom-0 -left-32 w-80 h-80 bg-primary/5 rounded-full blur-[80px]" />
 
@@ -75,8 +75,8 @@ export default function KidsDentistry() {
                         <motion.div initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
                             <span className="text-primary font-bold tracking-wider uppercase text-xs mb-4 block">Kids Dentistry</span>
                             <h1 className="text-4xl md:text-5xl lg:text-[3.2rem] font-bold text-gray-900 mb-6 leading-tight">
-                                Happy Teeth.<br />
-                                <span className="text-primary">Happy Kids. Every Visit.</span>
+                                Gentle Dental Care.<br />
+                                <span className="text-primary">Safe, Stress-Free Visits.</span>
                             </h1>
                             <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-xl">
                                 Gentle, caring dental treatment for children of all ages — from first tooth to teenage years.

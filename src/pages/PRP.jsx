@@ -36,12 +36,12 @@ const faqs = [
 ];
 
 const whyUs = [
-    { icon: Droplets, title: 'Medical-Grade Centrifugation', desc: 'We use advanced centrifugation technology to ensure the highest concentration of active platelets.' },
-    { icon: Award, title: 'Medically Supervised Treatment', desc: 'All PRP procedures are performed by trained medical professionals in a sterile clinical environment.' },
-    { icon: ShieldCheck, title: 'Autologous & Safe', desc: 'Since it uses your own blood, there is zero risk of allergic reactions or cross-contamination.' },
-    { icon: Sparkles, title: 'Natural Collagen Induction', desc: 'Stimulates your body\'s own healing mechanisms for long-lasting, natural skin rejuvenation.' },
-    { icon: Heart, title: 'Tailored Treatment Plans', desc: 'We assess your skin health and goals to determine the ideal frequency and combination of treatments.' },
-    { icon: Star, title: 'Visible, Refined Results', desc: 'Hundreds of patients have experienced improved skin texture, tone, and a youthful glow.' }
+    { icon: Droplets, title: 'Medical-Grade Centrifugation', desc: 'Advanced technology for the highest platelet concentration.' },
+    { icon: Award, title: 'Medically Supervised Treatment', desc: 'Performed by medical professionals in a sterile environment.' },
+    { icon: ShieldCheck, title: 'Autologous & Safe', desc: 'Zero risk of allergic reactions using your own blood.' },
+    { icon: Sparkles, title: 'Natural Collagen Induction', desc: 'Stimulates your body\'s healing for natural rejuvenation.' },
+    { icon: Heart, title: 'Tailored Treatment Plans', desc: 'Frequency and combination matched to your skin goals.' },
+    { icon: Star, title: 'Visible, Refined Results', desc: 'Proven improvement in skin texture and youthful glow.' }
 ];
 
 const benefits = [

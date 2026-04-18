@@ -36,12 +36,12 @@ const faqs = [
 ];
 
 const whyUs = [
-    { icon: Syringe, title: 'Precision Administration', desc: 'Expertly administered by trained clinical professionals for accurate and safe results.' },
-    { icon: Award, title: 'Medically Supervised', desc: 'All injectable treatments are performed in our sterile, medically-compliant facility.' },
-    { icon: ShieldCheck, title: 'Authentic Products', desc: 'We use only FDA-approved, authentic Botox and premium dermal fillers from trusted global brands.' },
-    { icon: Sparkles, title: 'Natural-Looking Enhancements', desc: 'Our clinical goal is subtle refinement that enhances your natural beauty, not overfills it.' },
-    { icon: Heart, title: 'Personalised Consultations', desc: 'We take the time to understand your aesthetic goals and design a treatment plan just for you.' },
-    { icon: Star, title: 'Proven Patient Satisfaction', desc: 'A track record of safe procedures and highly satisfied patients seeking facial refinement.' }
+    { icon: Syringe, title: 'Precision Administration', desc: 'Expert medical injectors for safe, natural-looking results.' },
+    { icon: Award, title: 'Medically Supervised', desc: 'Treatments performed in a sterile, medically-compliant facility.' },
+    { icon: ShieldCheck, title: 'Authentic Products', desc: 'Only FDA-approved, authentic brands from trusted providers.' },
+    { icon: Sparkles, title: 'Natural-Looking Enhancements', desc: 'Subtle refinement that enhances your natural beauty.' },
+    { icon: Heart, title: 'Personalised Consultations', desc: 'Custom treatment plans tailored to your aesthetic goals.' },
+    { icon: Star, title: 'Proven Patient Satisfaction', desc: 'Track record of safe procedures and high patient satisfaction.' }
 ];
 
 const benefits = [
