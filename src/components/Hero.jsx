@@ -83,7 +83,7 @@ export default function Hero() {
                                 className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full mb-3 text-[13px] font-semibold text-sky-300 border border-sky-400/30 bg-sky-400/10 backdrop-blur-sm"
                             >
                                 <span className="text-sky-400">✦</span>
-                                Official Invisalign® Provider · Kunnumpuram's Multi-Specialty Clinic
+                                Official Invisalign® Provider · Kunnumpuram's Multi-Speciality Clinic
                             </motion.div>
 
                             <motion.h1

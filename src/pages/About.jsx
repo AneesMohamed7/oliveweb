@@ -97,7 +97,7 @@ export default function About() {
                             className="flex flex-wrap gap-3"
                         >
                             {[
-                                { icon: Star, label: '5.0 Google Rating', sub: 'Verified Patient Reviews' },
+                                { icon: Star, label: '4.9 Google Rating', sub: 'Verified Patient Reviews' },
                                 { icon: Users, label: '4000+ Patients', sub: 'Served' },
                                 { icon: ShieldCheck, label: 'Invisalign®', sub: 'Certified Provider' },
                             ].map((chip) => (
@@ -169,7 +169,7 @@ export default function About() {
                             >
                                 <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">The Olive Journey</span>
                                 <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-[1.15] mb-6">
-                                    Built to Bridge the Gap in <span className="text-primary">Advanced Dental Care</span>
+                                    Modern Dental & Facial Care in <span className="text-primary">Kunnumpuram & Kondotty</span>
                                 </h2>
                             </motion.div>
 
@@ -180,7 +180,7 @@ export default function About() {
                                         Who We Are
                                     </h3>
                                     <p className="text-gray-500 text-sm leading-relaxed">
-                                        Olive Dental & Face Clinic is a multi-specialty hub in Kunnumpuram & Kondotty, where 6 specialist doctors collaborate to provide medically-guided excellence under one roof.
+                                        Olive Dental & Face Clinic is a doctor-led, multi-specialty clinic where experienced specialists provide coordinated dental and facial treatments with a focus on safety, precision, and long-term results.
                                     </p>
                                 </motion.div>
 
@@ -190,7 +190,7 @@ export default function About() {
                                         Why We Started
                                     </h3>
                                     <p className="text-gray-500 text-sm leading-relaxed">
-                                        Founded in 2023, we aimed to bring metropolitan-standard dental procedures to Malappuram, ensuring every family has access to tech-driven, ethical healthcare.
+                                        Established in 2023, we set out to bring advanced, technology-driven treatments to Malappuram — making reliable, ethical care accessible to local families.
                                     </p>
                                 </motion.div>
                             </div>
@@ -407,7 +407,7 @@ export default function About() {
                         className="grid grid-cols-2 lg:grid-cols-4 mb-16"
                     >
                         {[
-                            { value: '5.0', label: 'Google Rating', extra: '⭐⭐⭐⭐⭐' },
+                            { value: '4.9', label: 'Google Rating', extra: '⭐⭐⭐⭐' },
                             { value: '4000+', label: 'Happy Patients' },
                             { value: '3+', label: 'Years of Care' },
                             { value: '7+', label: 'Specialists' },
