@@ -86,7 +86,7 @@ export default function About() {
                             transition={{ duration: 0.7, delay: 0.6 }}
                             className="text-gray-300 text-lg lg:text-xl leading-relaxed mb-10 max-w-xl"
                         >
-                            4000+ patients choose Olive Dental & Face Clinic for accurate diagnosis, ethical treatment, and natural-looking results — all under one roof.
+                            8000+ patients choose Olive Dental & Face Clinic for accurate diagnosis, ethical treatment, and natural-looking results — all under one roof.
                         </motion.p>
 
                         {/* Stat chips row */}
@@ -98,7 +98,7 @@ export default function About() {
                         >
                             {[
                                 { icon: Star, label: '4.9 Google Rating', sub: 'Verified Patient Reviews' },
-                                { icon: Users, label: '4000+ Patients', sub: 'Served' },
+                                { icon: Users, label: '8000+ Patients', sub: 'Served' },
                                 { icon: ShieldCheck, label: 'Invisalign®', sub: 'Certified Provider' },
                             ].map((chip) => (
                                 <div key={chip.label} className="bg-white/10 border border-white/15 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2">
@@ -408,7 +408,7 @@ export default function About() {
                     >
                         {[
                             { value: '4.9', label: 'Google Rating', extra: '⭐⭐⭐⭐' },
-                            { value: '4000+', label: 'Happy Patients' },
+                            { value: '8000+', label: 'Happy Patients' },
                             { value: '3+', label: 'Years of Care' },
                             { value: '7+', label: 'Specialists' },
                         ].map((stat, i) => (
@@ -491,8 +491,8 @@ export default function About() {
                             >
                                 Book Invisalign® Consultation
                             </a>
-                            <Link
-                                to="/aligners"
+                             <Link
+                                to="/treatments/aligners"
                                 className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-base rounded-2xl hover:bg-white/20 transition-all"
                             >
                                 Learn More

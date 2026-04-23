@@ -104,7 +104,7 @@ export default function StatsSection() {
                 <div className="grid md:grid-cols-3 gap-12 md:gap-8">
                     <Counter from={0} to={100} label="Aligners Delivered" icon={Smile} delay={0} />
                     <Counter from={0} to={75} label="Dental Implants" icon={Anchor} delay={0.2} />
-                    <Counter from={0} to={4000} label="Happy Patients" icon={Users} delay={0.4} />
+                    <Counter from={0} to={8000} label="Happy Patients" icon={Users} delay={0.4} />
                 </div>
             </div>
 

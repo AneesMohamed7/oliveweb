@@ -38,7 +38,7 @@ export default function Navbar() {
     ];
 
     const treatmentLinks = [
-        { name: 'Dental Treatments', path: '/dental-treatments' },
+        { name: 'Dental Services', path: '/dental-treatments' },
         { name: 'Facial Aesthetics', path: '/facial-aesthetics' },
     ];
 
@@ -97,12 +97,12 @@ export default function Navbar() {
                                     isTreatmentsActive ? "text-primary" : "text-text"
                                 )}
                             >
-                                Treatments
+                                Services
                             </Link>
                             <button
                                 onClick={() => setTreatmentsOpen(!treatmentsOpen)}
                                 className="p-1 hover:text-primary transition-colors focus:outline-none"
-                                aria-label="Toggle Treatments Menu"
+                                aria-label="Toggle Services Menu"
                             >
                                 <ChevronDown size={14} className={cn("transition-transform duration-200", treatmentsOpen && "rotate-180")} />
                             </button>
@@ -197,7 +197,7 @@ export default function Navbar() {
                                         location.pathname === "/treatments" ? "text-primary" : "text-text"
                                     )}
                                 >
-                                    Treatments
+                                    Services
                                 </Link>
                                 <button
                                     onClick={() => setTreatmentsOpen(!treatmentsOpen)}

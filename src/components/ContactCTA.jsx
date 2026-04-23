@@ -180,8 +180,7 @@ export default function ContactCTA() {
                                 Send Request via WhatsApp
                             </button>
                             <p className="text-[10px] text-gray-400 text-center leading-relaxed">
-                                Opens WhatsApp with your details pre-filled. We typically respond within 15 minutes.
-                            </p>
+                                Open WhatsApp with your details pre-filled and get quick guidance from our team.                            </p>
                         </form>
                     </motion.div>
 

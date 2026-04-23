@@ -45,8 +45,8 @@ export default function DentalTreatments() {
     return (
         <>
             <Helmet>
-                <title>Advanced Dental Treatments | Olive Dental & Face Clinic, Kunnumpuram</title>
-                <meta name="description" content="Precision-driven dental treatments in Kunnumpuram, Kerala — dental implants, clear aligners, smile makeover, root canal, and more. Book your consultation." />
+                <title>Advanced Dental Services | Olive Dental & Face Clinic, Kunnumpuram</title>
+                <meta name="description" content="Precision-driven dental services in Kunnumpuram, Kerala — dental implants, clear aligners, smile makeover, root canal, and more. Book your consultation." />
 
                 <link rel="canonical" href="https://olivedentalofficial.in/dental-treatments" />
 
@@ -111,8 +111,8 @@ export default function DentalTreatments() {
                         viewport={{ once: true }}
                         className="mb-14"
                     >
-                        <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">Specialised Treatments</span>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Core Dental Treatments</h2>
+                        <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">Specialised Services</span>
+                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Core Dental Services</h2>
                         <p className="text-gray-500 max-w-2xl">
                             Our flagship procedures — delivering precision, comfort, and lasting results.
                         </p>
@@ -211,7 +211,7 @@ export default function DentalTreatments() {
             <section className="py-20 bg-background-soft">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-14">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Dental Treatment FAQs</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Dental Service FAQs</h2>
                     </div>
                     <div className="space-y-4">
                         {dentalFaqs.map((faq, index) => (

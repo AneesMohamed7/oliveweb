@@ -39,8 +39,8 @@ export default function FacialAesthetics() {
     return (
         <>
             <Helmet>
-                <title>Advanced Facial Aesthetic Treatments | Olive Dental & Face Clinic, Kunnumpuram</title>
-                <meta name="description" content="PRP treatment, Botox, microneedling, HydraFacial, and advanced anti-ageing treatments in Kunnumpuram, Kerala. Medically supervised facial aesthetics clinic." />
+                <title>Advanced Facial Aesthetic Services | Olive Dental & Face Clinic, Kunnumpuram</title>
+                <meta name="description" content="PRP treatment, Botox, microneedling, HydraFacial, and advanced anti-ageing services in Kunnumpuram, Kerala. Medically supervised facial aesthetics clinic." />
 
                 <link rel="canonical" href="https://olivedentalofficial.in/facial-aesthetics" />
 
@@ -109,7 +109,7 @@ export default function FacialAesthetics() {
                         viewport={{ once: true }}
                         className="mb-14"
                     >
-                        <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">Specialist Treatments</span>
+                        <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">Specialist Services</span>
                         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Facial Aesthetic Services</h2>
                         <p className="text-gray-500 max-w-2xl">
                             Clinically proven facial procedures performed under medical supervision for natural, healthy, and lasting results.
@@ -186,7 +186,7 @@ export default function FacialAesthetics() {
             <section className="py-20 bg-background-soft/30">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-14">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Facial Treatment FAQs</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Facial Service FAQs</h2>
                     </div>
                     <div className="space-y-4">
                         {facialFaqs.map((faq, index) => (

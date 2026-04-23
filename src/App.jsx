@@ -30,6 +30,8 @@ const CrownsAndBridges = lazy(() => import('./pages/CrownsAndBridges'));
 const TeethWhitening = lazy(() => import('./pages/TeethWhitening'));
 const KidsDentistry = lazy(() => import('./pages/KidsDentistry'));
 const WisdomTooth = lazy(() => import('./pages/WisdomTooth'));
+const BridalSmile = lazy(() => import('./pages/BridalSmile'));
+const Bonding = lazy(() => import('./pages/Bonding'));
 
 // Facial aesthetic pages
 const PRP = lazy(() => import('./pages/PRP'));
@@ -37,6 +39,7 @@ const Botox = lazy(() => import('./pages/Botox'));
 const Microneedling = lazy(() => import('./pages/Microneedling'));
 const ThreadLift = lazy(() => import('./pages/ThreadLift'));
 const HydraFacial = lazy(() => import('./pages/HydraFacial'));
+const BridalMakeover = lazy(() => import('./pages/BridalMakeover'));
 
 export default function App() {
   const [isInitialLoading, setIsInitialLoading] = React.useState(true);
@@ -93,6 +96,8 @@ export default function App() {
               <Route path="/treatments/teeth-whitening" element={<PageWrapper><TeethWhitening /></PageWrapper>} />
               <Route path="/treatments/kids-dentistry" element={<PageWrapper><KidsDentistry /></PageWrapper>} />
               <Route path="/treatments/wisdom-tooth" element={<PageWrapper><WisdomTooth /></PageWrapper>} />
+              <Route path="/treatments/bridal-smile" element={<PageWrapper><BridalSmile /></PageWrapper>} />
+              <Route path="/treatments/bonding" element={<PageWrapper><Bonding /></PageWrapper>} />
 
               {/* Facial Routes */}
               <Route path="/treatments/prp" element={<PageWrapper><PRP /></PageWrapper>} />
@@ -100,6 +105,7 @@ export default function App() {
               <Route path="/treatments/microneedling" element={<PageWrapper><Microneedling /></PageWrapper>} />
               <Route path="/treatments/thread-lift" element={<PageWrapper><ThreadLift /></PageWrapper>} />
               <Route path="/treatments/hydrafacial" element={<PageWrapper><HydraFacial /></PageWrapper>} />
+              <Route path="/treatments/bridal-makeover" element={<PageWrapper><BridalMakeover /></PageWrapper>} />
 
               <Route path="/dental-treatments" element={<PageWrapper><DentalTreatments /></PageWrapper>} />
               <Route path="/facial-aesthetics" element={<PageWrapper><FacialAesthetics /></PageWrapper>} />

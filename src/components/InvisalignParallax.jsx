@@ -27,10 +27,10 @@ export default function InvisalignParallax() {
             <div
                 className="absolute inset-0"
                 style={{
-                    background: 'linear-gradient(135deg, rgba(10,24,60,0.75) 0%, rgba(10,40,80,0.65) 50%, rgba(5,20,50,0.6) 100%)',
+                    background: 'linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.2) 100%)'
                 }}
             />
-            <div className="absolute inset-0 backdrop-blur-[0.5px]" />
+            <div className="absolute inset-0 backdrop-blur-[0.5x]" />
 
             {/* ── Main Content ── */}
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -146,14 +146,14 @@ export default function InvisalignParallax() {
                             <div className="flex flex-col sm:flex-row gap-3">
                                 <a
                                     href="tel:+918891494731"
-                                    className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-all duration-300 shadow-md"
+                                    className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5"
                                 >
                                     <Phone size={16} />
                                     Book Your Invisalign® Consultation
                                 </a>
                                 <Link
-                                    to="/aligners"
-                                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
+                                    to="/treatments/aligners"
+                                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-white/20 text-white font-semibold rounded-xl hover:bg-white hover:text-primary transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
                                 >
                                     See How Invisalign® Works
                                     <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

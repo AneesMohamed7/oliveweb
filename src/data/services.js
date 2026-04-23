@@ -46,6 +46,16 @@ export const dentalServices = [
         link: '/treatments/root-canal'
     },
     {
+        id: 'bridal-smile-design',
+        title: 'Bridal Smile Design',
+        category: 'dental',
+        type: 'core',
+        description: 'Pre-wedding smile enhancement plan including whitening, alignment, and aesthetic corrections designed for a confident bridal smile.',
+        icon: Sparkles,
+        image: '/images/bridal-smile.webp',
+        link: '/treatments/bridal-smile'
+    },
+    {
         id: 'veneers',
         title: 'Veneers',
         category: 'dental',
@@ -95,6 +105,16 @@ export const dentalServices = [
         image: '/images/wisdomtoothremoval-img.webp',
         link: '/treatments/wisdom-tooth'
     },
+    {
+        id: 'bonding',
+        title: 'Composite Bonding',
+        category: 'dental',
+        type: 'secondary',
+        description: 'Single-visit smile enhancement to repair chips, close gaps, and reshape teeth using artistic composite layering for immediate, natural results.',
+        icon: Sparkles,
+        image: '/images/beforeafter14.webp',
+        link: '/treatments/bonding'
+    },
 ];
 
 // ─── FACIAL AESTHETIC SERVICES ─────────────────────────────────────
@@ -129,6 +149,16 @@ export const facialServices = [
         icon: CircleDot,
         image: '/images/microneedling-img.webp',
         link: '/treatments/microneedling'
+    },
+    {
+        id: 'bridal-makeover',
+        title: 'Bridal Makeover',
+        category: 'facial',
+        type: 'core',
+        description: 'Comprehensive pre-wedding skin and smile transformation plan combining advanced facial treatments and dental aesthetics for a flawless, camera-ready look.',
+        icon: Crown,
+        image: '/images/bridal-makeover.webp',
+        link: '/treatments/bridal-makeover'
     },
     {
         id: 'thread-lift',
