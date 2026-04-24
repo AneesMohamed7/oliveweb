@@ -97,7 +97,7 @@ export default function About() {
                             className="flex flex-wrap gap-3"
                         >
                             {[
-                                { icon: Star, label: '4.9 Google Rating', sub: 'Verified Patient Reviews' },
+                                { icon: Star, label: '5.0 Google Rating', sub: 'Verified Patient Reviews' },
                                 { icon: Users, label: '8000+ Patients', sub: 'Served' },
                                 { icon: ShieldCheck, label: 'Invisalign®', sub: 'Certified Provider' },
                             ].map((chip) => (
@@ -407,7 +407,7 @@ export default function About() {
                         className="grid grid-cols-2 lg:grid-cols-4 mb-16"
                     >
                         {[
-                            { value: '4.9', label: 'Google Rating', extra: '⭐⭐⭐⭐' },
+                            { value: '5.0', label: 'Google Rating', extra: '⭐⭐⭐⭐⭐' },
                             { value: '8000+', label: 'Happy Patients' },
                             { value: '3+', label: 'Years of Care' },
                             { value: '7+', label: 'Specialists' },

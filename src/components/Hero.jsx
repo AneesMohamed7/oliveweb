@@ -2,26 +2,10 @@ import React from 'react';
 import {
     Phone,
     Star,
-    ShieldCheck,
-    BadgeCheck,
-    CreditCard,
-    Gift,
     ArrowRight,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import invisalignLogo from '../assets/invisalign-logo.png';
 
-const TRUST_BADGES = [
-    { icon: BadgeCheck, label: 'Qualified & Experienced Doctors' },
-    { icon: CreditCard, label: 'Flexible EMI Options' },
-    // { icon: ClipboardCheck, label: 'Transparent Treatment Planning' },
-];
-
-const STATS = [
-    { value: 'Experienced', label: 'Dental Team' },
-    { value: 'Advanced', label: 'Treatment Methods' },
-    { value: 'Patient-Focused', label: 'Care Approach' },
-];
 
 const stagger = {
     hidden: {},
@@ -40,7 +24,7 @@ const scaleIn = {
 
 export default function Hero() {
     return (
-        <section className="relative min-h-[80svh] sm:min-h-[85vh] lg:min-h-[105vh] flex flex-col overflow-hidden">
+        <section className="relative min-h-[100svh] sm:min-h-[90vh] lg:min-h-[105vh] flex flex-col overflow-hidden">
 
             {/* BG IMAGE */}
             <div className="absolute inset-0 -z-20">
@@ -66,29 +50,30 @@ export default function Hero() {
             />
 
             {/* MAIN CONTENT */}
-            <div className="relative z-10 flex-1 flex items-start lg:items-center">
-                <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 pt-24 pb-12 lg:py-0">
-                    <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+            <div className="relative z-20 flex-1 flex items-center">
+                <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 pt-24 pb-0 sm:pb-12 lg:py-0">
+                    <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
 
-                        {/* LEFT */}
+                        {/* LEFT — TEXT CONTENT */}
                         <motion.div
                             variants={stagger}
                             initial="hidden"
                             animate="show"
-                            className="flex flex-col"
+                            className="flex flex-col relative z-20"
                         >
                             {/* Overline Trust Pill */}
                             <motion.div
                                 variants={fadeUp}
-                                className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full mb-3 text-[13px] font-semibold text-sky-300 border border-sky-400/30 bg-sky-400/10 backdrop-blur-sm"
+                                className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full mb-3 text-[11px] sm:text-[13px] font-semibold text-sky-300 border border-sky-400/30 bg-sky-400/10 backdrop-blur-sm"
                             >
                                 <span className="text-sky-400">✦</span>
-                                Official Invisalign® Provider · Kunnumpuram's Multi-Speciality Clinic
+                                <span className="hidden sm:inline">Official Invisalign® Provider · Kunnumpuram's Multi-Speciality Clinic</span>
+                                <span className="sm:hidden">Invisalign® Provider · Kunnumpuram</span>
                             </motion.div>
 
                             <motion.h1
                                 variants={fadeUp}
-                                className="text-[2.6rem] sm:text-5xl lg:text-[3.1rem] font-extrabold text-white leading-[1.1] tracking-tight mb-4"
+                                className="text-[2rem] sm:text-[2.6rem] md:text-5xl lg:text-[3.1rem] font-extrabold text-white leading-[1.1] tracking-tight mb-4"
                             >
                                 Dental Implants,{' '}
                                 <span
@@ -107,7 +92,7 @@ export default function Hero() {
 
                             <motion.p
                                 variants={fadeUp}
-                                className="text-lg sm:text-lg text-white/70 leading-relaxed mb-5 max-w-[500px]"
+                                className="text-base sm:text-lg text-white/70 leading-relaxed mb-5 max-w-[500px]"
                             >
                                 Expert care, clear treatment plans, and results you can trust — all in one clinic.
                             </motion.p>
@@ -121,20 +106,20 @@ export default function Hero() {
                                         <Star key={i} size={15} className="text-yellow-400 fill-yellow-400" />
                                     ))}
                                 </div>
-                                <span className="text-white/90 font-semibold text-base">
-                                    4.9 Google Rating
+                                <span className="text-white/90 font-semibold text-sm sm:text-base">
+                                    5.0 Google Rating
                                 </span>
                             </motion.div>
 
                             <motion.div
                                 variants={fadeUp}
-                                className="flex flex-col sm:flex-row gap-3.5 mb-5"
+                                className="flex flex-col sm:flex-row gap-3 sm:gap-3.5 mb-5"
                             >
                                 <a
                                     href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20an%20appointment"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-green-500 hover:bg-green-400 text-white font-bold text-base shadow-lg shadow-green-900/40 hover:shadow-green-500/40 transition-all duration-200 hover:-translate-y-0.5"
+                                    className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-green-500 hover:bg-green-400 text-white font-bold text-sm sm:text-base shadow-lg shadow-green-900/40 hover:shadow-green-500/40 transition-all duration-200 hover:-translate-y-0.5"
                                 >
                                     Book An Appointment
                                     <ArrowRight size={15} className="opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
@@ -142,95 +127,52 @@ export default function Hero() {
 
                                 <a
                                     href="tel:+918891494731"
-                                    className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/25 hover:bg-white/20 text-white font-bold text-base transition-all duration-200 hover:-translate-y-0.5"
+                                    className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/25 hover:bg-white/20 text-white font-bold text-sm sm:text-base transition-all duration-200 hover:-translate-y-0.5"
                                 >
                                     <Phone size={18} strokeWidth={2} />
                                     Call Now
                                 </a>
                             </motion.div>
 
-                            {/* TRUST BADGES */}
-                            <motion.div
-                                variants={fadeUp}
-                                className="hidden sm:flex flex-wrap gap-2"
-                            >
-                                {TRUST_BADGES.map(({ icon: Icon, label }) => (
-                                    <div
-                                        key={label}
-                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white/85 text-xs font-medium"
-                                    >
-                                        <Icon size={13} className="text-sky-300" strokeWidth={2} />
-                                        {label}
-                                    </div>
-                                ))}
-                            </motion.div>
                         </motion.div>
 
-                        {/* RIGHT — image card */}
-                        <motion.div
-                            variants={scaleIn}
-                            initial="hidden"
-                            animate="show"
-                            className="relative hidden lg:flex flex-col gap-4 items-center justify-center"
-                        >
-                            {/* Glow */}
-                            <div
-                                className="absolute inset-6 rounded-3xl blur-2xl opacity-25 pointer-events-none"
-                                style={{ background: 'radial-gradient(ellipse, #38bdf8 0%, #1d4ed8 60%, transparent 100%)' }}
-                            />
 
-                            {/* Image */}
-                            <div
-                                className="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10"
-                                style={{ aspectRatio: '4/3' }}
-                            >
-                                <img
-                                    src="/images/oliveclinic-img1.webp"
-                                    alt="Dental specialist with patient at Olive Dental Clinic"
-                                    className="w-full h-full object-cover object-top"
-                                    loading="eager"
-                                    decoding="async"
-                                    width={800}
-                                    height={600}
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1840]/70 via-transparent to-transparent pointer-events-none" />
-                                <div className="absolute bottom-5 left-5 right-5">
-                                    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3">
-                                        <div className="flex items-center justify-between gap-2">
-                                            <div>
-                                                <p className="text-white font-semibold text-sm">Olive Dental &amp; Face Clinic</p>
-                                                <p className="text-sky-300 text-xs mt-0.5 font-medium">Official Invisalign® Provider · Kunnumpuram</p>
-                                            </div>
-                                            <div className="flex-shrink-0 bg-sky-400/20 border border-sky-400/30 rounded-lg px-2 py-1">
-                                                <img src={invisalignLogo} alt="Invisalign" className="h-5 w-auto brightness-0 invert opacity-90" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* STATS */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 12 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.7, duration: 0.5 }}
-                                className="w-full grid grid-cols-3 gap-3"
-                            >
-                                {STATS.map(({ value, label }) => (
-                                    <div
-                                        key={label}
-                                        className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl py-4 px-3"
-                                    >
-                                        <span className="text-white font-extrabold text-xl tracking-tight">{value}</span>
-                                        <span className="text-white/55 text-xs mt-1 text-center leading-tight">{label}</span>
-                                    </div>
-                                ))}
-                            </motion.div>
-                        </motion.div>
 
                     </div>
                 </div>
             </div>
+
+            {/* HERO IMAGE — Mobile & Tablet (inline, bottom of section) */}
+            <motion.div
+                variants={scaleIn}
+                initial="hidden"
+                animate="show"
+                className="lg:hidden relative z-10 flex items-end mt-auto w-full overflow-hidden"
+            >
+                <img
+                    src="/images/smiling-women1.png"
+                    alt="Smiling woman showing healthy dental results"
+                    className="ml-[-140px] h-[355px] w-[480px] max-w-none sm:ml-0 sm:h-[400px] sm:w-[70%] sm:max-w-full sm:mx-auto md:h-[450px] md:w-[60%] object-contain object-bottom select-none pointer-events-none"
+                    loading="eager"
+                    decoding="async"
+                />
+            </motion.div>
+
+            {/* HERO IMAGE — Desktop (absolute, grounded to bottom-right) */}
+            <motion.div
+                variants={scaleIn}
+                initial="hidden"
+                animate="show"
+                className="hidden lg:flex absolute bottom-0 right-0 w-1/2 h-full items-end justify-end z-10 pointer-events-none"
+            >
+                <img
+                    src="/images/smiling-women1.png"
+                    alt="Smiling woman showing healthy dental results"
+                    className="h-[500px] w-full object-contain object-bottom scale-125 origin-bottom select-none"
+                    loading="eager"
+                    decoding="async"
+                />
+            </motion.div>
         </section>
     );
 }

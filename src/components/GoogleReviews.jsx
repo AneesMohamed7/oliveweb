@@ -137,7 +137,7 @@ export default function GoogleReviews() {
                         <span className="font-semibold text-gray-700">Reviews</span>
                         <span className="flex items-center gap-1 bg-yellow-50 text-yellow-700 px-2.5 py-0.5 rounded-full text-sm font-bold border border-yellow-100">
                             <Star size={12} fill="currentColor" />
-                            4.9
+                            5.0
                         </span>
                     </div>
                     <h2 className="text-3xl font-bold text-gray-900">What Our Patients Say</h2>

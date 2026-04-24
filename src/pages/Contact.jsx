@@ -156,7 +156,7 @@ export default function Contact() {
                                 <div className="flex">
                                     {[...Array(5)].map((_, i) => <Star key={i} size={13} fill="#FBBC04" color="#FBBC04" />)}
                                 </div>
-                                <span className="text-gray-300 font-semibold">4.9</span>
+                                <span className="text-gray-300 font-semibold">5.0</span>
                                 <span>Google Rating</span>
                             </div>
                         </motion.div>
