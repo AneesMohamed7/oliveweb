@@ -22,15 +22,13 @@ const scaleIn = {
     show: { opacity: 1, scale: 1, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
 };
 
-import { MeshGlow, GridPattern } from './DecorativeElements';
-
 export default function Hero() {
     return (
         <section className="relative min-h-[100svh] sm:min-h-[90vh] lg:min-h-[105vh] flex flex-col overflow-hidden">
 
             {/* BACKGROUND */}
             <div
-                className="absolute inset-2 sm:inset-4 lg:inset-6 -z-10 rounded-[2rem] sm:rounded-[3.5rem] lg:rounded-[4.5rem] shadow-2xl overflow-hidden bg-primary"
+                className="absolute inset-x-2 bottom-2 top-6 sm:inset-x-4 sm:bottom-4 sm:top-8 lg:inset-x-6 lg:bottom-6 lg:top-12 -z-10 rounded-[2rem] sm:rounded-[3.5rem] lg:rounded-[4.5rem] shadow-2xl overflow-hidden bg-primary"
                 style={{
                     background: 'linear-gradient(135deg, #2E8BCB 0%, #1e6899 100%)',
                 }}
@@ -42,8 +40,6 @@ export default function Hero() {
                         background: 'linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)',
                     }}
                 />
-                <MeshGlow className="opacity-20" />
-                <GridPattern className="text-white/5 opacity-30" />
             </div>
 
             {/* MAIN CONTENT */}
@@ -56,12 +52,12 @@ export default function Hero() {
                             variants={stagger}
                             initial="hidden"
                             animate="show"
-                            className="flex flex-col relative z-20"
+                            className="flex flex-col relative z-20 lg:-mt-12"
                         >
-                            {/* Overline Trust Pill */}
+                            {/* Overline Trust Pill — Hidden on Desktop */}
                             <motion.div
                                 variants={fadeUp}
-                                className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full mb-3 text-xs sm:text-[13px] font-semibold text-white border border-white/20 bg-white/10 backdrop-blur-sm"
+                                className="lg:hidden inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full mb-3 text-xs sm:text-[13px] font-semibold text-white border border-white/20 bg-white/10 backdrop-blur-sm"
                             >
                                 <span className="text-white">✦</span>
                                 <span className="hidden sm:inline">Official Invisalign® Provider · Kunnumpuram's Multi-Speciality Clinic</span>
@@ -145,24 +141,28 @@ export default function Hero() {
                     className="ml-[-48px] h-[400px] w-[880px] max-w-none sm:ml-0 sm:h-[550px] sm:w-[70%] sm:max-w-full sm:mx-auto md:h-[650px] md:w-[60%] object-contain object-bottom select-none pointer-events-none scale-105 origin-bottom"
                     loading="eager"
                     decoding="async"
+                    fetchPriority="high"
                 />
             </motion.div>
 
-            {/* HERO IMAGE — Desktop (absolute, grounded to bottom-right) */}
+            {/* HERO IMAGE — Desktop (absolute, aligned to background level) */}
             <motion.div
                 variants={scaleIn}
                 initial="hidden"
                 animate="show"
-                className="hidden lg:flex absolute bottom-0  right-[0px] w-1/2 h-full items-end justify-end z-10 pointer-events-none"
+                className="hidden lg:flex absolute top-12 bottom-6 right-6 w-1/2 items-end justify-end z-10 pointer-events-none"
             >
                 <img
                     src="/images/smilingdoctor-hero.png"
                     alt="Smiling woman showing healthy dental results"
-                    className="h-[1050px] w-full object-contain object-bottom scale-150 origin-bottom select-none"
+                    className="h-full w-full object-contain object-bottom scale-125 origin-bottom select-none"
                     loading="eager"
                     decoding="async"
+                    fetchPriority="high"
                 />
             </motion.div>
+
+
         </section>
     );
 }

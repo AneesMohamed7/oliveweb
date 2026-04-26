@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, MapPin, Send, Clock, Navigation, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { MeshGlow, GridPattern } from './DecorativeElements';
 
 export default function ContactCTA() {
     const [formData, setFormData] = useState({ name: '', phone: '', treatment: '' });
@@ -40,11 +39,17 @@ export default function ContactCTA() {
     };
 
     return (
-        <section className="py-20 bg-blue-900 text-white relative overflow-hidden" id="contact">
-            {/* Background Pattern */}
-            <MeshGlow className="opacity-30" />
-            <GridPattern className="text-white/5" />
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
+        <section className="relative py-24 sm:py-32 overflow-hidden text-white" id="contact">
+            {/* Background Curve Container - Matching Hero Aesthetic */}
+            <div
+                className="absolute inset-x-2 inset-y-2 sm:inset-x-4 sm:inset-y-4 lg:inset-x-6 lg:inset-y-6 -z-10 rounded-[2.5rem] sm:rounded-[4rem] lg:rounded-[5rem] shadow-2xl overflow-hidden bg-blue-900"
+                style={{
+                    background: 'linear-gradient(135deg, #1e3a8a 0%, #172554 100%)',
+                }}
+            >
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
+            </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 items-start">

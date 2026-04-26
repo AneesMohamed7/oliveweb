@@ -2,13 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { GridPattern, BackgroundText } from './DecorativeElements';
 
 export default function AboutSection() {
     return (
-        <section className="py-24 bg-[#F9FBFF] border-y border-gray-100 overflow-hidden relative">
-            <BackgroundText text="OLIVE" className="opacity-[0.03] translate-x-1/4" />
-            <GridPattern className="text-primary/5 opacity-50" />
+        <section className="py-24 bg-[#F9FBFF] border-y border-gray-100 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
@@ -74,13 +71,10 @@ export default function AboutSection() {
                             {/* LIGHT LINK */}
                             <Link
                                 to="/about"
-                                className="inline-flex items-center gap-2 px-5 py-2.5 
-    bg-primary/10 text-primary font-semibold text-sm rounded-xl 
-    hover:bg-primary hover:text-white 
-    transition-all duration-200 group"
+                                className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-white font-bold text-base rounded-xl hover:bg-primary/90 shadow-lg shadow-primary/10 transition-all duration-200 group"
                             >
-                                Learn more about us
-                                <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
+                                Learn More About Us
+                                <ArrowRight size={18} className="transition-transform duration-200 group-hover:translate-x-1" />
                             </Link>
 
                         </motion.div>

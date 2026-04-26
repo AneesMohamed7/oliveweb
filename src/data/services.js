@@ -125,7 +125,7 @@ export const facialServices = [
         title: 'PRP Skin Rejuvenation',
         category: 'facial',
         type: 'core',
-        description: 'Boosts collagen using your own growth factors for firmer, healthier skin.',
+        description: 'Harnesses your own platelet-rich plasma to stimulate collagen production, leaving skin firmer, brighter, and visibly younger with zero synthetic additives.',
         icon: Droplets,
         image: '/images/prpskin-rejuvenation.webp',
         link: '/treatments/prp'
@@ -135,7 +135,7 @@ export const facialServices = [
         title: 'Botox & Dermal Fillers',
         category: 'facial',
         type: 'core',
-        description: 'Smooths wrinkles and restores volume with precise, natural-looking results.',
+        description: 'Expertly placed injections smooth expression lines and restore lost facial volume, delivering refreshed, natural-looking results that move with you.',
         icon: Syringe,
         image: '/images/botox-img.webp',
         link: '/treatments/botox'
@@ -145,7 +145,7 @@ export const facialServices = [
         title: 'Microneedling',
         category: 'facial',
         type: 'core',
-        description: 'Stimulates collagen to reduce scars, pores, and fine lines.',
+        description: 'Controlled micro-injuries trigger your skin\'s natural repair process, visibly reducing acne scars, enlarged pores, and fine lines over a series of sessions.',
         icon: CircleDot,
         image: '/images/microneedling-img.webp',
         link: '/treatments/microneedling'
@@ -155,7 +155,7 @@ export const facialServices = [
         title: 'Bridal Makeover',
         category: 'facial',
         type: 'core',
-        description: 'Comprehensive pre-wedding skin and smile transformation plan combining advanced facial treatments and dental aesthetics for a flawless, camera-ready look.',
+        description: 'A personalised pre-wedding transformation combining advanced facial treatments and dental aesthetics — designed so you look and feel flawless from every angle on your most important day.',
         icon: Crown,
         image: '/images/bridal-makeover.webp',
         link: '/treatments/bridal-makeover'
@@ -165,7 +165,7 @@ export const facialServices = [
         title: 'Thread Lift',
         category: 'facial',
         type: 'core',
-        description: 'Lifts and tightens sagging skin without surgery.',
+        description: 'Dissolvable threads are placed beneath the skin to lift and contour sagging areas, giving a subtle surgical-like result with minimal downtime.',
         icon: Sparkles,
         image: '/images/threadlift-img.webp',
         link: '/treatments/thread-lift'
@@ -175,7 +175,7 @@ export const facialServices = [
         title: 'HydraFacial',
         category: 'facial',
         type: 'core',
-        description: 'Deep cleansing and hydration for instantly glowing skin.',
+        description: 'A multi-step treatment that cleanses, extracts, and floods skin with nourishing serums — leaving your complexion deeply hydrated and visibly radiant in under an hour.',
         icon: Waves,
         image: '/images/hydrafacial-img.webp',
         link: '/treatments/hydrafacial'
@@ -189,7 +189,7 @@ export const facialServices = [
         type: 'advanced',
         icon: Leaf,
         image: '/images/chemicalPeeling_converted.webp',
-        description: 'Improves texture and reduces pigmentation with medical-grade exfoliation.'
+        description: 'Medical-grade acids exfoliate damaged surface layers to fade pigmentation, smooth texture, and reveal fresher, more even-toned skin underneath.'
     },
     {
         id: 'skin-resurfacing',
@@ -198,7 +198,7 @@ export const facialServices = [
         type: 'advanced',
         icon: Activity,
         image: '/images/skinResurfesing-converted-from-jpg.webp',
-        description: 'Smoothens uneven skin and reduces scars for a refined appearance.'
+        description: 'Targets uneven tone, acne scarring, and rough texture with precision resurfacing techniques that refine skin and restore a naturally smooth appearance.'
     },
     {
         id: 'mesotherapy',
@@ -207,7 +207,7 @@ export const facialServices = [
         type: 'advanced',
         icon: Droplets,
         image: '/images/Mesotherapy.webp',
-        description: 'Delivers nutrients deep into skin for hydration and glow.'
+        description: 'A blend of vitamins, minerals, and hyaluronic acid is microinjected into the skin to deeply hydrate, boost radiance, and slow visible signs of ageing.'
     },
     {
         id: 'lip-pigmentation',
@@ -216,7 +216,7 @@ export const facialServices = [
         type: 'advanced',
         icon: Feather,
         image: '/images/lippigmentation.jpg',
-        description: 'Restores natural lip colour and improves tone evenly.'
+        description: 'Corrects uneven or darkened lip tone using targeted treatment, restoring a naturally fuller, healthier colour with long-lasting results.'
     },
     {
         id: 'microblading',
@@ -225,7 +225,7 @@ export const facialServices = [
         type: 'advanced',
         icon: Scissors,
         image: '/images/Microblading.webp',
-        description: 'Creates fuller, natural-looking brows with fine strokes.'
+        description: 'Ultra-fine hair-stroke technique deposits pigment into the brows to create realistic, fuller-looking brows tailored precisely to your face shape.'
     },
 
     // MINOR
@@ -236,7 +236,7 @@ export const facialServices = [
         type: 'minor',
         icon: CircleDot,
         image: '/images/Wart Removal1.webp',
-        description: 'Safe and quick removal of unwanted skin growths.'
+        description: 'Fast, safe, and effective removal of common and plantar warts using clinically proven methods with minimal discomfort and quick recovery.'
     },
     {
         id: 'mole-removal',
@@ -245,7 +245,7 @@ export const facialServices = [
         type: 'minor',
         icon: CircleDot,
         image: '/images/moleRemove.webp',
-        description: 'Precise removal with minimal scarring.'
+        description: 'Precise surgical or laser removal of unwanted moles, performed with careful attention to minimise scarring and ensure clean, smooth healing.'
     },
     {
         id: 'skin-tag',
@@ -254,7 +254,7 @@ export const facialServices = [
         type: 'minor',
         icon: CircleDot,
         image: '/images/prpskin-rejuvenation.webp',
-        description: 'Quick and painless removal of skin tags.'
+        description: 'Quick in-clinic procedure to painlessly remove skin tags from the face or body, leaving the surrounding skin completely unaffected.'
     },
     {
         id: 'dandruff',
@@ -263,7 +263,7 @@ export const facialServices = [
         type: 'minor',
         icon: Leaf,
         image: '/images/dandruffRemovalTreatment.webp',
-        description: 'Targets scalp issues and controls recurring dandruff.'
+        description: 'A targeted scalp therapy that addresses the root causes of dandruff, reducing flaking, itchiness, and irritation for long-term scalp health.'
     },
     {
         id: 'under-eye',
@@ -272,7 +272,7 @@ export const facialServices = [
         type: 'minor',
         icon: Eye,
         image: '/images/underEyeTreatment.webp',
-        description: 'Reduces dark circles and under-eye puffiness.'
+        description: 'Combines targeted fillers or topical therapy to reduce dark circles, fine lines, and puffiness for a more rested, refreshed appearance.'
     },
     {
         id: 'dermaplaning',
@@ -281,8 +281,9 @@ export const facialServices = [
         type: 'minor',
         icon: Sparkles,
         image: '/images/dermaplaningtreatment.webp',
-        description: 'Removes dead skin and peach fuzz for smoother skin.'
+        description: 'A gentle blade exfoliation technique that removes dead skin cells and vellus hair, instantly revealing smoother, brighter skin with better product absorption.'
     }
 ];
+
 // Combined for backwards compatibility
 export const services = [...dentalServices.filter(s => s.type === 'core' || s.type === 'secondary'), ...facialServices.filter(s => s.type === 'core')];

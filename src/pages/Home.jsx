@@ -35,14 +35,12 @@ export default function Home() {
             <Hero />
             <StatsSection />
             <AboutSection />
-            <Features />
-
-            {/* ─── Below the fold (Intersection Observer lazy loaded) ─── */}
             <LazySection
                 component={() => import('../components/Services')}
                 minHeight="600px"
                 rootMargin="300px"
             />
+            <Features />
             <LazySection
                 component={() => import('../components/InvisalignParallax')}
                 minHeight="500px"
