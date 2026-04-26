@@ -40,13 +40,6 @@ export default function AboutSection() {
                                     Learn More About Us
                                     <ArrowRight size={18} />
                                 </Link>
-                                <Link
-                                    to="/contact"
-                                    className="px-8 py-4 bg-white border-2 border-accent/20 text-accent font-bold rounded-2xl hover:bg-accent hover:text-white hover:border-accent transition-all duration-300 flex items-center gap-3"
-                                >
-                                    Book Consultation
-                                    <Calendar size={18} />
-                                </Link>
                             </div>
                         </motion.div>
                     </div>
