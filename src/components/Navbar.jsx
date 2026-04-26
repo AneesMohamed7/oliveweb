@@ -50,16 +50,16 @@ export default function Navbar() {
     const isTreatmentsActive = location.pathname.startsWith('/treatments') || ['/dental-treatments', '/facial-aesthetics'].includes(location.pathname);
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-gray-200">
+        <nav className="fixed top-2 left-2 right-2 sm:top-4 sm:left-4 sm:right-4 lg:top-6 lg:left-6 lg:right-6 z-50 bg-white/95 backdrop-blur-md shadow-xl border border-gray-100 rounded-2xl sm:rounded-[2rem] lg:rounded-[3rem]">
             <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center py-1">
+                <div className="flex justify-between items-center py-0.5">
                     {/* Logo Section */}
                     <div className="flex items-center gap-2 lg:gap-4">
                         <Link to="/" className="flex items-center gap-1 lg:gap-2">
-                            <img src={oliveLogo} alt="Olive Dental" className="h-[70px] sm:h-[85px] lg:h-[95px] w-auto object-contain" />
+                            <img src={oliveLogo} alt="Olive Dental" className="h-[55px] sm:h-[70px] lg:h-[80px] w-auto object-contain" />
                             <div className="flex flex-col justify-center">
-                                <span className="text-lg sm:text-2xl lg:text-3xl font-bold text-primary font-sans leading-none mb-0.5 whitespace-nowrap">Olive Dental</span>
-                                <span className="text-[10px] sm:text-xs lg:text-sm font-bold text-accent tracking-widest uppercase">& Face Clinic</span>
+                                <span className="text-base sm:text-xl lg:text-2xl font-bold text-primary font-sans leading-none mb-0.5 whitespace-nowrap">Olive Dental</span>
+                                <span className="text-[9px] sm:text-[10px] lg:text-xs font-bold text-accent tracking-widest uppercase">& Face Clinic</span>
                             </div>
                         </Link>
 
@@ -172,7 +172,7 @@ export default function Navbar() {
 
             {/* Mobile Navigation */}
             {isOpen && (
-                <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+                <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-2xl rounded-b-2xl sm:rounded-b-[2rem]">
                     <div className="px-4 pt-2 pb-6 space-y-1">
                         {navLinks.map((link) => (
                             <Link

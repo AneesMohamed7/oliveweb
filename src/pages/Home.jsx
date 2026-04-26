@@ -5,6 +5,7 @@ import LazySection from '../components/LazySection';
 // ─── Eagerly loaded (above the fold) ───
 import Hero from '../components/Hero';
 import StatsSection from '../components/StatsSection';
+import AboutSection from '../components/AboutSection';
 import Features from '../components/Features';
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
             {/* ─── Above the fold (eagerly loaded) ─── */}
             <Hero />
             <StatsSection />
+            <AboutSection />
             <Features />
 
             {/* ─── Below the fold (Intersection Observer lazy loaded) ─── */}

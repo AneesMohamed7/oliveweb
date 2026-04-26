@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, ShieldCheck, Stethoscope, ClipboardCheck, Wallet, BadgeCheck } from 'lucide-react';
+import { Users, ShieldCheck, Stethoscope, ClipboardCheck, Wallet, BadgeCheck, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Features() {
@@ -41,70 +41,131 @@ export default function Features() {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.15
+                staggerChildren: 0.1
             }
         }
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
+        hidden: { opacity: 0, x: 20 },
         visible: {
             opacity: 1,
-            y: 0,
+            x: 0,
             transition: { duration: 0.5 }
         }
     };
 
     return (
-        <section className="py-20 bg-white border-b border-gray-100">
+        <section className="py-24 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                {/* Section Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-80px" }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-14"
-                >
-                    <span className="text-primary font-semibold tracking-wide uppercase text-sm mb-2 block">
-                        Why Choose Olive
-                    </span>
-                    <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                        Trusted Dental & Facial Care in Kunnumpuram
-                    </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
-                        Serving patients in Kunnumpuram and Kondotty with medically guided treatments,
-                        structured diagnosis, and a strong commitment to safety and transparency.
-                    </p>
-                </motion.div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                {/* Feature Cards */}
-                <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
-                >
-                    {features.map((feature, idx) => (
-                        <motion.div
-                            key={idx}
-                            variants={itemVariants}
-                            className="p-6 rounded-2xl border border-gray-100 bg-white hover:border-primary/30 transition-all duration-300"
-                        >
-                            <div className="mb-4 p-3 w-fit bg-blue-50 text-primary rounded-lg">
-                                <feature.icon size={22} />
+                    {/* Left Side: Image and Decorative Elements */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="relative"
+                    >
+                        {/* Decorative Background Shape */}
+                        <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10 animate-pulse"></div>
+                        <div className="absolute -bottom-10 -right-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl -z-10"></div>
+
+                        <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
+                            <img
+                                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2070"
+                                alt="Modern Dental Clinic"
+                                className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+                            />
+                            {/* Floating Badge */}
+                            <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/20">
+                                <div className="flex items-center gap-4">
+                                    <div className="p-3 bg-primary/10 rounded-xl text-primary">
+                                        <CheckCircle2 size={24} />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-semibold text-gray-900">Modern Technology</p>
+                                        <p className="text-xs text-gray-500">Advanced diagnostic tools for precise care.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 className="font-semibold text-gray-900 mb-2 text-lg">
-                                {feature.title}
-                            </h3>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                {feature.text}
+                        </div>
+
+
+                    </motion.div>
+
+                    {/* Right Side: Content and Features Grid */}
+                    <div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="mb-10"
+                        >
+                            <span className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+                                Why Choose Olive Clinic
+                            </span>
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                                Trusted Dental & Facial Care <br className="hidden md:block" />  in Kunnumpuram
+                            </h2>
+                            <p className="text-gray-600 text-lg leading-relaxed">
+                                Experience world-class healthcare with a personal touch. We combine medical expertise
+                                with advanced technology to ensure the best outcomes for our patients.
                             </p>
                         </motion.div>
-                    ))}
-                </motion.div>
+
+                        <motion.div
+                            variants={containerVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6"
+                        >
+                            {features.map((feature, idx) => {
+                                const isGreen = idx % 2 === 1; // Alternating colors
+                                return (
+                                    <motion.div
+                                        key={idx}
+                                        variants={itemVariants}
+                                        className="group"
+                                    >
+                                        <div className="flex items-start gap-4 p-2 rounded-xl transition-colors duration-300">
+                                            <div className={`mt-1 flex-shrink-0 p-2 rounded-lg transition-colors duration-300 ${isGreen
+                                                    ? 'bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white'
+                                                    : 'bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white'
+                                                }`}>
+                                                <feature.icon size={18} />
+                                            </div>
+                                            <div>
+                                                <h3 className="font-bold text-gray-900 mb-1">
+                                                    {feature.title}
+                                                </h3>
+                                                <p className="text-sm text-gray-500 leading-relaxed">
+                                                    {feature.text}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                );
+                            })}
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                            className="mt-10"
+                        >
+                            <button className="px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary-dark transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40">
+                                Learn More About Us
+                            </button>
+                        </motion.div>
+                    </div>
+                </div>
             </div>
         </section>
     );

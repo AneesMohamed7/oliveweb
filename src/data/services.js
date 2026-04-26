@@ -39,7 +39,7 @@ export const dentalServices = [
         id: 'rct',
         title: 'Root Canal Treatment',
         category: 'dental',
-        type: 'core',
+        type: 'secondary',
         description: 'Advanced endodontic care using rotary instruments and apex locators for painless, precise root canal therapy that preserves your natural tooth structure.',
         icon: HeartPulse,
         image: '/images/rootCanal-img.png',
