@@ -30,24 +30,6 @@ export default function AboutSection() {
                                 deliver ethical, long-term health outcomes.
                             </p>
 
-                            {/* Key Highlights Grid */}
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 pt-2 border-t border-gray-100">
-                                <div className="flex flex-col">
-                                    <span className="text-2xl font-bold text-gray-900">10+</span>
-                                    <span className="text-xs text-gray-400 font-bold uppercase tracking-widest">Years Experience</span>
-                                </div>
-                                <div className="flex flex-col">
-                                    <span className="text-2xl font-bold text-gray-900">8,000+</span>
-                                    <span className="text-xs text-gray-400 font-bold uppercase tracking-widest">Happy Patients</span>
-                                </div>
-                                <div className="flex flex-col">
-                                    <div className="flex items-center gap-1.5 mb-0.5">
-                                        <Microscope size={14} className="text-primary" />
-                                        <span className="text-xs font-bold text-gray-900 uppercase tracking-tight">Specialized</span>
-                                    </div>
-                                    <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider leading-tight">Multi-specialty Clinic</span>
-                                </div>
-                            </div>
 
                             {/* CTA Row */}
                             <div className="flex flex-wrap gap-4 pt-2">
