@@ -3,6 +3,7 @@ import { dentalServices, facialServices } from '../data/services';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { MeshGlow, GridPattern } from './DecorativeElements';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -79,7 +80,8 @@ export default function Services() {
     return (
         <>
             {/* ─── SECTION 1: DENTAL ─── */}
-            <section className="py-20 bg-background-soft" id="services">
+            <section className="py-20 bg-background-soft relative overflow-hidden" id="services">
+                <GridPattern className="text-gray-200 opacity-40" />
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -119,7 +121,9 @@ export default function Services() {
             </section>
 
             {/* ─── SECTION 2: FACIAL AESTHETICS ─── */}
-            <section className="py-20 bg-[#FAF8F5]">
+            <section className="py-20 bg-[#FAF8F5] relative overflow-hidden">
+                <MeshGlow className="opacity-10 blur-[90px]" />
+                <GridPattern className="text-primary/5" />
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -159,7 +163,8 @@ export default function Services() {
             </section>
 
             {/* ─── CLOSING CTA ─── */}
-            <section className="py-14 bg-gray-900">
+            <section className="py-14 bg-gray-900 relative overflow-hidden">
+                <MeshGlow className="opacity-20" />
                 <div className="max-w-4xl mx-auto px-4 text-center">
                     <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3">
                         Book Your Consultation at Olive Dental & Face Clinic

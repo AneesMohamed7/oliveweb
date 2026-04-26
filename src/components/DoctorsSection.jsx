@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 import { doctors } from '../data/doctors';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { BackgroundText, GridPattern } from './DecorativeElements';
 
 export default function DoctorsSection() {
     // Show first 3 on homepage
     const featured = doctors.slice(0, 3);
 
     return (
-        <section className="py-20 bg-background-soft">
+        <section className="py-20 bg-background-soft relative overflow-hidden">
+            <BackgroundText text="EXPERTS" className="opacity-10 translate-y-1/3" />
+            <GridPattern className="text-gray-200 opacity-40" />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

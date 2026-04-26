@@ -7,6 +7,7 @@ import DoctorsSection from '../components/DoctorsSection';
 import ContactCTA from '../components/ContactCTA';
 import GoogleReviews from '../components/GoogleReviews';
 import invisalignLogo from '../assets/invisalign-logo.png';
+import { MeshGlow, GridPattern, BackgroundText, FloatingElement } from '../components/DecorativeElements';
 
 const fadeUp = {
     hidden: { opacity: 0, y: 24 },
@@ -50,6 +51,7 @@ export default function About() {
                     {/* Multi-layered gradient for strong text readability */}
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-950/90 via-gray-900/70 to-transparent" />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-gray-900/30" />
+                    <MeshGlow className="opacity-40" />
                 </motion.div>
 
                 {/* Content — anchored to bottom-left */}
@@ -120,10 +122,9 @@ export default function About() {
             ═══════════════════════════════════════════ */}
             <section className="py-32 bg-white relative overflow-hidden">
                 {/* Decorative Background Elements */}
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/30 -skew-x-12 translate-x-1/4 pointer-events-none" />
-                <div className="absolute top-1/4 left-0 text-[20rem] font-black text-gray-50 leading-none select-none pointer-events-none -translate-x-1/4">
-                    OLIVE
-                </div>
+                <GridPattern className="text-gray-100 opacity-60" />
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/20 -skew-x-12 translate-x-1/4 pointer-events-none" />
+                <BackgroundText text="ESTD 2023" className="-translate-y-1/3 opacity-40 translate-x-1/4" />
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -246,11 +247,8 @@ export default function About() {
             ═══════════════════════════════════════════ */}
             <section className="py-32 bg-[#FAFBFD] relative overflow-hidden">
                 {/* Background Leadership Typography */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-                    <span className="text-[15vw] font-black text-gray-200/40 leading-none whitespace-nowrap translate-y-1/4">
-                        DR. SHAHANA
-                    </span>
-                </div>
+                <BackgroundText text="LEADERSHIP" className="translate-y-1/4 text-gray-200/50" />
+                <MeshGlow className="opacity-20" />
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -347,9 +345,10 @@ export default function About() {
             <DoctorsSection />
 
             {/* ═══════════════════════════════════════════
-                4. WHAT DEFINES OLIVE — 4 Pillars
+                 4. WHAT DEFINES OLIVE — 4 Pillars
             ═══════════════════════════════════════════ */}
-            <section className="py-24 bg-gradient-to-b from-white to-blue-50/30">
+            <section className="py-24 bg-gradient-to-b from-white to-blue-50/30 relative overflow-hidden">
+                <GridPattern className="text-primary/5" />
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
                         <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Our Foundation</span>

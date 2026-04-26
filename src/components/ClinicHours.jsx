@@ -1,10 +1,12 @@
 import React from 'react';
 import { Clock, MapPin, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { GridPattern } from './DecorativeElements';
 
 export default function ClinicHours() {
     return (
-        <section className="py-16 bg-white border-t border-gray-100">
+        <section className="py-16 bg-white border-t border-gray-100 relative overflow-hidden">
+            <GridPattern className="text-gray-100 opacity-60" />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

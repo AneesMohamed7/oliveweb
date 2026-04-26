@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, MapPin, Send, Clock, Navigation, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { MeshGlow, GridPattern } from './DecorativeElements';
 
 export default function ContactCTA() {
     const [formData, setFormData] = useState({ name: '', phone: '', treatment: '' });
@@ -41,6 +42,8 @@ export default function ContactCTA() {
     return (
         <section className="py-20 bg-blue-900 text-white relative overflow-hidden" id="contact">
             {/* Background Pattern */}
+            <MeshGlow className="opacity-30" />
+            <GridPattern className="text-white/5" />
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

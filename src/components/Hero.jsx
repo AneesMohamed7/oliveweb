@@ -22,6 +22,8 @@ const scaleIn = {
     show: { opacity: 1, scale: 1, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
 };
 
+import { MeshGlow, GridPattern } from './DecorativeElements';
+
 export default function Hero() {
     return (
         <section className="relative min-h-[100svh] sm:min-h-[90vh] lg:min-h-[105vh] flex flex-col overflow-hidden">
@@ -40,6 +42,8 @@ export default function Hero() {
                         background: 'linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)',
                     }}
                 />
+                <MeshGlow className="opacity-20" />
+                <GridPattern className="text-white/5 opacity-30" />
             </div>
 
             {/* MAIN CONTENT */}

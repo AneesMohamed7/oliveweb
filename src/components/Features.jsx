@@ -1,41 +1,31 @@
 import React from 'react';
 import { Users, ShieldCheck, Stethoscope, ClipboardCheck, Wallet, BadgeCheck, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { MeshGlow, GridPattern } from './DecorativeElements';
 
 export default function Features() {
     const features = [
         {
             icon: Users,
             title: "Complete Care Under One Roof",
-            text: "Get dental and facial treatments in one convenient place."
-        },
-        {
-            icon: Stethoscope,
-            title: "Experienced Doctors You Can Trust",
-            text: "Our skilled team focuses on safe care and lasting results."
-        },
-        {
-            icon: ClipboardCheck,
-            title: "Clear Diagnosis, Clear Plan",
-            text: "We explain your condition and treatment step by step."
+            text: "Dental and facial treatments in one clinic."
         },
         {
             icon: ShieldCheck,
-            title: "Strict Safety & Sterilization",
-            text: "Every procedure follows high hygiene and sterilization standards."
+            title: "Strict Sterilization",
+            text: "High hygiene standards for every procedure."
         },
         {
             icon: BadgeCheck,
             title: "Certified Invisalign® Provider",
-            text: "Get expert Invisalign care with digital treatment planning."
+            text: "Advanced digital treatment planning."
         },
         {
-            icon: Wallet,
-            title: "Transparent & Affordable Pricing",
-            text: "Know your treatment cost upfront with no hidden charges."
+            icon: Stethoscope,
+            title: "Advanced Technology",
+            text: "RVG digital X-rays and precision tools for accurate treatment."
         }
     ];
-
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -56,7 +46,8 @@ export default function Features() {
     };
 
     return (
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-24 bg-white overflow-hidden relative">
+            <GridPattern className="text-gray-100" />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -70,8 +61,7 @@ export default function Features() {
                         className="relative"
                     >
                         {/* Decorative Background Shape */}
-                        <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10 animate-pulse"></div>
-                        <div className="absolute -bottom-10 -right-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl -z-10"></div>
+                        <MeshGlow className="opacity-20 blur-[80px]" />
 
                         <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
                             <img
@@ -134,8 +124,8 @@ export default function Features() {
                                     >
                                         <div className="flex items-start gap-4 p-2 rounded-xl transition-colors duration-300">
                                             <div className={`mt-1 flex-shrink-0 p-2 rounded-lg transition-colors duration-300 ${isGreen
-                                                    ? 'bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white'
-                                                    : 'bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white'
+                                                ? 'bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white'
+                                                : 'bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white'
                                                 }`}>
                                                 <feature.icon size={18} />
                                             </div>
