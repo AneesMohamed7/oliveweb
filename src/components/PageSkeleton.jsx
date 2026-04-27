@@ -1,5 +1,5 @@
 import React from 'react';
-import oliveLogo from '../assets/olive-logo.png';
+import oliveLogo from '../assets/cliniclogo002.png';
 
 export default function PageSkeleton() {
     return (

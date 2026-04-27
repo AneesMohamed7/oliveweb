@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const reviews = [
@@ -112,7 +112,24 @@ function ReviewCard({ review }) {
 
 export default function GoogleReviews() {
     const [startIndex, setStartIndex] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
     const visible = 3;
+
+    useEffect(() => {
+        if (isHovered) return;
+
+        const interval = setInterval(() => {
+            setStartIndex((prev) => {
+                // Loop back to 0 if we reached the end
+                if (prev >= reviews.length - visible) {
+                    return 0;
+                }
+                return prev + 1;
+            });
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, [isHovered]);
 
     const prev = () => setStartIndex(Math.max(0, startIndex - 1));
     const next = () => setStartIndex(Math.min(reviews.length - visible, startIndex + 1));
@@ -120,7 +137,11 @@ export default function GoogleReviews() {
     const visibleReviews = reviews.slice(startIndex, startIndex + visible);
 
     return (
-        <section className="py-16 bg-gray-50">
+        <section 
+            className="py-16 bg-gray-50"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-12">
@@ -181,6 +202,18 @@ export default function GoogleReviews() {
                     >
                         <ChevronRight size={18} />
                     </button>
+                </div>
+
+                {/* CTA */}
+                <div className="text-center mt-8">
+                    <a
+                        href="https://share.google/gfImGck8QmoYMjJni"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-sm"
+                    >
+                        Read all reviews on Google Maps →
+                    </a>
                 </div>
             </div>
         </section>

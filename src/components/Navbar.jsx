@@ -4,8 +4,8 @@ import { Menu, X, Phone, MessageCircle, ChevronDown } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 
-import oliveLogo from '../assets/olivelogobgremoved.png';
-import isoLogo from '../assets/iso-logo.svg';
+import oliveLogo from '../assets/cliniclogo002.png';
+
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -54,33 +54,20 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-2">
                     {/* Logo Section */}
-                    <div className="flex items-center gap-2 lg:gap-4">
+                    <div className="flex items-center">
                         <Link to="/" className="flex items-center gap-1 lg:gap-2">
                             <img src={oliveLogo} alt="Olive Dental" className="h-[55px] sm:h-[70px] lg:h-[80px] w-auto object-contain" />
-                            <div className="flex flex-col justify-center">
-                                <span className="text-base sm:text-xl lg:text-2xl font-bold text-primary font-sans leading-none mb-0.5 whitespace-nowrap">Olive Dental</span>
-                                <span className="text-[9px] sm:text-[10px] lg:text-xs font-bold text-accent tracking-widest uppercase">& Face Clinic</span>
-                            </div>
                         </Link>
-
-                        {/* ISO Badge */}
-                        <div className="flex items-center gap-2 border-l border-gray-200 pl-2 ml-1 lg:pl-6 lg:ml-4 lg:h-10">
-                            <img src={isoLogo} alt="ISO Certified" className="h-8 w-8 lg:h-10 lg:w-10 opacity-90" />
-                            <div className="hidden xl:flex flex-col justify-center">
-                                <span className="text-[10px] font-bold text-gray-500 leading-tight">ISO 9001:2015</span>
-                                <span className="text-[9px] text-primary font-bold tracking-wider">CERTIFIED</span>
-                            </div>
-                        </div>
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
+                    <div className="hidden md:flex flex-1 items-center justify-center space-x-6 lg:space-x-10">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 to={link.path}
                                 className={cn(
-                                    "text-xs lg:text-sm font-medium transition-colors hover:text-primary whitespace-nowrap",
+                                    "text-sm lg:text-base font-medium transition-colors hover:text-primary whitespace-nowrap",
                                     location.pathname === link.path ? "text-primary" : "text-text"
                                 )}
                             >
@@ -93,7 +80,7 @@ export default function Navbar() {
                             <Link
                                 to="/treatments"
                                 className={cn(
-                                    "text-xs lg:text-sm font-medium transition-colors hover:text-primary whitespace-nowrap",
+                                    "text-sm lg:text-base font-medium transition-colors hover:text-primary whitespace-nowrap",
                                     isTreatmentsActive ? "text-primary" : "text-text"
                                 )}
                             >
@@ -104,7 +91,7 @@ export default function Navbar() {
                                 className="p-1 hover:text-primary transition-colors focus:outline-none"
                                 aria-label="Toggle Services Menu"
                             >
-                                <ChevronDown size={14} className={cn("transition-transform duration-200", treatmentsOpen && "rotate-180")} />
+                                <ChevronDown size={16} className={cn("transition-transform duration-200", treatmentsOpen && "rotate-180")} />
                             </button>
 
                             {treatmentsOpen && (
@@ -133,14 +120,17 @@ export default function Navbar() {
                                 key={link.name}
                                 to={link.path}
                                 className={cn(
-                                    "text-xs lg:text-sm font-medium transition-colors hover:text-primary whitespace-nowrap",
+                                    "text-sm lg:text-base font-medium transition-colors hover:text-primary whitespace-nowrap",
                                     location.pathname === link.path ? "text-primary" : "text-text"
                                 )}
                             >
                                 {link.name}
                             </Link>
                         ))}
+                    </div>
 
+                    {/* Action Buttons */}
+                    <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
                         <a
                             href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I%20would%20like%20to%20book%20an%20appointment"
                             target="_blank"

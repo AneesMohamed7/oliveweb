@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, MessageCircle, MapPin, Clock, Send, CheckCircle, Navigation, ShieldCheck, Star, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import clinicImg from '../assets/clinic-reception.png';
+const clinicImg = "/images/clinic-front-inside.webp";
 
 export default function Contact() {
     const [formData, setFormData] = useState({ name: '', phone: '', treatment: '' });
