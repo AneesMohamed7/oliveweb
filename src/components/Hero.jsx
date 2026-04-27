@@ -44,7 +44,7 @@ export default function Hero() {
 
             {/* MAIN CONTENT */}
             <div className="relative z-20 flex-1 flex items-center">
-                <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 pt-16 sm:pt-24 pb-0 sm:pb-12 lg:py-0">
+                <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 pt-16 sm:pt-24 pb-10 sm:pb-12 lg:py-0">
                     <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
 
                         {/* LEFT — TEXT CONTENT */}
@@ -133,12 +133,12 @@ export default function Hero() {
                 variants={scaleIn}
                 initial="hidden"
                 animate="show"
-                className="lg:hidden relative z-10 flex items-end mt-auto w-full overflow-hidden"
+                className="lg:hidden relative z-10 flex items-end mt-auto w-full"
             >
                 <img
                     src="/images/smilingdoctor-hero.png"
                     alt="Smiling woman showing healthy dental results"
-                    className="ml-[-48px] h-[400px] w-[880px] max-w-none sm:ml-0 sm:h-[550px] sm:w-[70%] sm:max-w-full sm:mx-auto md:h-[650px] md:w-[60%] object-contain object-bottom select-none pointer-events-none scale-105 origin-bottom"
+                    className="ml-[-40px] h-[420px] w-[880px] max-w-none sm:ml-0 sm:h-[550px] sm:w-[70%] sm:max-w-full sm:mx-auto md:h-[650px] md:w-[60%] object-contain object-bottom select-none pointer-events-none scale-105 origin-bottom"
                     loading="eager"
                     decoding="async"
                     fetchPriority="high"

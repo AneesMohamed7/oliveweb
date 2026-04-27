@@ -62,11 +62,6 @@ export default function Home() {
                 rootMargin="150px"
             />
             <LazySection
-                component={() => import('../components/ClinicHours')}
-                minHeight="300px"
-                rootMargin="150px"
-            />
-            <LazySection
                 component={() => import('../components/FAQ')}
                 minHeight="400px"
                 rootMargin="100px"
