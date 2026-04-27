@@ -22,7 +22,7 @@ export const dentalServices = [
         type: 'core',
         description: 'Digitally crafted invisible aligners for precise teeth straightening — comfortable, removable, and designed for predictable results without traditional braces.',
         icon: Smile,
-        image: '/images/clearaligner-img (1).webp',
+        image: '/images/smile-with-aligner.webp',
         link: '/treatments/aligners'
     },
     {

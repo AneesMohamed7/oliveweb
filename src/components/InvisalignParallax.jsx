@@ -20,7 +20,7 @@ export default function InvisalignParallax() {
             {/* ── Parallax Background ── */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
-                style={{ backgroundImage: "url('/images/invisalign-parallax-bg.jpg')" }}
+                style={{ backgroundImage: "url('/images/parallax-h-img.png')" }}
             />
             {/* Deep premium overlay */}
             <div
@@ -60,7 +60,7 @@ export default function InvisalignParallax() {
                                         <CheckCircle2 size={20} className="text-primary" />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-bold text-gray-900">100+ Invisalign® Cases Completed</p>
+                                        <p className="text-sm font-bold text-gray-900">1100+ Invisalign® Cases Completed</p>
                                         <p className="text-xs text-gray-500">Certified specialist · Digital precision planning</p>
                                     </div>
                                 </div>
@@ -86,10 +86,10 @@ export default function InvisalignParallax() {
                                 </span>
                             </div>
                             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
-                                Straighten Your Smile with{' '}
+                                Get a Straighter Smile withh{' '}
                                 <span className="text-primary">Invisalign®</span>
                                 {' '}—{' '}
-                                <span className="text-white/70">Kerala's Certified Clear Aligner Specialists</span>
+                                Aligners
                             </h2>
 
                             {/* Authority Callout */}
@@ -102,10 +102,9 @@ export default function InvisalignParallax() {
                             </div>
 
                             <p className="text-white/85 text-lg leading-relaxed mb-8">
-                                Our certified Invisalign® specialists use intraoral 3D scanning to
-                                map your teeth precisely and preview your final smile before
-                                treatment even begins. No guesswork — just a clear plan, transparent
-                                pricing, and real results.
+                                <p className="text-white/85 text-lg leading-relaxed mb-8">
+                                    Straighten your teeth with Invisalign® clear aligners in Kunnumpuram. Get a 3D smile preview, clear treatment plan, and comfortable, nearly invisible results.
+                                </p>
                             </p>
                         </motion.div>
 

@@ -55,8 +55,13 @@ export default function ContactCTA() {
                     transition={{ duration: 0.6 }}
                     className="bg-gradient-to-br from-primary to-primary-dark rounded-3xl overflow-hidden shadow-2xl text-white relative"
                 >
-                    {/* Background Pattern */}
-                    <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
+                    {/* Stronger overlay matching Hero section */}
+                    <div
+                        className="absolute inset-0 pointer-events-none"
+                        style={{
+                            background: 'linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)',
+                        }}
+                    />
 
                     <div className="relative z-10 p-8 md:p-12 lg:p-16">
                         <div className="grid lg:grid-cols-2 gap-12 items-start">

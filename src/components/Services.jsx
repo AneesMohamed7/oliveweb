@@ -22,10 +22,7 @@ function ServiceCard({ service, variant = 'dental' }) {
     return (
         <motion.div
             variants={itemVariants}
-            className={`group rounded-2xl overflow-hidden border transition-all duration-300 hover:-translate-y-1 flex flex-col ${isDental
-                ? 'bg-white border-gray-100 hover:shadow-xl'
-                : 'bg-white border-gray-100 hover:shadow-xl hover:border-primary/20'
-                }`}
+            className="group rounded-2xl overflow-hidden border transition-all duration-300 hover:-translate-y-1 flex flex-col bg-white border-gray-100 shadow-md shadow-gray-200/50 hover:shadow-xl hover:shadow-gray-300/50"
         >
             <div className="h-52 overflow-hidden relative flex-shrink-0">
                 <img
@@ -37,21 +34,14 @@ function ServiceCard({ service, variant = 'dental' }) {
                     width={400}
                     height={208}
                 />
-                <div className={`absolute inset-0 bg-gradient-to-t ${isDental ? 'from-blue-900/60' : 'from-gray-900/40'
-                    } to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300`}></div>
-                <span className={`absolute top-4 left-4 text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1 rounded-full ${isDental
-                    ? 'bg-primary/90 text-white'
-                    : 'bg-primary/90 text-white shadow-sm'
-                    }`}>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1 rounded-full bg-primary/90 text-white">
                     {isDental ? 'Dental' : 'Aesthetic'}
                 </span>
             </div>
 
             <div className="p-6 flex flex-col flex-grow">
-                <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 -mt-11 relative z-10 border-2 border-white shadow-md transition-colors duration-300 ${isDental
-                    ? 'bg-blue-50 text-primary group-hover:bg-primary group-hover:text-white'
-                    : 'bg-blue-50 text-primary group-hover:bg-primary group-hover:text-white'
-                    }`}>
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 -mt-11 relative z-10 border-2 border-white shadow-md transition-colors duration-300 bg-blue-50 text-primary group-hover:bg-primary group-hover:text-white">
                     <service.icon size={22} />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
@@ -61,8 +51,7 @@ function ServiceCard({ service, variant = 'dental' }) {
                 {service.link && (
                     <Link
                         to={service.link}
-                        className={`inline-flex items-center text-sm font-semibold mt-auto group/link transition-colors ${isDental ? 'text-primary hover:text-primary-dark' : 'text-primary hover:text-primary-dark'
-                            }`}
+                        className="inline-flex items-center text-sm font-semibold mt-auto group/link transition-colors text-primary hover:text-primary-dark"
                     >
                         Learn More <ArrowRight size={14} className="ml-1 transform group-hover/link:translate-x-1 transition-transform" />
                     </Link>
@@ -118,14 +107,14 @@ export default function Services() {
                             to="/dental-treatments"
                             className="inline-flex items-center gap-2 px-7 py-3 border-2 border-primary text-primary font-semibold rounded-xl hover:bg-primary hover:text-white transition-all duration-300"
                         >
-                            View All Dental Treatments <ArrowRight size={18} />
+                            Explore All Dental Treatments <ArrowRight size={18} />
                         </Link>
                     </div>
                 </div>
             </section>
 
             {/* ─── SECTION 2: FACIAL AESTHETICS ─── */}
-            <section className="py-20 bg-[#FAF8F5]">
+            <section className="py-20 bg-[#F9FBFF]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -163,7 +152,7 @@ export default function Services() {
                             to="/facial-aesthetics"
                             className="inline-flex items-center gap-2 px-7 py-3 border-2 border-primary text-primary font-semibold rounded-xl hover:bg-primary hover:text-white transition-all duration-300"
                         >
-                            View All Aesthetic Treatments <ArrowRight size={18} />
+                            Explore All Aesthetic Treatments <ArrowRight size={18} />
                         </Link>
                     </div>
                 </div>

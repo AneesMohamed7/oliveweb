@@ -124,7 +124,7 @@ export default function FacialAesthetics() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.05 }}
-                                className="bg-white rounded-2xl border border-gray-100 overflow-hidden group hover:shadow-xl hover:border-primary/20 hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                                className="bg-white rounded-2xl border border-gray-100 overflow-hidden group shadow-md shadow-gray-200/50 hover:shadow-xl hover:shadow-gray-300/50 hover:border-primary/20 hover:-translate-y-1 transition-all duration-300 flex flex-col"
                             >
                                 {service.image && (
                                     <div className="h-56 overflow-hidden relative bg-gray-100">

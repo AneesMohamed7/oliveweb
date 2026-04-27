@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
 import { Anchor, Smile, Users } from 'lucide-react';
-import { MeshGlow } from './DecorativeElements';
+
 
 /* =========================
    COUNTER COMPONENT
@@ -71,7 +71,7 @@ export default function StatsSection() {
         <section className="relative z-30 -mt-12 sm:-mt-16 lg:-mt-20 pb-16">
 
             <div className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12 relative">
-                <MeshGlow className="opacity-20 blur-[80px]" />
+
 
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}

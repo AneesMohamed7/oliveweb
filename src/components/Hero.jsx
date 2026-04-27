@@ -63,7 +63,7 @@ export default function Hero() {
 
                             <motion.h1
                                 variants={fadeUp}
-                                className="text-[2.7rem] sm:text-[2.8rem] md:text-5xl lg:text-[3.4rem] font-extrabold text-white leading-[1.08] tracking-tight mb-4"
+                                className="text-[2.4rem] sm:text-[2.6rem] md:text-5xl lg:text-[3.4rem] font-extrabold text-white leading-[1.08] tracking-tight mb-4"
                             >
                                 Dental Implants,{' '}
                                 <span className="text-sky-300">
@@ -82,7 +82,7 @@ export default function Hero() {
 
                             <motion.div
                                 variants={fadeUp}
-                                className="flex items-center gap-2 mb-3"
+                                className="flex items-center gap-2 mb-6 sm:mb-8"
                             >
                                 <div className="flex gap-0.5">
                                     {[...Array(5)].map((_, i) => (
