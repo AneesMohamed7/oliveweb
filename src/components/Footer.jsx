@@ -22,9 +22,9 @@ export default function Footer() {
 
                             {/* Row 2: Description */}
                             <p className="text-gray-300 text-lg leading-snug pr-4 max-w-md mt-0">
-                                Multi-specialty dental and facial aesthetic clinic serving
-                                Kunnumpuram and Kondotty, Malappuram. Focused on ethical
-                                treatment, precision, and long-term patient trust.
+                                Dental and skin clinic in Kunnumpuram, Malappuram offering implants, aligners, PRP, and
+                                facial treatments with safe, well-planned care and
+                                long-term results.
                             </p>
 
                             {/* Row 3: Social Links */}

@@ -28,10 +28,7 @@ export default function Hero() {
 
             {/* BACKGROUND */}
             <div
-                className="absolute inset-x-2 bottom-2 top-6 sm:inset-x-4 sm:bottom-4 sm:top-8 lg:inset-x-6 lg:bottom-6 lg:top-12 -z-10 rounded-[2rem] sm:rounded-[3.5rem] lg:rounded-[4.5rem] shadow-2xl overflow-hidden bg-primary"
-                style={{
-                    background: 'linear-gradient(135deg, #2E8BCB 0%, #1e6899 100%)',
-                }}
+                className="absolute inset-x-2 bottom-2 top-6 sm:inset-x-4 sm:bottom-4 sm:top-8 lg:inset-x-6 lg:bottom-6 lg:top-12 -z-10 rounded-[2rem] sm:rounded-[3.5rem] lg:rounded-[4.5rem] shadow-2xl overflow-hidden bg-gradient-to-br from-primary to-primary-dark"
             >
                 {/* Stronger overlay for readability */}
                 <div
@@ -66,7 +63,7 @@ export default function Hero() {
 
                             <motion.h1
                                 variants={fadeUp}
-                                className="text-[2.4rem] sm:text-[2.6rem] md:text-5xl lg:text-[3.1rem] font-extrabold text-white leading-[1.08] tracking-tight mb-4"
+                                className="text-[2.7rem] sm:text-[2.8rem] md:text-5xl lg:text-[3.4rem] font-extrabold text-white leading-[1.08] tracking-tight mb-4"
                             >
                                 Dental Implants,{' '}
                                 <span className="text-sky-300">
@@ -138,7 +135,7 @@ export default function Hero() {
                 <img
                     src="/images/smilingdoctor-hero.png"
                     alt="Smiling woman showing healthy dental results"
-                    className="ml-[-40px] h-[420px] w-[880px] max-w-none sm:ml-0 sm:h-[550px] sm:w-[70%] sm:max-w-full sm:mx-auto md:h-[650px] md:w-[60%] object-contain object-bottom select-none pointer-events-none scale-105 origin-bottom"
+                    className="ml-[-60px] h-[420px] w-[880px] max-w-none sm:ml-0 sm:h-[550px] sm:w-[70%] sm:max-w-full sm:mx-auto md:h-[650px] md:w-[60%] object-contain object-bottom select-none pointer-events-none scale-105 origin-bottom"
                     loading="eager"
                     decoding="async"
                     fetchPriority="high"

@@ -6,8 +6,7 @@ import invisalignLogo from '../assets/invisalign-logo.png';
 
 
 const highlights = [
-    'Nearly invisible aligners',
-    'Original Invisalign® system',
+    'invisible aligners',
     'Remove while eating & brushing',
     'Custom-fit using 3D scan',
     'Safe & clinically tested',

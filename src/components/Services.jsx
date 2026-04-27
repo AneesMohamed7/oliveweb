@@ -88,10 +88,16 @@ export default function Services() {
                         transition={{ duration: 0.6 }}
                         className="mb-14"
                     >
-                        <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">Dental Excellence</span>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Comprehensive Dental Care</h2>
+                        <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">
+                            Dental Clinic in Kunnumpuram
+                        </span>
+
+                        <h2 className="text-4xl lg:text-4xl font-bold text-gray-900 mb-4">
+                            Advanced Dental Treatments
+                        </h2>
+
                         <p className="text-gray-500 max-w-2xl text-lg">
-                            Precision-driven dental treatments for long-term oral health and confident smiles — trusted by families across Kunnumpuram.
+                            From dental implants and aligners to root canal and smile correction, we provide safe, structured treatments trusted by patients across Kunnumpuram and Malappuram.
                         </p>
                     </motion.div>
 
@@ -128,10 +134,15 @@ export default function Services() {
                         transition={{ duration: 0.6 }}
                         className="mb-14"
                     >
-                        <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">Advanced Aesthetics</span>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Facial Aesthetic Treatments</h2>
+                        <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">
+                            Aesthetic Clinic in Kunnumpuram
+                        </span>
+
+                        <h2 className="text-4xl lg:text-4xl font-bold text-gray-900 mb-4">
+                            Advanced Skin & Facial Treatments                        </h2>
+
                         <p className="text-gray-500 max-w-2xl text-lg">
-                            Medically supervised skin rejuvenation and anti-ageing solutions designed for natural, clinical results — the premier aesthetic clinic in Kunnumpuram.
+                            PRP, Botox, HydraFacial and skin treatments for clear, healthy skin — trusted across Kunnumpuram and Malappuram.
                         </p>
                     </motion.div>
 

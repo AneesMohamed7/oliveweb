@@ -29,13 +29,20 @@ export default function ContactCTA() {
         'Other',
     ];
 
+    const timeSlots = [
+        'Morning (9:00 AM - 12:00 PM)',
+        'Afternoon (12:00 PM - 4:00 PM)',
+        'Evening (4:00 PM - 9:00 PM)',
+    ];
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const treatmentText = formData.treatment ? `%0A*Interested in:* ${formData.treatment}` : '';
-        const message = `Hi Olive Dental, I would like to request a callback.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}${treatmentText}`;
+        const timeText = formData.time ? `%0A*Preferred Time:* ${formData.time}` : '';
+        const message = `Hi Olive Dental, I would like to request a callback.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}${treatmentText}${timeText}`;
         const whatsappUrl = `https://wa.me/918891494731?text=${message}`;
         window.open(whatsappUrl, '_blank');
-        setFormData({ name: '', phone: '', treatment: '' });
+        setFormData({ name: '', phone: '', treatment: '', time: '' });
     };
 
     return (
@@ -46,7 +53,7 @@ export default function ContactCTA() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="bg-gradient-to-br from-blue-900 to-blue-950 rounded-3xl overflow-hidden shadow-2xl text-white relative"
+                    className="bg-gradient-to-br from-primary to-primary-dark rounded-3xl overflow-hidden shadow-2xl text-white relative"
                 >
                     {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
@@ -59,8 +66,10 @@ export default function ContactCTA() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
                             >
-                                <h2 className="text-3xl lg:text-4xl font-bold mb-8">Visit Our Clinics</h2>
-
+                                <h2 className="text-3xl lg:text-4xl font-bold mb-6">Book Your Visit Today</h2>
+                                <p className="text-blue-100/70 text-lg leading-relaxed mb-10">
+                                    Schedule a consultation to discuss your dental or skin care needs. We'll get back to you immediately to confirm your appointment.
+                                </p>
                                 <div className="grid sm:grid-cols-2 gap-8 mb-10">
                                     {/* Kunnumpuram Location */}
                                     <div className="space-y-4">
@@ -166,18 +175,33 @@ export default function ContactCTA() {
                                             />
                                         </div>
                                     </div>
-                                    <div>
-                                        <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Treatment Interest</label>
-                                        <select
-                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-gray-600 bg-white"
-                                            value={formData.treatment}
-                                            onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
-                                        >
-                                            <option value="">Select treatment (optional)</option>
-                                            {treatments.map((t) => (
-                                                <option key={t} value={t}>{t}</option>
-                                            ))}
-                                        </select>
+                                    <div className="grid sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Treatment Interest</label>
+                                            <select
+                                                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-gray-600 bg-white"
+                                                value={formData.treatment}
+                                                onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
+                                            >
+                                                <option value="">Select treatment</option>
+                                                {treatments.map((t) => (
+                                                    <option key={t} value={t}>{t}</option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Preferred Time</label>
+                                            <select
+                                                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-gray-600 bg-white"
+                                                value={formData.time}
+                                                onChange={(e) => setFormData({ ...formData, time: e.target.value })}
+                                            >
+                                                <option value="">Select time slot</option>
+                                                {timeSlots.map((t) => (
+                                                    <option key={t} value={t}>{t}</option>
+                                                ))}
+                                            </select>
+                                        </div>
                                     </div>
                                     <button
                                         type="submit"

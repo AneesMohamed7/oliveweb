@@ -50,7 +50,7 @@ export default function Navbar() {
     const isTreatmentsActive = location.pathname.startsWith('/treatments') || ['/dental-treatments', '/facial-aesthetics'].includes(location.pathname);
 
     return (
-        <nav className="fixed top-2 left-2 right-2 sm:top-4 sm:left-4 sm:right-4 lg:top-6 lg:left-6 lg:right-6 z-50 bg-white shadow-xl border border-gray-100 rounded-2xl sm:rounded-[2rem] lg:rounded-[3rem]">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-gray-100">
             <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-0.5">
                     {/* Logo Section */}

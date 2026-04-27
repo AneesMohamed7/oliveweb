@@ -167,8 +167,8 @@ export default function GoogleReviews() {
                                 key={i}
                                 onClick={() => setStartIndex(Math.min(i, reviews.length - visible))}
                                 className={`w-2 h-2 rounded-full transition-all ${i >= startIndex && i < startIndex + visible
-                                        ? 'bg-primary w-4'
-                                        : 'bg-gray-300'
+                                    ? 'bg-primary w-4'
+                                    : 'bg-gray-300'
                                     }`}
                             />
                         ))}
@@ -181,18 +181,6 @@ export default function GoogleReviews() {
                     >
                         <ChevronRight size={18} />
                     </button>
-                </div>
-
-                {/* CTA */}
-                <div className="text-center mt-8">
-                    <a
-                        href="https://share.google/gfImGck8QmoYMjJni"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-primary font-semibold hover:underline text-sm"
-                    >
-                        Read all reviews on Google Maps →
-                    </a>
                 </div>
             </div>
         </section>

@@ -47,24 +47,22 @@ export default function AboutSection() {
                             </span>
 
                             {/* Heading */}
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-[1.15] mb-6">
+                            <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-gray-900 leading-[1.15] mb-6">
                                 Modern Dental & Facial Care
                                 <br className="hidden md:block" />
-                                <span className="text-primary">Designed Around You.</span>
+                                <span className="text-primary"> in Kunnumpuram</span>
                             </h2>
 
                             {/* 2 SHORT PARAGRAPHS */}
-                            <div className="space-y-5 text-gray-600 text-lg leading-relaxed mb-8">
+                            <div className="space-y-4 text-gray-600 text-lg leading-relaxed mb-8">
 
                                 <p>
-                                    Olive Clinic offers focused dental and facial treatments in one place,
-                                    combining clinical expertise with a structured approach to patient care.
+                                    Looking for a dental and facial clinic in Malappuram?
+                                    <span className="font-semibold text-gray-900"> Olive Dental & Face Clinic</span> in Kunnumpuram offers implants, aligners, PRP, and advanced skin treatments with expert care.
                                 </p>
 
                                 <p>
-                                    Every treatment is explained clearly, planned carefully, and delivered
-                                    with attention to long-term results rather than quick temporary fixes.
-                                </p>
+                                    Trusted by patients across Malappuram for safe treatments, clear planning, and long-lasting results.                                </p>
 
                             </div>
 

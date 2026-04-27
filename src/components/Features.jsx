@@ -6,23 +6,23 @@ export default function Features() {
     const features = [
         {
             icon: Users,
-            title: "Complete Care Under One Roof",
-            text: "Dental and facial treatments in one clinic."
+            title: "Dental & Skin Treatments in One Clinic",
+            text: "Implants, aligners, PRP and facial care in one place."
         },
         {
             icon: ShieldCheck,
-            title: "Strict Sterilization",
-            text: "High hygiene standards for every procedure."
+            title: "Safe & Sterile Procedures",
+            text: "Strict hygiene protocols for every treatment."
         },
         {
             icon: BadgeCheck,
-            title: "Certified Invisalign® Provider",
-            text: "Advanced digital treatment planning."
+            title: "Certified Invisalign Provider",
+            text: "Planned aligner treatments with digital precision."
         },
         {
             icon: Stethoscope,
-            title: "Advanced Technology",
-            text: "RVG digital X-rays and precision tools for accurate treatment."
+            title: "Modern Diagnostic Technology",
+            text: "Digital X-rays and tools for accurate results."
         }
     ];
     const containerVariants = {
@@ -61,12 +61,13 @@ export default function Features() {
                             <span className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
                                 Why Choose Olive Clinic
                             </span>
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-[1.2]">
+                            <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold text-gray-900 mb-6 leading-[1.2]">
                                 Trusted Dental & Facial Care <br className="hidden md:block" />  <span className="text-primary">in Kunnumpuram</span>
                             </h2>
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                Experience world-class healthcare with a personal touch. We combine medical expertise
-                                with advanced technology to ensure the best outcomes for our patients.
+                                <p className="text-gray-600 text-lg leading-relaxed">
+                                    Looking for a trusted dental and facial clinic in Kunnumpuram? We provide implants, aligners, PRP and skin treatments using modern technology and clear treatment planning.
+                                </p>
                             </p>
                             {/* Subtle Separator Line */}
                             <div className="h-px w-full bg-gray-200 mt-10"></div>
