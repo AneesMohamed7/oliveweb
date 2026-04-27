@@ -5,21 +5,54 @@ import { motion, AnimatePresence } from 'framer-motion';
 const clinicImg = "/images/clinic-front-inside.webp";
 
 export default function Contact() {
-    const [formData, setFormData] = useState({ name: '', phone: '', treatment: '' });
+    const [formData, setFormData] = useState({ 
+        name: '', 
+        phone: '', 
+        email: '', 
+        treatment: '', 
+        date: '',
+        time: '',
+        message: '' 
+    });
     const [submitted, setSubmitted] = useState(false);
+    const [isSending, setIsSending] = useState(false);
+    const [error, setError] = useState(null);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        const treatmentText = formData.treatment ? `%0A*Interested in:* ${formData.treatment}` : '';
-        const message = `Hi Olive Dental, I would like to request a callback.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}${treatmentText}`;
-        const whatsappUrl = `https://wa.me/918891494731?text=${message}`;
-        window.open(whatsappUrl, '_blank');
-        setSubmitted(true);
-        setTimeout(() => {
-            setFormData({ name: '', phone: '', treatment: '' });
-            setSubmitted(false);
-        }, 4000);
+        setIsSending(true);
+        setError(null);
+        
+        try {
+            const response = await fetch('/api/book-appointment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setSubmitted(true);
+                setFormData({ name: '', phone: '', email: '', treatment: '', date: '', time: '', message: '' });
+            } else {
+                setError(data.message || 'Something went wrong. Please try again or call us.');
+            }
+        } catch (err) {
+            console.error('Submission Error:', err);
+            setError('Something went wrong. Please try again or call us.');
+        } finally {
+            setIsSending(false);
+        }
     };
+
+    const timeSlots = [
+        'Morning (9:00 AM - 12:00 PM)',
+        'Afternoon (12:00 PM - 4:00 PM)',
+        'Evening (4:00 PM - 9:00 PM)',
+    ];
 
     const treatments = [
         'Clear Aligners',
@@ -180,14 +213,19 @@ export default function Contact() {
                                             exit={{ opacity: 0 }}
                                             className="text-center py-12"
                                         >
-                                            <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                                                <CheckCircle size={34} className="text-accent" />
+                                            <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <CheckCircle size={34} className="text-green-600" />
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-2">Request Sent!</h3>
-                                            <p className="text-sm text-gray-500">
-                                                Your details were sent via WhatsApp.<br />
-                                                We'll call you back shortly.
+                                            <h3 className="text-xl font-bold text-gray-900 mb-2">Request Received!</h3>
+                                            <p className="text-sm text-gray-500 mb-6">
+                                                Your appointment request has been received. Our team will contact you shortly.
                                             </p>
+                                            <button
+                                                onClick={() => setSubmitted(false)}
+                                                className="text-primary font-bold hover:underline"
+                                            >
+                                                Book another appointment
+                                            </button>
                                         </motion.div>
                                     ) : (
                                         <motion.form
@@ -197,6 +235,11 @@ export default function Contact() {
                                             onSubmit={handleSubmit}
                                             className="space-y-4"
                                         >
+                                            {error && (
+                                                <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm font-medium border border-red-100 mb-2">
+                                                    {error}
+                                                </div>
+                                            )}
                                             <div>
                                                 <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Full Name</label>
                                                 <input
@@ -208,45 +251,108 @@ export default function Contact() {
                                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                                 />
                                             </div>
-                                            <div>
-                                                <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Phone Number</label>
-                                                <input
-                                                    type="tel"
-                                                    required
-                                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm"
-                                                    placeholder="+91 98765 43210"
-                                                    value={formData.phone}
-                                                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                                />
+                                            <div className="grid sm:grid-cols-2 gap-4">
+                                                <div>
+                                                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Phone Number</label>
+                                                    <input
+                                                        type="tel"
+                                                        required
+                                                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm"
+                                                        placeholder="+91 98765 43210"
+                                                        value={formData.phone}
+                                                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Email Address</label>
+                                                    <input
+                                                        type="email"
+                                                        required
+                                                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm"
+                                                        placeholder="john@example.com"
+                                                        value={formData.email}
+                                                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="grid sm:grid-cols-2 gap-4">
+                                                <div>
+                                                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Treatment Interest</label>
+                                                    <select
+                                                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm text-gray-600 appearance-none"
+                                                        value={formData.treatment}
+                                                        onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
+                                                        style={{
+                                                            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E")`,
+                                                            backgroundPosition: 'right 0.75rem center',
+                                                            backgroundRepeat: 'no-repeat',
+                                                            backgroundSize: '1.25em 1.25em'
+                                                        }}
+                                                    >
+                                                        <option value="">Select treatment (optional)</option>
+                                                        {treatments.map((t) => (
+                                                            <option key={t} value={t}>{t}</option>
+                                                        ))}
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Preferred Date</label>
+                                                    <input
+                                                        type="date"
+                                                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm text-gray-600"
+                                                        value={formData.date}
+                                                        onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Preferred Time</label>
+                                                    <select
+                                                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm text-gray-600 appearance-none"
+                                                        value={formData.time}
+                                                        onChange={(e) => setFormData({ ...formData, time: e.target.value })}
+                                                        style={{
+                                                            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E")`,
+                                                            backgroundPosition: 'right 0.75rem center',
+                                                            backgroundRepeat: 'no-repeat',
+                                                            backgroundSize: '1.25em 1.25em'
+                                                        }}
+                                                    >
+                                                        <option value="">Select time slot</option>
+                                                        {timeSlots.map((t) => (
+                                                            <option key={t} value={t}>{t}</option>
+                                                        ))}
+                                                    </select>
+                                                </div>
                                             </div>
                                             <div>
-                                                <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Treatment Interest</label>
-                                                <select
-                                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm text-gray-600 appearance-none"
-                                                    value={formData.treatment}
-                                                    onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
-                                                    style={{
-                                                        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E")`,
-                                                        backgroundPosition: 'right 0.75rem center',
-                                                        backgroundRepeat: 'no-repeat',
-                                                        backgroundSize: '1.25em 1.25em'
-                                                    }}
-                                                >
-                                                    <option value="">Select treatment (optional)</option>
-                                                    {treatments.map((t) => (
-                                                        <option key={t} value={t}>{t}</option>
-                                                    ))}
-                                                </select>
+                                                <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Message (Optional)</label>
+                                                <textarea
+                                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm"
+                                                    placeholder="How can we help you?"
+                                                    rows="3"
+                                                    value={formData.message}
+                                                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                                ></textarea>
                                             </div>
                                             <button
                                                 type="submit"
-                                                className="w-full bg-gradient-to-r from-primary to-blue-600 text-white py-4 rounded-xl font-bold hover:shadow-lg hover:shadow-primary/25 transition-all flex items-center justify-center gap-2 mt-2 text-sm"
+                                                disabled={isSending}
+                                                className={`w-full bg-gradient-to-r from-primary to-blue-600 text-white py-4 rounded-xl font-bold hover:shadow-lg hover:shadow-primary/25 transition-all flex items-center justify-center gap-2 mt-2 text-sm ${isSending ? 'opacity-70 cursor-not-allowed' : ''}`}
                                             >
-                                                <Send size={16} />
-                                                Send Request via WhatsApp
+                                                {isSending ? (
+                                                    <div className="flex items-center gap-2">
+                                                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                                                        Sending...
+                                                    </div>
+                                                ) : (
+                                                    <>
+                                                        <Send size={16} />
+                                                        Book Appointment
+                                                    </>
+                                                )}
                                             </button>
                                             <p className="text-[10px] text-gray-400 text-center leading-relaxed">
-                                                Opens WhatsApp with your details pre-filled. No spam, ever.
+                                                By submitting, you agree to be contacted by Olive Dental regarding your request.
                                             </p>
                                         </motion.form>
                                     )}

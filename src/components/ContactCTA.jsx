@@ -3,7 +3,18 @@ import { Phone, MapPin, Send, Clock, Navigation, ChevronRight } from 'lucide-rea
 import { motion } from 'framer-motion';
 
 export default function ContactCTA() {
-    const [formData, setFormData] = useState({ name: '', phone: '', treatment: '' });
+    const [formData, setFormData] = useState({ 
+        name: '', 
+        phone: '', 
+        email: '', 
+        treatment: '', 
+        date: '', 
+        time: '', 
+        message: '' 
+    });
+    const [submitted, setSubmitted] = useState(false);
+    const [isSending, setIsSending] = useState(false);
+    const [error, setError] = useState(null);
 
     const treatments = [
         'Clear Aligners',
@@ -35,14 +46,34 @@ export default function ContactCTA() {
         'Evening (4:00 PM - 9:00 PM)',
     ];
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        const treatmentText = formData.treatment ? `%0A*Interested in:* ${formData.treatment}` : '';
-        const timeText = formData.time ? `%0A*Preferred Time:* ${formData.time}` : '';
-        const message = `Hi Olive Dental, I would like to request a callback.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}${treatmentText}${timeText}`;
-        const whatsappUrl = `https://wa.me/918891494731?text=${message}`;
-        window.open(whatsappUrl, '_blank');
-        setFormData({ name: '', phone: '', treatment: '', time: '' });
+        setIsSending(true);
+        setError(null);
+        
+        try {
+            const response = await fetch('/api/book-appointment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setSubmitted(true);
+                setFormData({ name: '', phone: '', email: '', treatment: '', date: '', time: '', message: '' });
+            } else {
+                setError(data.message || 'Something went wrong. Please try again or call us.');
+            }
+        } catch (err) {
+            console.error('Submission Error:', err);
+            setError('Something went wrong. Please try again or call us.');
+        } finally {
+            setIsSending(false);
+        }
     };
 
     return (
@@ -156,67 +187,137 @@ export default function ContactCTA() {
                                 <p className="text-gray-500 mb-6">Leave your details and we'll call you back instantly to confirm your visit.</p>
 
                                 <form onSubmit={handleSubmit} className="space-y-4">
-                                    <div className="grid sm:grid-cols-2 gap-4">
-                                        <div>
-                                            <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Full Name</label>
-                                            <input
-                                                type="text"
-                                                required
-                                                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-gray-300"
-                                                placeholder="John Doe"
-                                                value={formData.name}
-                                                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                            />
-                                        </div>
-                                        <div>
-                                            <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Phone Number</label>
-                                            <input
-                                                type="tel"
-                                                required
-                                                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-gray-300"
-                                                placeholder="+91 98765 43210"
-                                                value={formData.phone}
-                                                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="grid sm:grid-cols-2 gap-4">
-                                        <div>
-                                            <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Treatment Interest</label>
-                                            <select
-                                                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-gray-600 bg-white"
-                                                value={formData.treatment}
-                                                onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
+                                    {submitted ? (
+                                        <motion.div
+                                            initial={{ opacity: 0, scale: 0.9 }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            className="text-center py-8"
+                                        >
+                                            <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <Send size={24} />
+                                            </div>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-2">Request Received!</h4>
+                                            <p className="text-gray-500 mb-6">Your appointment request has been received. Our team will contact you shortly.</p>
+                                            <button
+                                                onClick={() => setSubmitted(false)}
+                                                className="text-primary font-bold hover:underline"
                                             >
-                                                <option value="">Select treatment</option>
-                                                {treatments.map((t) => (
-                                                    <option key={t} value={t}>{t}</option>
-                                                ))}
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Preferred Time</label>
-                                            <select
-                                                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-gray-600 bg-white"
-                                                value={formData.time}
-                                                onChange={(e) => setFormData({ ...formData, time: e.target.value })}
+                                                Book another appointment
+                                            </button>
+                                        </motion.div>
+                                    ) : (
+                                        <>
+                                            {error && (
+                                                <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm font-medium border border-red-100">
+                                                    {error}
+                                                </div>
+                                            )}
+                                            <div className="grid sm:grid-cols-2 gap-4">
+                                                <div>
+                                                    <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Full Name</label>
+                                                    <input
+                                                        type="text"
+                                                        required
+                                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-gray-300"
+                                                        placeholder="John Doe"
+                                                        value={formData.name}
+                                                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Phone Number</label>
+                                                    <input
+                                                        type="tel"
+                                                        required
+                                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-gray-300"
+                                                        placeholder="+91 98765 43210"
+                                                        value={formData.phone}
+                                                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="grid sm:grid-cols-2 gap-4">
+                                                <div>
+                                                    <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Email Address</label>
+                                                    <input
+                                                        type="email"
+                                                        required
+                                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-gray-300"
+                                                        placeholder="john@example.com"
+                                                        value={formData.email}
+                                                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Preferred Date</label>
+                                                    <input
+                                                        type="date"
+                                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-gray-600 bg-white"
+                                                        value={formData.date}
+                                                        onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="grid sm:grid-cols-2 gap-4">
+                                                <div>
+                                                    <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Treatment Interest</label>
+                                                    <select
+                                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-gray-600 bg-white"
+                                                        value={formData.treatment}
+                                                        onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
+                                                    >
+                                                        <option value="">Select treatment</option>
+                                                        {treatments.map((t) => (
+                                                            <option key={t} value={t}>{t}</option>
+                                                        ))}
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Preferred Time</label>
+                                                    <select
+                                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-gray-600 bg-white"
+                                                        value={formData.time}
+                                                        onChange={(e) => setFormData({ ...formData, time: e.target.value })}
+                                                    >
+                                                        <option value="">Select time slot</option>
+                                                        {timeSlots.map((t) => (
+                                                            <option key={t} value={t}>{t}</option>
+                                                        ))}
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Message (Optional)</label>
+                                                <textarea
+                                                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-gray-300"
+                                                    placeholder="Tell us more about your requirements..."
+                                                    rows="3"
+                                                    value={formData.message}
+                                                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                                ></textarea>
+                                            </div>
+                                            <button
+                                                type="submit"
+                                                disabled={isSending}
+                                                className={`w-full bg-primary text-white py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20 mt-2 ${isSending ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-dark'}`}
                                             >
-                                                <option value="">Select time slot</option>
-                                                {timeSlots.map((t) => (
-                                                    <option key={t} value={t}>{t}</option>
-                                                ))}
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <button
-                                        type="submit"
-                                        className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-primary-dark transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20 mt-2"
-                                    >
-                                        <Send size={18} />
-                                        Send Request via WhatsApp
-                                    </button>
-                                    <p className="text-[10px] text-gray-400 text-center leading-relaxed">
-                                        Open WhatsApp with your details pre-filled and get quick guidance from our team.                            </p>
+                                                {isSending ? (
+                                                    <div className="flex items-center gap-2">
+                                                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                                                        Sending...
+                                                    </div>
+                                                ) : (
+                                                    <>
+                                                        <Send size={18} />
+                                                        Book Appointment
+                                                    </>
+                                                )}
+                                            </button>
+                                            <p className="text-[10px] text-gray-400 text-center leading-relaxed">
+                                                By submitting, you agree to be contacted by Olive Dental regarding your request.
+                                            </p>
+                                        </>
+                                    )}
                                 </form>
                             </motion.div>
                         </div>
