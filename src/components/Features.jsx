@@ -44,8 +44,14 @@ export default function Features() {
     };
 
     return (
-        <section className="py-24 bg-white overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-32 bg-white overflow-hidden relative">
+            {/* Decorative Background Elements */}
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/30 -skew-x-12 translate-x-1/4 pointer-events-none" />
+            <div className="absolute top-1/4 left-0 text-[15rem] font-black text-gray-50 leading-none select-none pointer-events-none -translate-x-1/4">
+                OLIVE
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -58,16 +64,14 @@ export default function Features() {
                             transition={{ duration: 0.6 }}
                             className="mb-10"
                         >
-                            <span className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
-                                Why Choose Olive Clinic
+                            <span className="text-primary font-semibold tracking-[0.2em] uppercase text-xs mb-4 block">
+                                Why Patients Choose Olive Clinic
                             </span>
                             <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold text-gray-900 mb-6 leading-[1.2]">
                                 Trusted Dental & Facial Care <br className="hidden md:block" />  <span className="text-primary">in Kunnumpuram</span>
                             </h2>
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                <p className="text-gray-600 text-lg leading-relaxed">
-                                    Looking for a trusted dental and facial clinic in Kunnumpuram? We provide implants, aligners, PRP and skin treatments using modern technology and clear treatment planning.
-                                </p>
+                                Looking for a trusted dental and facial clinic in Kunnumpuram? We provide implants, aligners, PRP and skin treatments using modern technology and clear treatment planning.
                             </p>
                             {/* Subtle Separator Line */}
                             <div className="h-px w-full bg-gray-200 mt-10"></div>
@@ -128,17 +132,17 @@ export default function Features() {
 
                     {/* Right Side: Image and Decorative Elements */}
                     <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ duration: 0.8 }}
                         className="relative order-1 lg:order-2"
                     >
-                        {/* Decorative Background Shape */}
-                        <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10 animate-pulse"></div>
-                        <div className="absolute -bottom-10 -right-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl -z-10"></div>
+                        {/* Decorative pulses behind image */}
+                        <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-3xl -z-10 animate-pulse" />
+                        <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl -z-10" />
 
-                        <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
+                        <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group">
                             <img
                                 src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2070"
                                 alt="Modern Dental Clinic"

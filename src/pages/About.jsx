@@ -147,19 +147,6 @@ export default function About() {
                                 />
                                 <div className="absolute inset-0 bg-primary/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity" />
                             </div>
-
-                            {/* Floating Stats Badge */}
-                            <motion.div
-                                initial={{ y: 20, opacity: 0 }}
-                                whileInView={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 0.5, duration: 0.6 }}
-                                className="absolute -bottom-8 -right-8 bg-white p-1 rounded-3xl shadow-2xl"
-                            >
-                                <div className="bg-primary text-white rounded-[1.25rem] px-8 py-6 text-center">
-                                    <p className="text-4xl font-extrabold mb-1">3+</p>
-                                    <p className="text-[10px] font-bold uppercase tracking-wider text-blue-100">Years of Care</p>
-                                </div>
-                            </motion.div>
                         </motion.div>
 
                         {/* Right — Story Content */}
@@ -173,26 +160,14 @@ export default function About() {
                                 </h2>
                             </motion.div>
 
-                            <div className="grid sm:grid-cols-2 gap-8">
-                                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1}>
-                                    <h3 className="flex items-center gap-3 text-sm font-bold text-gray-900 uppercase tracking-widest mb-4">
-                                        <div className="w-1.5 h-6 bg-primary rounded-full" />
-                                        Who We Are
-                                    </h3>
-                                    <p className="text-gray-500 text-sm leading-relaxed">
-                                        Olive Dental & Face Clinic is a doctor-led, multi-specialty clinic where experienced specialists provide coordinated dental and facial treatments with a focus on safety, precision, and long-term results.
-                                    </p>
-                                </motion.div>
+                            <div className="space-y-4 text-gray-500 text-base leading-relaxed">
+                                <p>
+                                    Olive Dental & Face Clinic in Kunnumpuram, Malappuram provides dental and skin treatments including implants, aligners, PRP, and facial care. Established in 2023, the clinic focuses on clear diagnosis, safe procedures, and long-term results for every patient.
+                                </p>
 
-                                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={2}>
-                                    <h3 className="flex items-center gap-3 text-sm font-bold text-gray-900 uppercase tracking-widest mb-4">
-                                        <div className="w-1.5 h-6 bg-accent rounded-full" />
-                                        Why We Started
-                                    </h3>
-                                    <p className="text-gray-500 text-sm leading-relaxed">
-                                        Established in 2023, we set out to bring advanced, technology-driven treatments to Malappuram — making reliable, ethical care accessible to local families.
-                                    </p>
-                                </motion.div>
+                                <p>
+                                    Patients choose Olive for its structured treatment approach, modern technology, and transparent guidance. Every procedure is carefully planned to ensure comfort, predictable outcomes, and natural-looking results.
+                                </p>
                             </div>
 
                             {/* Features Glass Card */}
@@ -361,10 +336,26 @@ export default function About() {
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
-                            { icon: Users, title: 'Multi-Specialty Expertise', desc: 'From dental implants and aligners to PRP and advanced facial rejuvenation, our coordinated approach ensures comprehensive care without fragmented referrals.' },
-                            { icon: Microscope, title: 'Clinical Precision & Technology', desc: 'Digital diagnostics, structured treatment planning, and strict sterilization protocols ensure safety and predictable results.' },
-                            { icon: Sparkles, title: 'Medically Guided Aesthetic Care', desc: 'Our facial treatments focus on skin health, collagen stimulation, and balanced enhancement — never artificial transformation.' },
-                            { icon: Heart, title: 'Community-Based Trust', desc: 'Our growth in Kunnumpuram and Kondotty is built on referrals, repeat visits, and genuine patient satisfaction.' }
+                            {
+                                icon: Users,
+                                title: 'Complete Dental & Skin Care',
+                                desc: 'From implants and aligners to PRP and facial treatments, patients receive comprehensive care in one place.'
+                            },
+                            {
+                                icon: Microscope,
+                                title: 'Accurate Diagnosis & Planning',
+                                desc: 'Digital tools and structured planning ensure clear diagnosis, defined timelines, and predictable results.'
+                            },
+                            {
+                                icon: Sparkles,
+                                title: 'Natural-Looking Results',
+                                desc: 'Treatments are designed to enhance your appearance while maintaining a natural and balanced look.'
+                            },
+                            {
+                                icon: Heart,
+                                title: 'Consistent Patient Satisfaction',
+                                desc: 'Focused on safe treatments, clear communication, and results that patients are comfortable and confident with.'
+                            }
                         ].map((item, i) => (
                             <motion.div
                                 key={i}
@@ -491,7 +482,7 @@ export default function About() {
                             >
                                 Book Invisalign® Consultation
                             </a>
-                             <Link
+                            <Link
                                 to="/treatments/aligners"
                                 className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-base rounded-2xl hover:bg-white/20 transition-all"
                             >

@@ -35,6 +35,29 @@ export default function FacialAesthetics() {
     const [openFaq, setOpenFaq] = useState(null);
 
     const allServices = facialServices;
+    
+    const facialTrustPillars = [
+        { 
+            icon: ShieldCheck, 
+            title: 'Medically Supervised', 
+            text: 'Treatments performed under strict medical guidance for complete safety.' 
+        },
+        { 
+            icon: FlaskConical, 
+            title: 'Safe & Sterile', 
+            text: 'Hospital-grade sterilization and hygiene protocols for all skin procedures.' 
+        },
+        { 
+            icon: Sparkles, 
+            title: 'Advanced Technology', 
+            text: 'Using modern tools like HydraFacial and PRP systems for precise results.' 
+        },
+        { 
+            icon: Heart, 
+            title: 'Natural Results', 
+            text: 'Focus on enhancing your natural features without artificial-looking outcomes.' 
+        }
+    ];
 
     return (
         <>
@@ -156,6 +179,44 @@ export default function FacialAesthetics() {
                     </div>
                 </div>
             </section>
+
+            {/* ─── WHY CHOOSE US ─── */}
+            <section className="py-20 bg-gray-50/50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-14"
+                    >
+                        <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">The Olive Advantage</span>
+                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Facial Care</h2>
+                        <p className="text-gray-500 max-w-2xl mx-auto">
+                            We combine medical expertise with aesthetic artistry to deliver safe, effective, and natural-looking skin transformations.
+                        </p>
+                    </motion.div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {facialTrustPillars.map((item, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.1 }}
+                                className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all text-center"
+                            >
+                                <div className="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <item.icon size={28} />
+                                </div>
+                                <h3 className="font-bold text-gray-900 mb-3">{item.title}</h3>
+                                <p className="text-gray-500 text-sm leading-relaxed">{item.text}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
 
 
             {/* ─── SKIN ASSESSMENT CTA ─── */}

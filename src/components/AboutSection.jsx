@@ -5,32 +5,44 @@ import { ArrowRight } from 'lucide-react';
 
 export default function AboutSection() {
     return (
-        <section className="py-24 bg-[#F9FBFF] border-y border-gray-100 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-32 bg-white border-y border-gray-100 overflow-hidden relative">
+            {/* Decorative Background Elements from About Page */}
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/30 -skew-x-12 translate-x-1/4 pointer-events-none" />
+            <div className="absolute top-1/4 left-0 text-[15rem] font-black text-gray-50 leading-none select-none pointer-events-none -translate-x-1/4">
+                OLIVE
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
 
                     {/* LEFT — IMAGE */}
                     <motion.div
-                        initial={{ opacity: 0, x: -40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.7 }}
+                        transition={{ duration: 0.8 }}
                         className="flex-1 w-full relative"
                     >
-                        <div className="relative overflow-hidden rounded-[2.5rem] shadow-xl border border-white">
+                        {/* Decorative square behind image */}
+                        <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-3xl -z-10 animate-pulse" />
+
+                        <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl border-8 border-white group">
                             <img
                                 src="/images/oliveclinic-img1.webp"
                                 alt="Olive Dental & Face Clinic"
-                                className="w-full h-[480px] object-cover"
+                                className="w-full h-[520px] object-cover transition-transform duration-700 group-hover:scale-110"
                             />
 
                             {/* subtle depth */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                            <div className="absolute inset-0 bg-primary/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
 
+
+
                         {/* soft background glow */}
-                        <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-blue-50/40 rounded-full blur-[80px]"></div>
+                        <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-50/40 rounded-full blur-[100px]"></div>
                     </motion.div>
 
                     {/* RIGHT — TEXT */}

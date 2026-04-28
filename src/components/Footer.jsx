@@ -13,15 +13,15 @@ export default function Footer() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-12">
 
                         {/* Brand Column */}
-                        <div className="lg:col-span-4 flex flex-col gap-6 -mt-24">
+                        <div className="lg:col-span-4 flex flex-col gap-6">
                             <img
                                 src={oliveLogo}
                                 alt="Olive Dental"
-                                className="h-[300px] w-auto object-contain brightness-0 invert -mb-32 self-start"
+                                className="h-20 w-auto  object-contain items-center brightness-0 invert self-start"
                             />
 
                             {/* Row 2: Description */}
-                            <p className="text-gray-300 text-lg leading-snug pr-4 max-w-md mt-0">
+                            <p className="text-gray-400 text-lg leading-relaxed max-w-md">
                                 Dental and skin clinic in Kunnumpuram, Malappuram offering implants, aligners, PRP, and
                                 facial treatments with safe, well-planned care and
                                 long-term results.
@@ -72,7 +72,7 @@ export default function Footer() {
 
                         {/* Services */}
                         <div className="lg:col-span-3">
-                            <h4 className="text-white font-bold mb-6">Our Services</h4>
+                            <h4 className="text-white font-bold mb-6">Our Treatments</h4>
                             <ul className="space-y-3 text-sm">
                                 <li><Link to="/dental-treatments" className="text-gray-400 hover:text-white transition-colors">General Dentistry</Link></li>
                                 <li><Link to="/treatments/implants" className="text-gray-400 hover:text-white transition-colors">Dental Implants</Link></li>
