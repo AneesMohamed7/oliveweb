@@ -86,7 +86,7 @@ export default function InvisalignParallax() {
                                 </span>
                             </div>
                             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
-                                Get a Straighter Smile withh{' '}
+                                Get a Straighter Smile with{' '}
                                 <span className="text-primary">Invisalign®</span>
                                 {' '}—{' '}
                                 Aligners
@@ -102,9 +102,7 @@ export default function InvisalignParallax() {
                             </div>
 
                             <p className="text-white/85 text-lg leading-relaxed mb-8">
-                                <p className="text-white/85 text-lg leading-relaxed mb-8">
-                                    Straighten your teeth with Invisalign® clear aligners in Kunnumpuram. Get a 3D smile preview, clear treatment plan, and comfortable, nearly invisible results.
-                                </p>
+                                Straighten your teeth with Invisalign® clear aligners in Kunnumpuram. Get a 3D smile preview, clear treatment plan, and comfortable, nearly invisible results.
                             </p>
                         </motion.div>
 
