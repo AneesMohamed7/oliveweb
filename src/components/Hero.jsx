@@ -133,7 +133,7 @@ export default function Hero() {
                 className="lg:hidden relative z-10 flex items-end mt-auto w-full"
             >
                 <img
-                    src="/images/smilingdoctor-hero.png"
+                    src="/images/smilingdoctor-hero.webp"
                     alt="Smiling woman showing healthy dental results"
                     className="ml-[-60px] h-[420px] w-[880px] max-w-none sm:ml-0 sm:h-[550px] sm:w-[70%] sm:max-w-full sm:mx-auto md:h-[650px] md:w-[60%] object-contain object-bottom select-none pointer-events-none scale-105 origin-bottom"
                     loading="eager"
@@ -150,7 +150,7 @@ export default function Hero() {
                 className="hidden lg:flex absolute top-12 bottom-6 right-6 w-1/2 items-end justify-end z-10 pointer-events-none"
             >
                 <img
-                    src="/images/smilingdoctor-hero.png"
+                    src="/images/smilingdoctor-hero.webp"
                     alt="Smiling woman showing healthy dental results"
                     className="h-full w-full object-contain object-bottom scale-125 origin-bottom select-none"
                     loading="eager"

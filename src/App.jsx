@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { prefetchOnIdle } from './hooks/usePrefetch';
 
@@ -31,7 +31,7 @@ const TeethWhitening = lazy(() => import('./pages/TeethWhitening'));
 const KidsDentistry = lazy(() => import('./pages/KidsDentistry'));
 const WisdomTooth = lazy(() => import('./pages/WisdomTooth'));
 const BridalSmile = lazy(() => import('./pages/BridalSmile'));
-const Bonding = lazy(() => import('./pages/Bonding'));
+const GapCorrection = lazy(() => import('./pages/GapCorrection'));
 
 // Facial aesthetic pages
 const PRP = lazy(() => import('./pages/PRP'));
@@ -97,7 +97,8 @@ export default function App() {
               <Route path="/treatments/kids-dentistry" element={<PageWrapper><KidsDentistry /></PageWrapper>} />
               <Route path="/treatments/wisdom-tooth" element={<PageWrapper><WisdomTooth /></PageWrapper>} />
               <Route path="/treatments/bridal-smile" element={<PageWrapper><BridalSmile /></PageWrapper>} />
-              <Route path="/treatments/bonding" element={<PageWrapper><Bonding /></PageWrapper>} />
+              <Route path="/treatments/gap-correction" element={<PageWrapper><GapCorrection /></PageWrapper>} />
+              <Route path="/treatments/bonding" element={<Navigate to="/treatments/gap-correction" replace />} />
 
               {/* Facial Routes */}
               <Route path="/treatments/prp" element={<PageWrapper><PRP /></PageWrapper>} />

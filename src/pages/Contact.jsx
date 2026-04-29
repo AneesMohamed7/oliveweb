@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, MessageCircle, MapPin, Clock, Send, CheckCircle, Navigation, ShieldCheck, Star, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 const clinicImg = "/images/clinic-front-inside.webp";
 
 export default function Contact() {
-    const [formData, setFormData] = useState({ 
-        name: '', 
-        phone: '', 
-        email: '', 
-        treatment: '', 
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        email: '',
+        treatment: '',
         date: '',
         time: '',
-        message: '' 
+        message: ''
     });
     const [submitted, setSubmitted] = useState(false);
     const [isSending, setIsSending] = useState(false);
@@ -22,27 +23,40 @@ export default function Contact() {
         e.preventDefault();
         setIsSending(true);
         setError(null);
-        
+
         try {
-            const response = await fetch('/api/book-appointment', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+            // Replace these with your actual EmailJS credentials
+            const SERVICE_ID = 'service_14r5omd';
+            const TEMPLATE_ID = 'template_bec8swb';
+            const PUBLIC_KEY = 'fMbAqMb_XqkFrBC1U';
 
-            const data = await response.json();
+            const templateParams = {
+                name: formData.name,
+                phone: formData.phone,
+                email: formData.email,
+                treatment: formData.treatment,
+                date: formData.date,
+                time: formData.time,
+                message: formData.message,
+                to_email: 'olivedental31@gmail.com'
+            };
 
-            if (data.success) {
+            const result = await emailjs.send(
+                SERVICE_ID,
+                TEMPLATE_ID,
+                templateParams,
+                PUBLIC_KEY
+            );
+
+            if (result.status === 200) {
                 setSubmitted(true);
                 setFormData({ name: '', phone: '', email: '', treatment: '', date: '', time: '', message: '' });
             } else {
-                setError(data.message || 'Something went wrong. Please try again or call us.');
+                throw new Error('Failed to send email');
             }
         } catch (err) {
             console.error('Submission Error:', err);
-            setError('Something went wrong. Please try again or call us.');
+            setError('Something went wrong. Please try again or call us at +91 88914 94731.');
         } finally {
             setIsSending(false);
         }
@@ -70,7 +84,7 @@ export default function Contact() {
         'Scaling & Polishing',
         'Gum Treatment (Periodontology)',
         'Orthodontic Braces',
-        'Composite Bonding',
+        'Gap Correction',
         'Fluoride Treatment',
         'Dental X-Ray',
         'Mouth Guard / Night Guard',

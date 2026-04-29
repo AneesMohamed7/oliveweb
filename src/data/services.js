@@ -106,15 +106,15 @@ export const dentalServices = [
         link: '/treatments/wisdom-tooth'
     },
     {
-        id: 'bonding',
-        title: 'Composite Bonding',
+        id: 'gap-correction',
+        title: 'Gap Correction',
         category: 'dental',
         type: 'secondary',
-        description: 'Single-visit smile enhancement to repair chips, close gaps, and reshape teeth using artistic composite layering for immediate, natural results.',
+        description: 'Quick and effective tooth gap closure using advanced composite bonding techniques — ideal for fixing spacing, reshaping teeth, and enhancing smile symmetry in a single visit.',
         icon: Sparkles,
-        image: '/images/beforeafter14.webp',
-        link: '/treatments/bonding'
-    },
+        image: '/images/teethgap-img.webp',
+        link: '/treatments/gap-correction'
+    }
 ];
 
 // ─── FACIAL AESTHETIC SERVICES ─────────────────────────────────────

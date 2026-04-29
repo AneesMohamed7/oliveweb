@@ -63,14 +63,14 @@ const faqs = [
 
 /* ───────────── COMPONENT ───────────── */
 
-export default function Bonding() {
+export default function GapCorrection() {
     const [openFAQ, setOpenFAQ] = useState(null);
 
     return (
         <div className="bg-white font-sans text-gray-800">
             <Helmet>
-                <title>Composite Bonding — Artistic Smile Refinement | Olive Dental</title>
-                <meta name="description" content="Repair chips, close gaps, and refine your smile in a single visit with professional composite bonding. minimally invasive aesthetic dentistry at Olive Dental, Kunnumpuram." />
+                <title>Gap Correction — Artistic Smile Refinement | Olive Dental</title>
+                <meta name="description" content="Repair chips, close gaps, and refine your smile in a single visit with professional gap correction and composite bonding. Minimally invasive aesthetic dentistry at Olive Dental, Kunnumpuram." />
             </Helmet>
 
             {/* ═══════════ 1. HERO ═══════════ */}
@@ -87,8 +87,8 @@ export default function Bonding() {
                         >
                             <span className="text-primary font-bold tracking-wider uppercase text-xs mb-4 block">Aesthetic Dental Refinement</span>
                             <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-gray-900 mb-6 leading-tight">
-                                Artistic Smile <br />
-                                <span className="text-primary">Instant Refinement</span>
+                                Artistic <br />
+                                <span className="text-primary">Gap Correction</span>
                             </h1>
                             <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-xl">
                                 Composite bonding is a minimally invasive way to repair chips,
@@ -97,7 +97,7 @@ export default function Bonding() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 mb-4">
                                 <a
-                                    href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I'm%20interested%20in%20Composite%20Bonding"
+                                    href="https://wa.me/918891494731?text=Hi%20Olive%20Dental,%20I'm%20interested%20in%20Gap%20Correction"
                                     className="px-8 py-4 bg-primary text-white rounded-xl font-bold hover:bg-primary-dark transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20"
                                 >
                                     <MessageCircle size={20} /> WhatsApp Consultation
