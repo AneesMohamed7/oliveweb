@@ -60,7 +60,7 @@ export default function App() {
     // Initial loading timer
     const timer = setTimeout(() => {
       setIsInitialLoading(false);
-    }, 2200);
+    }, 600);
     
     return () => clearTimeout(timer);
   }, []);

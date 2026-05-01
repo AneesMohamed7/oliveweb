@@ -59,11 +59,11 @@ export default function AboutSection() {
                             </span>
 
                             {/* Heading */}
-                            <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-gray-900 leading-[1.15] mb-6">
+                            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-gray-900 leading-[1.15] mb-6">
                                 Modern Dental & Facial Care
                                 <br className="hidden md:block" />
                                 <span className="text-primary"> in Kunnumpuram</span>
-                            </h2>
+                            </h1>
 
                             {/* 2 SHORT PARAGRAPHS */}
                             <div className="space-y-4 text-gray-600 text-lg leading-relaxed mb-8">

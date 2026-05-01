@@ -144,7 +144,7 @@ export default function Features() {
 
                         <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group">
                             <img
-                                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2070"
+                                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1000"
                                 alt="Modern Dental Clinic"
                                 className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
                             />

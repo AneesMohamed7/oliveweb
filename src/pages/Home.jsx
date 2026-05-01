@@ -5,8 +5,6 @@ import LazySection from '../components/LazySection';
 // ─── Eagerly loaded (above the fold) ───
 import Hero from '../components/Hero';
 import StatsSection from '../components/StatsSection';
-import AboutSection from '../components/AboutSection';
-import Features from '../components/Features';
 
 export default function Home() {
     return (
@@ -34,13 +32,21 @@ export default function Home() {
             {/* ─── Above the fold (eagerly loaded) ─── */}
             <Hero />
             <StatsSection />
-            <AboutSection />
+            <LazySection
+                component={() => import('../components/AboutSection')}
+                minHeight="600px"
+                rootMargin="400px"
+            />
             <LazySection
                 component={() => import('../components/Services')}
                 minHeight="600px"
                 rootMargin="300px"
             />
-            <Features />
+            <LazySection
+                component={() => import('../components/Features')}
+                minHeight="600px"
+                rootMargin="300px"
+            />
             <LazySection
                 component={() => import('../components/InvisalignParallax')}
                 minHeight="500px"
